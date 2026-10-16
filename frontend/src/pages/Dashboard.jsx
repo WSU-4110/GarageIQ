@@ -1,4 +1,10 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { signOut } from 'firebase/auth';
+import useAuth from "../hooks/useAuth.js";
+import useUserProfile from "../hooks/useUserProfile.js";
+import { auth } from "../lib/firebase.js";
+import { formatStoredDate } from "../lib/profileDates.js";
 
 const carImage =
   "https://images.unsplash.com/photo-1486006920555-c77dcf18193c?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&q=85&w=1600";
@@ -37,21 +43,75 @@ const navItems = [
   { label: "Find shops", icon: "map" },
 ];
 
-const modifications = [
-  { title: "Stage 1 ECU Tune", category: "Performance", date: "May 12, 2024", price: "$899", status: "Installed" },
-  { title: "KW V3 Coilovers", category: "Suspension", date: "Apr 28, 2024", price: "$2,840", status: "Installed" },
-  { title: "Titanium Cat-back", category: "Exhaust", date: "Mar 16, 2024", price: "$3,250", status: "Installed" },
-];
-
-export default function App() {
+export default function Dashboard() {
+  const navigate = useNavigate();
+  const { user } = useAuth();
+  const { profile, loading, error } = useUserProfile();
   const [active, setActive] = useState("Overview");
   const [menuOpen, setMenuOpen] = useState(false);
   const [toast, setToast] = useState("");
+
+  const displayName =
+    profile?.name || user?.displayName || user?.email?.split("@")[0] || "Driver";
+  const vehicleName = profile?.Car?.trim() || "";
+  const modifications = (Array.isArray(profile?.Modifications) ? profile.Modifications : [])
+    .map((modification, index) => {
+      if (typeof modification === "string") {
+        return {
+          title: modification,
+          category: "Modification",
+          date: "",
+          price: "—",
+          status: "Saved",
+          index,
+        };
+      }
+
+      return {
+        title: modification?.title || modification?.name || "Modification",
+        category: modification?.category || "Modification",
+        date: modification?.date || "",
+        price: modification?.price || "—",
+        status: modification?.status || "Saved",
+        index,
+      };
+    });
+  const recentModifications = modifications.slice(0, 3);
+  const initials = displayName
+    .split(/\s+/)
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((part) => part[0].toUpperCase())
+    .join("");
 
   const notify = (message) => {
     setToast(message);
     window.setTimeout(() => setToast(""), 2200);
   };
+
+  async function handleSignOut() {
+    try {
+      await signOut(auth);
+      navigate("/login", { replace: true });
+    } catch (signOutError) {
+      notify(`Could not sign out: ${signOutError.message}`);
+    }
+  }
+
+  if (loading) {
+    return <div className="auth-page"><p role="status">Loading your garage...</p></div>;
+  }
+
+  if (error) {
+    return (
+      <div className="auth-page">
+        <section className="auth-card">
+          <p className="form-message error-message" role="alert">{error}</p>
+          <button className="primary-button auth-submit" onClick={handleSignOut}>Sign out</button>
+        </section>
+      </div>
+    );
+  }
 
   return (
     <div className="app-shell">
@@ -68,7 +128,14 @@ export default function App() {
             <button
               key={item.label}
               className={active === item.label ? "nav-item active" : "nav-item"}
-              onClick={() => { setActive(item.label); setMenuOpen(false); }}
+              onClick={() => {
+                if (["My garage", "Modifications", "Maintenance"].includes(item.label)) {
+                  navigate("/vehicle");
+                } else {
+                  setActive(item.label);
+                }
+                setMenuOpen(false);
+              }}
             >
               <Icon name={item.icon} /><span>{item.label}</span>
             </button>
@@ -77,17 +144,17 @@ export default function App() {
 
         <div className="garage-switcher">
           <p className="eyebrow">Active vehicle</p>
-          <button onClick={() => notify("Vehicle switcher ready")}>
+          <button onClick={() => navigate("/vehicle")}>
             <span className="mini-car"><img src={carImage} alt="" /></span>
-            <span><strong>2020 BMW M4</strong><small>F82 Competition</small></span>
+            <span><strong>{vehicleName || "Add your vehicle"}</strong><small>Vehicle profile</small></span>
             <Icon name="chevron" size={14} />
           </button>
         </div>
 
         <div className="sidebar-footer">
-          <div className="avatar">JD</div>
-          <div><strong>James Dalton</strong><span>Pro member</span></div>
-          <button aria-label="Account options">•••</button>
+          <div className="avatar">{initials}</div>
+          <div><strong>{displayName}</strong><span>{user?.email}</span></div>
+          <button onClick={handleSignOut} aria-label="Sign out" title="Sign out">Sign out</button>
         </div>
       </aside>
 
@@ -101,19 +168,19 @@ export default function App() {
             <kbd>⌘ K</kbd>
           </label>
           <div className="header-actions">
-            <button className="icon-button" aria-label="Notifications" onClick={() => notify("You're all caught up")}><Icon name="bell" /></button>
-            <button className="primary-button" onClick={() => notify("New modification added to your plan")}><Icon name="plus" /> Add modification</button>
+            <button className="icon-button" aria-label="Notifications" onClick={() => notify("Notifications are not connected yet.")}><Icon name="bell" /></button>
+            <button className="primary-button" onClick={() => navigate("/vehicle")}><Icon name="plus" /> Add modification</button>
           </div>
         </header>
 
         <div className="content">
           <section className="welcome">
             <div>
-              <p className="eyebrow orange">Tuesday, June 18</p>
-              <h1>{active === "Overview" ? "Welcome back, James." : active}</h1>
-              <p>{active === "Overview" ? "Your M4 is dialed in. Here’s what’s happening in your garage." : `Everything you need to manage your ${active.toLowerCase()}.`}</p>
+              <p className="eyebrow orange">{new Intl.DateTimeFormat(undefined, { weekday: "long", month: "long", day: "numeric" }).format(new Date())}</p>
+              <h1>{active === "Overview" ? `Welcome back, ${displayName}.` : active}</h1>
+              <p>{active === "Overview" ? "Here’s what’s happening in your garage." : `Everything you need to manage your ${active.toLowerCase()}.`}</p>
             </div>
-            <button className="secondary-button" onClick={() => notify("Build sheet exported")}><Icon name="arrow" /> Export build sheet</button>
+            <button className="secondary-button" onClick={() => notify("Build sheet export is not connected yet.")}><Icon name="arrow" /> Export build sheet</button>
           </section>
 
           <section className="hero-card">
@@ -121,13 +188,12 @@ export default function App() {
             <div className="hero-shade" />
             <div className="car-title">
               <span className="status-dot">PRIMARY BUILD</span>
-              <h2>2020 BMW M4 Competition</h2>
-              <p>F82 · S55 3.0L Twin-Turbo · Black Sapphire Metallic</p>
+              <h2>{vehicleName || "Add your vehicle profile"}</h2>
+              <p>{vehicleName ? "Vehicle details saved to your garage" : "Add your vehicle to start building your garage"}</p>
             </div>
             <div className="hero-stats">
-              <div><small>EST. POWER</small><strong>512 <span>hp</span></strong><em>+68 hp</em></div>
-              <div><small>MODIFICATIONS</small><strong>14</strong><em>9 installed</em></div>
-              <div><small>BUILD VALUE</small><strong>$18.4k</strong><em>in upgrades</em></div>
+              <div><small>MODIFICATIONS</small><strong>{modifications.length}</strong><em>saved to your profile</em></div>
+              <div><small>LAST OIL SERVICE</small><strong>{formatStoredDate(profile?.LastOilChange)}</strong><em>from your service history</em></div>
             </div>
           </section>
 
@@ -135,39 +201,44 @@ export default function App() {
             <div className="panel activity-panel">
               <div className="panel-heading">
                 <div><p className="eyebrow">Build log</p><h3>Recent modifications</h3></div>
-                <button onClick={() => setActive("Modifications")}>View all <Icon name="arrow" size={15} /></button>
+                <button onClick={() => navigate("/vehicle")}>View all <Icon name="arrow" size={15} /></button>
               </div>
               <div className="mod-list">
-                {modifications.map((mod, index) => (
-                  <div className="mod-row" key={mod.title}>
-                    <div className={`mod-icon mod-${index}`}><Icon name={index === 0 ? "bolt" : index === 1 ? "wrench" : "car"} /></div>
-                    <div className="mod-copy"><strong>{mod.title}</strong><span>{mod.category} · {mod.date}</span></div>
+                {recentModifications.length ? recentModifications.map((mod) => (
+                  <div className="mod-row" key={`${mod.title}-${mod.index}`}>
+                    <div className={`mod-icon mod-${mod.index % 3}`}><Icon name={mod.index % 3 === 0 ? "bolt" : mod.index % 3 === 1 ? "wrench" : "car"} /></div>
+                    <div className="mod-copy"><strong>{mod.title}</strong><span>{mod.category}{mod.date ? ` · ${mod.date}` : ""}</span></div>
                     <span className="installed"><Icon name="check" size={12} /> {mod.status}</span>
                     <strong className="price">{mod.price}</strong>
                   </div>
-                ))}
+                )) : <p className="empty-state">No modifications saved yet. Add them from your vehicle profile.</p>}
               </div>
             </div>
 
             <div className="panel health-panel">
               <div className="panel-heading">
                 <div><p className="eyebrow">Vehicle health</p><h3>Maintenance</h3></div>
-                <div className="health-score">92</div>
+                <button onClick={() => navigate("/vehicle")}>Edit history <Icon name="arrow" size={15} /></button>
               </div>
               <div className="service-item">
                 <div className="service-icon"><Icon name="calendar" /></div>
-                <div><strong>Oil service</strong><span>Due in 420 miles</span></div>
-                <b>SOON</b>
+                <div><strong>Oil change</strong><span>{formatStoredDate(profile?.LastOilChange)}</span></div>
               </div>
-              <div className="progress"><span /></div>
-              <div className="odometer"><span>Current mileage</span><strong>31,842 mi</strong></div>
-              <button className="full-button" onClick={() => notify("Maintenance record flow opened")}>Log maintenance <Icon name="plus" size={15} /></button>
+              <div className="service-item">
+                <div className="service-icon"><Icon name="calendar" /></div>
+                <div><strong>Tire rotation</strong><span>{formatStoredDate(profile?.LastTireRotation)}</span></div>
+              </div>
+              <div className="service-item">
+                <div className="service-icon"><Icon name="calendar" /></div>
+                <div><strong>Transmission service</strong><span>{formatStoredDate(profile?.LastTransmissionService)}</span></div>
+              </div>
+              <button className="full-button" onClick={() => navigate("/vehicle")}>Edit service history <Icon name="arrow" size={15} /></button>
             </div>
 
             <div className="panel planner-panel">
               <div className="panel-heading">
                 <div><p className="eyebrow">Next up</p><h3>Build planner</h3></div>
-                <button onClick={() => notify("Planner opened")}>Open planner <Icon name="arrow" size={15} /></button>
+                <button onClick={() => notify("The build planner is not connected yet.")}>Open planner <Icon name="arrow" size={15} /></button>
               </div>
               <div className="planned-card">
                 <div className="planned-top"><span>PLANNED</span><strong>$4,600 est.</strong></div>
@@ -187,7 +258,7 @@ export default function App() {
                 <div className="panel-heading"><div><p className="eyebrow">Trusted nearby</p><h3>Apex Motorworks</h3></div><span className="rating">★ 4.9</span></div>
                 <p>BMW performance specialists · 3.2 mi away</p>
                 <div className="shop-meta"><span>Open until 6 PM</span><span>24 builds</span></div>
-                <button className="full-button dark" onClick={() => notify("Opening shop profile")}>View shop <Icon name="arrow" size={15} /></button>
+                <button className="full-button dark" onClick={() => notify("Shop profiles are not connected yet.")}>View shop <Icon name="arrow" size={15} /></button>
               </div>
             </div>
           </section>
