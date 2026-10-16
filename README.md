@@ -182,12 +182,22 @@ Integration and testing help ensure the functionality works correctly with the r
 |---|---|---|
 | Frontend | React, HTML, CSS | Faiyad |
 | Backend | Python, FastAPI | Yahya |
-| Database | MySQL | Ammar |
-| Cloud Infrastructure | Google Cloud SQL / GCP | Ammar |
+| Database | MySQL (backend plan) / Firestore (frontend profile) | Ammar |
+| Cloud Infrastructure | Google Cloud SQL / Firebase on GCP | Ammar |
 | Shop Discovery | Map / Location API | Mohamed |
 | Testing | Pytest, Swagger | Mohamed / Team |
 | Continuous Integration | GitHub Actions | Mohamed / Team |
 | Version Control | GitHub | Everyone |
+
+### Current frontend Firebase integration
+
+The current frontend uses Firebase Authentication and Firestore directly for
+sign-in, account profiles, vehicle details, service dates, and modifications.
+Each account is stored at `users/{Firebase Auth UID}` in the `garageiq`
+Firestore database.
+The FastAPI/MySQL architecture above remains the planned backend path for
+other application features. Setup instructions and the owner-only Firestore
+rules are in [`frontend/README.md`](./frontend/README.md).
 
 ---
 

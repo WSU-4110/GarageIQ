@@ -10,7 +10,7 @@
 
 * { box-sizing: border-box; }
 body { margin: 0; min-width: 320px; min-height: 100vh; background: #f3f3f0; }
-button, input { font: inherit; }
+button, input, textarea { font: inherit; }
 button { cursor: pointer; }
 
 .app-shell { min-height: 100vh; display: flex; }
@@ -40,6 +40,7 @@ nav .eyebrow, .garage-switcher .eyebrow { padding-left: 11px; }
 .sidebar-footer strong, .sidebar-footer span { display: block; font-size: 10px; }
 .sidebar-footer span { margin-top: 3px; color: #777a7d; }
 .sidebar-footer button { color: #777a7d; background: none; border: 0; }
+.sidebar-footer button { padding: 4px; font-size: 9px; }
 .close-menu { display: none; }
 
 main { width: calc(100% - 246px); margin-left: 246px; }
@@ -179,3 +180,10 @@ main { width: calc(100% - 246px); margin-left: 246px; }
 .auth-switch a { color: #d94d1d; font-weight: 700; }
 .auth-note, .vehicle-intro { margin-top: 18px; color: #85888b; font-size: 11px; line-height: 1.6; }
 .vehicle-intro { margin: 0 0 20px; }
+.auth-card textarea { width: 100%; padding: 12px; color: #191a1b; background: white; border: 1px solid #d8d8d3; border-radius: 6px; outline-color: #e95827; font-size: 13px; resize: vertical; }
+.auth-card button:disabled { cursor: wait; opacity: .65; }
+.form-message { margin: 14px 0; font-size: 11px; line-height: 1.5; }
+.error-message { color: #a52f22; }
+.success-message { color: #3f704c; }
+.profile-section-label { margin: 20px 0 6px; padding-top: 16px; color: #55585a; border-top: 1px solid #e6e6e1; font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.empty-state { margin: 0; padding: 18px 12px; color: #818386; border-top: 1px solid #e6e6e1; font-size: 10px; }
