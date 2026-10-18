@@ -1,4 +1,12 @@
 fastapi
 uvicorn[standard]
 pydantic
+pydantic-settings
+numpy
+pyyaml
+httpx
+firebase-admin
+# Optional local embeddings (set GARAGEIQ_EMBEDDER=fastembed): fastembed
+# Dev
+pytest
 firebase-admin

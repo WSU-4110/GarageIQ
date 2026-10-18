@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { AuthProvider } from "./context/AuthContext.jsx";
 import useAuth from "./hooks/useAuth.js";
 import Dashboard from "./pages/Dashboard.jsx";
+import Advisor from "./pages/Advisor.jsx";
 import Login from "./pages/Login.jsx";
 import Signup from "./pages/Signup.jsx";
 import VehicleProfile from "./pages/VehicleProfile.jsx";
@@ -40,6 +41,7 @@ export default function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
           <Route path="/vehicle" element={<ProtectedRoute><VehicleProfile /></ProtectedRoute>} />
+          <Route path="/advisor" element={<ProtectedRoute><Advisor /></ProtectedRoute>} />
           <Route path="*" element={<Navigate to="/dashboard" replace />} />
         </Routes>
       </BrowserRouter>

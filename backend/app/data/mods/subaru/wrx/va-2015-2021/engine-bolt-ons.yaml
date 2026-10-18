@@ -1,0 +1,30 @@
+- id: wrx-va-cold-air-intake
+  name: Cold Air Intake
+  aliases: [intake, CAI]
+  category: intake
+  summary: Replaces the factory airbox for more airflow and intake sound.
+  advice: Gains are small (typically 1-5 hp) unless paired with a tune. Choose a sealed or dry-filter design to reduce hydrolock risk.
+  tags: [power, sound, bolt-on, horsepower]
+  recommended_with: [wrx-va-ecu-tune]
+  source: GarageIQ editorial (unverified)
+
+- id: wrx-va-ecu-tune
+  name: ECU Tune
+  aliases: [tune, tuned, flash]
+  category: engine management
+  summary: Reflashes engine tuning to use added airflow and boost safely for more power.
+  advice: Use a reputable tuner and keep a log of knock and air-fuel ratio. Voids warranty in many cases.
+  tags: [power, tune, horsepower, torque]
+  requires: [baseline-maintenance]
+  recommended_with: [wrx-va-cold-air-intake, wrx-va-catback-exhaust]
+  source: GarageIQ editorial (unverified)
+
+- id: wrx-va-catback-exhaust
+  name: Cat-back Exhaust
+  aliases: [catback, exhaust]
+  category: exhaust
+  summary: Free-flowing exhaust from the catalytic converter back for sound and minor power gains.
+  advice: Check local noise regulations. Axle-back is cheaper if you only want sound.
+  tags: [sound, exhaust, power]
+  recommended_with: [wrx-va-ecu-tune]
+  source: GarageIQ editorial (unverified)

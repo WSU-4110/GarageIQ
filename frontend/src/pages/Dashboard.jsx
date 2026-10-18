@@ -169,6 +169,7 @@ export default function Dashboard() {
           </label>
           <div className="header-actions">
             <button className="icon-button" aria-label="Notifications" onClick={() => notify("Notifications are not connected yet.")}><Icon name="bell" /></button>
+            <button className="primary-button" onClick={() => navigate("/advisor")}>Mod advisor</button>
             <button className="primary-button" onClick={() => navigate("/vehicle")}><Icon name="plus" /> Add modification</button>
           </div>
         </header>
