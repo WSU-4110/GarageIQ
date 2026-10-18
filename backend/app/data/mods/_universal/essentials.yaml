@@ -1,0 +1,40 @@
+- id: performance-alignment
+  name: Performance Alignment
+  category: service
+  summary: Alignment with camber and toe settings tuned for lowered or track-focused cars.
+  advice: Required after changing ride height; do it after the suspension settles.
+  tags: [handling, alignment, tires, suspension]
+  source: GarageIQ editorial (unverified)
+
+- id: quality-tires
+  name: Quality Tires
+  category: tires
+  summary: The single biggest upgrade for grip, braking and wet-weather safety.
+  advice: Match the tire type to your use (all-season, summer, winter). Check the tire age code and replace after about 6 years.
+  tags: [handling, grip, braking, safety, tires, wheels]
+  source: GarageIQ editorial (unverified)
+
+- id: brake-fluid-flush
+  name: Brake Fluid Flush
+  category: maintenance
+  summary: Replaces moisture-contaminated brake fluid to restore a firm pedal and prevent fade.
+  advice: Do it every 2 years regardless of mileage, and before any track day.
+  tags: [brakes, maintenance, safety, track]
+  source: GarageIQ editorial (unverified)
+
+- id: performance-brake-pads
+  name: Performance Brake Pads
+  category: brakes
+  summary: Higher-friction pads for better bite and fade resistance.
+  advice: More aggressive pads can be noisy and dusty on the street. Pair with fresh fluid.
+  tags: [brakes, stopping, track, fade]
+  recommended_with: [brake-fluid-flush]
+  source: GarageIQ editorial (unverified)
+
+- id: baseline-maintenance
+  name: Baseline Maintenance Catch-up
+  category: maintenance
+  summary: Fresh oil, filters, spark plugs, coolant and transmission fluid before adding power.
+  advice: Reliability first. Modifications amplify existing maintenance problems.
+  tags: [maintenance, reliability, oil, power, first]
+  source: GarageIQ editorial (unverified)

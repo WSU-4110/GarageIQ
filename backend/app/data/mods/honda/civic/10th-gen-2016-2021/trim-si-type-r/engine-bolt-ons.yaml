@@ -1,0 +1,27 @@
+- id: civic-10-turbo-cold-air-intake
+  name: Cold Air Intake
+  category: intake
+  summary: Replaces the factory airbox for more airflow and intake sound.
+  advice: Gains are small unless paired with a tune. Keep the filter away from engine heat.
+  tags: [power, sound, bolt-on, horsepower]
+  recommended_with: [civic-10-turbo-ecu-tune]
+  source: GarageIQ editorial (unverified)
+
+- id: civic-10-turbo-ecu-tune
+  name: ECU Tune
+  category: engine management
+  summary: Reflashes engine tuning to raise boost and optimise fueling for more power.
+  advice: Use a reputable tuner and expect a warranty impact. Turbo Hondas respond well to intake and exhaust upgrades first.
+  tags: [power, tune, horsepower, torque]
+  requires: [baseline-maintenance]
+  recommended_with: [civic-10-turbo-cold-air-intake, civic-10-turbo-catback-exhaust]
+  source: GarageIQ editorial (unverified)
+
+- id: civic-10-turbo-catback-exhaust
+  name: Cat-back Exhaust
+  category: exhaust
+  summary: Free-flowing exhaust from the catalytic converter back for sound and minor power gains.
+  advice: Check local noise regulations. Resonated options reduce drone.
+  tags: [sound, exhaust, power]
+  recommended_with: [civic-10-turbo-ecu-tune]
+  source: GarageIQ editorial (unverified)

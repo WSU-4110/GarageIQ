@@ -1,0 +1,18 @@
+- id: wrx-va-coilovers
+  name: Coilover Suspension
+  aliases: [coilovers, coilover]
+  category: suspension
+  summary: Adjustable ride height and damping for handling and a lower stance.
+  advice: Too low harms geometry and ride quality; pair with an alignment.
+  tags: [handling, lowering, stance, track, corners]
+  requires: [performance-alignment]
+  recommended_with: [wrx-va-sway-bars]
+  source: GarageIQ editorial (unverified)
+
+- id: wrx-va-sway-bars
+  name: Upgraded Sway Bars
+  category: suspension
+  summary: Stiffer anti-roll bars to reduce body roll in corners.
+  advice: Adjustable rear bars let you tune understeer and oversteer.
+  tags: [handling, corners, track, body roll]
+  source: GarageIQ editorial (unverified)
