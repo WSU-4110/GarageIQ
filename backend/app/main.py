@@ -1,3 +1,7 @@
+from fastapi import Depends, HTTPException
+from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
+from firebase_admin import auth
+from app.firebase_config import db
 from fastapi import FastAPI
 from typing import Optional
 from pydantic import BaseModel
@@ -43,3 +47,35 @@ def create_vehicle(vehicle: VehicleCreate):
     next_vehicle_id += 1
 
     return vehicle_data
+    
+bearer_auth = HTTPBearer()
+
+
+@app.get("/me/profile")
+def get_my_profile(
+    credentials: HTTPAuthorizationCredentials = Depends(bearer_auth)
+):
+    try:
+        decoded_token = auth.verify_id_token(credentials.credentials)
+    except (
+        auth.InvalidIdTokenError,
+        auth.ExpiredIdTokenError,
+        auth.RevokedIdTokenError,
+        ValueError,
+    ):
+        raise HTTPException(
+            status_code=401,
+            detail="Invalid or expired Firebase token"
+        )
+
+    user_id = decoded_token["uid"]
+
+    document = db.collection("users").document(user_id).get()
+
+    if not document.exists:
+        raise HTTPException(
+            status_code=404,
+            detail="User profile not found"
+        )
+
+    return document.to_dict()
