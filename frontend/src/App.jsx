@@ -6,6 +6,7 @@ import Advisor from "./pages/Advisor.jsx";
 import Login from "./pages/Login.jsx";
 import Signup from "./pages/Signup.jsx";
 import VehicleProfile from "./pages/VehicleProfile.jsx";
+import { MaintenancePage, ModificationsPage } from "./pages/GaragePages.jsx";
 
 function LoadingPage() {
   return (
@@ -41,6 +42,8 @@ export default function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
           <Route path="/vehicle" element={<ProtectedRoute><VehicleProfile /></ProtectedRoute>} />
+          <Route path="/modifications" element={<ProtectedRoute><ModificationsPage /></ProtectedRoute>} />
+          <Route path="/maintenance" element={<ProtectedRoute><MaintenancePage /></ProtectedRoute>} />
           <Route path="/advisor" element={<ProtectedRoute><Advisor /></ProtectedRoute>} />
           <Route path="*" element={<Navigate to="/dashboard" replace />} />
         </Routes>

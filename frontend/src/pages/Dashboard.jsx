@@ -50,6 +50,7 @@ export default function Dashboard() {
   const [active, setActive] = useState("Overview");
   const [menuOpen, setMenuOpen] = useState(false);
   const [toast, setToast] = useState("");
+  const [search, setSearch] = useState("");
 
   const displayName =
     profile?.name || user?.displayName || user?.email?.split("@")[0] || "Driver";
@@ -76,7 +77,7 @@ export default function Dashboard() {
         index,
       };
     });
-  const recentModifications = modifications.slice(0, 3);
+  const recentModifications = modifications.filter((item) => `${item.title} ${item.category}`.toLowerCase().includes(search.toLowerCase())).slice(0, 3);
   const initials = displayName
     .split(/\s+/)
     .filter(Boolean)
@@ -129,11 +130,10 @@ export default function Dashboard() {
               key={item.label}
               className={active === item.label ? "nav-item active" : "nav-item"}
               onClick={() => {
-                if (["My garage", "Modifications", "Maintenance"].includes(item.label)) {
-                  navigate("/vehicle");
-                } else {
-                  setActive(item.label);
-                }
+                if (item.label === "My garage") navigate("/vehicle");
+                else if (item.label === "Modifications") navigate("/modifications");
+                else if (item.label === "Maintenance") navigate("/maintenance");
+                else setActive(item.label);
                 setMenuOpen(false);
               }}
             >
@@ -164,13 +164,13 @@ export default function Dashboard() {
           <div className="mobile-brand">GARAGE<span>IQ</span></div>
           <label className="search">
             <Icon name="search" />
-            <input placeholder="Search your garage..." aria-label="Search your garage" />
+            <input placeholder="Search your garage..." aria-label="Search your garage" value={search} onChange={(event) => setSearch(event.target.value)} />
             <kbd>⌘ K</kbd>
           </label>
           <div className="header-actions">
             <button className="icon-button" aria-label="Notifications" onClick={() => notify("Notifications are not connected yet.")}><Icon name="bell" /></button>
             <button className="primary-button" onClick={() => navigate("/advisor")}>Mod advisor</button>
-            <button className="primary-button" onClick={() => navigate("/vehicle")}><Icon name="plus" /> Add modification</button>
+            <button className="primary-button" onClick={() => navigate("/modifications")}><Icon name="plus" /> Add modification</button>
           </div>
         </header>
 
