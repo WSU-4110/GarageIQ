@@ -12,6 +12,7 @@ from pathlib import Path
 from app.core.config import get_settings
 from app.ingest.datasets import import_dataset
 from app.ingest.guides import import_guide
+from app.ingest.scraper import import_web_page
 from app.knowledge.loader import load_knowledge
 
 
@@ -52,6 +53,18 @@ def main(argv: list[str] | None = None) -> int:
     g.add_argument("--trims", help="'|' separated")
     g.add_argument("--verified", action="store_true")
 
+    w = sub.add_parser("scrape", help="fetch an HTML page and import it as an unverified guide")
+    w.add_argument("url")
+    w.add_argument("--license", required=True)
+    w.add_argument("--title")
+    w.add_argument("--tags", help="'|' separated")
+    w.add_argument("--make", default="")
+    w.add_argument("--model", default="")
+    w.add_argument("--year-from", type=int)
+    w.add_argument("--year-to", type=int)
+    w.add_argument("--generation", default="")
+    w.add_argument("--trims", help="'|' separated")
+
     sub.add_parser("check")
     a = p.parse_args(argv)
     s = get_settings()
@@ -63,6 +76,12 @@ def main(argv: list[str] | None = None) -> int:
         target = import_guide(
             a.file, s.guides_dir, a.source, a.license, a.title, _split(a.tags), a.make, a.model,
             a.year_from, a.year_to, a.generation, _split(a.trims), a.verified,
+        )
+        print(f"Guide written to {target}")
+    elif a.cmd == "scrape":
+        target = import_web_page(
+            a.url, s.guides_dir, a.license, a.title, _split(a.tags), a.make, a.model,
+            a.year_from, a.year_to, a.generation, _split(a.trims),
         )
         print(f"Guide written to {target}")
     check()
