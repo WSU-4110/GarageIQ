@@ -22,7 +22,6 @@ function VehicleCard({ profile }) {
 }
 
 export function ModificationsPage() {
-  const navigate = useNavigate();
   const { user } = useAuth();
   const { profile, loading, error } = useUserProfile();
   const [rows, setRows] = useState(null);
