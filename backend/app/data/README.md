@@ -31,6 +31,8 @@ Split into chunks by headings (max ~900 chars). Chunk ids are `<path>#<n>`.
 python -m app.ingest dataset app/data/datasets/parts.csv [--verified]
 python -m app.ingest guide notes.md --source URL --license CC-BY-4.0 \
     --make Subaru --model WRX --year-from 2015 --year-to 2021 --generation va-2015-2021
+python -m app.ingest scrape https://example.com/guide --license CC-BY-4.0 \
+    --make Subaru --model WRX --year-from 2015 --year-to 2021 --generation va-2015-2021
 python -m app.ingest check          # validate everything
 ```
 Dataset columns: `id,name,category,summary,advice,make,models,year_from,year_to,generation,trims,
@@ -40,3 +42,7 @@ become universal. Rows are validated before anything is written; imports re-run 
 
 Only import content you have the right to use: record the real `source` and `license`, and pass
 `--verified` only after a human has checked the entries.
+
+`scrape` accepts HTML pages, removes scripts and markup, and imports the result as an unverified
+guide with the page URL as its source. Review licensing, accuracy, and the generated guide before
+marking it verified. It is intended for individual source pages, not unrestricted crawling.

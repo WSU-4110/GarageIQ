@@ -1,9 +1,11 @@
+const API_BASE = (import.meta.env.VITE_API_BASE_URL || "/api").replace(/\/$/, "");
+
 export async function getAdvice(user, vehicle, question, installedMods = []) {
   const headers = { "Content-Type": "application/json" };
   if (user?.getIdToken) {
     headers.Authorization = `Bearer ${await user.getIdToken()}`;
   }
-  const response = await fetch("/api/advice", {
+  const response = await fetch(`${API_BASE}/advice`, {
     method: "POST",
     headers,
     body: JSON.stringify({ vehicle, question, top_k: 5, installed_mods: installedMods }),

@@ -31,6 +31,7 @@ async def lifespan(app: FastAPI):
 app = FastAPI(title="GarageIQ API", version="1.1.0", lifespan=lifespan)
 app.include_router(vehicles.router)
 app.include_router(advice.router)
+app.include_router(advice.router, prefix="/api")
 
 
 @app.get("/")
