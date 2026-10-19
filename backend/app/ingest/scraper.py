@@ -1,12 +1,13 @@
 """Fetch a web page and import its readable text as a sourced guide."""
 from html.parser import HTMLParser
 from pathlib import Path
-from tempfile import NamedTemporaryFile
+from tempfile import TemporaryDirectory
 from urllib.error import HTTPError, URLError
 from urllib.parse import urlparse
 from urllib.request import Request, urlopen
 
 from app.ingest.guides import import_guide
+from app.knowledge.hierarchy import slug
 
 USER_AGENT = "GarageIQ-knowledge-ingest/1.0"
 SKIP_ELEMENTS = {"script", "style", "noscript", "svg", "template"}
@@ -95,13 +96,11 @@ def import_web_page(
     trims: list[str] | None = None,
 ) -> Path:
     page_title, text = scrape_page(url)
-    with NamedTemporaryFile("w", suffix=".md", encoding="utf-8", delete=False) as file:
-        source = Path(file.name)
-        file.write(f"# {title or page_title}\n\n{text}\n")
-    try:
+    name = slug(title or page_title) or "scraped-page"
+    with TemporaryDirectory() as tmp:
+        source = Path(tmp) / f"{name}.md"
+        source.write_text(f"# {title or page_title}\n\n{text}\n", encoding="utf-8")
         return import_guide(
             source, guides_root, url, license, title or page_title, tags, make, model,
             year_from, year_to, generation, trims, False,
         )
-    finally:
-        source.unlink()
