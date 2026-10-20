@@ -4,9 +4,12 @@ import App from "./App.jsx";
 import "./index.css";
 import "./pages/index.css";
 import "./styles/garage-polish.css";
+import "./styles/garage-upgrade.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
 );
+
+import "./styles/sidebar-repair.css";

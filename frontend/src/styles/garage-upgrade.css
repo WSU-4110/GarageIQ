@@ -1,0 +1,38 @@
+/* GarageIQ cohesive layout: no purple UI branding, same side rail on every page */
+.garage-sidebar-unified .brand {text-decoration:none;color:#fff;}
+.garage-sidebar-unified .brand > span:last-child {color:#fff;}
+.garage-sidebar-unified .brand > span:last-child span{color:#f46432;}
+.garage-sidebar-unified .garage-nav-icon{width:20px;min-width:20px;display:inline-flex;justify-content:center;font-size:19px;color:inherit;}
+.garage-sidebar-unified .nav-item{display:flex;align-items:center;gap:11px;text-decoration:none!important;color:#babdc0;font-weight:600;}
+.garage-sidebar-unified .nav-item.active{color:#fff;}
+.garage-sidebar-unified .garage-switcher{margin-top:auto;margin-bottom:20px;}
+.garage-switcher-label{display:block;}
+.garage-switcher-label select{width:100%;height:42px;color:#fff;background:#252628;border:1px solid #3d3e40;border-radius:7px;padding:8px 10px;}
+.garage-sidebar-unified .sidebar-footer{display:flex;align-items:center;gap:9px;}
+.garage-sidebar-unified .sidebar-footer>div:nth-child(2){min-width:0;overflow:hidden;}
+.garage-sidebar-unified .sidebar-footer span{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.garage-sidebar-unified .sidebar-footer button{font-size:11px;white-space:nowrap;}
+.garage-page{min-width:0;}
+.garage-header-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.garage-category-picker{position:relative;display:flex;align-items:center;gap:4px;min-width:0;}
+.garage-category-picker>span{width:20px;min-width:20px;color:#f46432;text-align:center;}
+.garage-category-picker select{flex:1;min-width:0;}
+.garage-brand-field{display:flex;flex-direction:column;gap:5px;min-width:0;}
+.garage-brand-field select,.garage-brand-field input{min-width:0;width:100%;}
+.garage-brand-field:has(input){align-self:start;}
+.recommendation-note{padding:14px;border-radius:8px;background:#f2f4f4;color:#43494c;}
+.recommendation-note.recommendation-supported{background:#eaf6ed;color:#185b38;}
+.garage-archive-toggle{cursor:pointer;text-align:left;width:100%;background:transparent;border:0;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:12px;padding:16px 10px;align-items:center;color:inherit;}
+.garage-archive-toggle:hover{background:#faf8f6;}
+.garage-archive-detail{border:1px solid #e9e8e4;border-radius:8px;background:#fbfaf9;padding:13px;margin-bottom:14px;}
+.garage-archive-mod{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:8px;padding:9px;border-bottom:1px solid #e8e8e8;font-size:12px;}
+.garage-archive-detail .secondary-button{margin-top:12px;}
+.garage-reminder-row{display:grid;grid-template-columns:minmax(140px,2fr) minmax(125px,1fr) minmax(125px,1fr) minmax(130px,1.3fr) 28px;align-items:center;gap:10px;border-top:1px solid #ebebeb;padding:13px 0;}
+.garage-reminder-row>label{font-size:11px;color:#626262;display:flex;align-items:center;gap:6px;}
+.garage-reminder-row input{width:100%;min-width:0;border:1px solid #dededb;border-radius:6px;padding:10px;}
+.garage-reminder-row label input{width:85px;}
+.garage-reminder-due{font-size:12px;font-weight:700;color:#323838;}
+.garage-reminder-due small{display:block;font-size:11px;color:#888;font-weight:400;margin-top:5px;}
+.garage-page .garage-actions{gap:12px;}
+@media(max-width:1050px){.garage-reminder-row{grid-template-columns:1fr 1fr;}.garage-reminder-row .row-remove{justify-self:end;}}
+@media(max-width:650px){.garage-reminder-row{grid-template-columns:1fr;}.garage-archive-toggle{grid-template-columns:1fr 1fr;}.garage-archive-mod{grid-template-columns:1fr 1fr;}}

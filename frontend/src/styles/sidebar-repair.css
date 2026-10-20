@@ -1,0 +1,20 @@
+/* Match the original Dashboard sidebar and keep the vehicle picker integrated in its card. */
+.garage-sidebar-unified .nav-item{display:flex;align-items:center;gap:12px;text-decoration:none!important}
+.garage-sidebar-unified .nav-item svg{flex-shrink:0}
+.garage-sidebar-unified .brand{color:white;text-decoration:none!important}
+.garage-sidebar-unified .brand>span:last-child{color:white}
+.garage-sidebar-unified .brand>span:last-child span{color:#f46432}
+.garage-sidebar-unified .brand-mark svg{color:#111;stroke:#111}
+.garage-sidebar-unified .garage-switcher{margin-top:auto;margin-bottom:20px}
+.garage-vehicle-combo{position:relative;display:flex;align-items:center;min-height:58px;border:1px solid #373839;background:#1c1d1f;border-radius:9px;padding:10px 36px 10px 10px}
+.garage-vehicle-combo-link{display:flex;align-items:center;gap:9px;min-width:0;text-decoration:none;color:#fff}
+.garage-vehicle-combo-link .mini-car{width:37px;height:37px;display:flex;align-items:center;justify-content:center;border-radius:7px;background:#292b2d;flex-shrink:0}
+.garage-vehicle-name{display:flex;flex-direction:column;min-width:0;gap:2px}
+.garage-vehicle-name strong,.garage-vehicle-name small{display:block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.garage-vehicle-name strong{font-size:12px}.garage-vehicle-name small{font-size:10px;color:#92979c}
+.garage-vehicle-combo>select{position:absolute;right:7px;top:0;width:29px;height:100%;cursor:pointer;opacity:.02;appearance:auto}
+.garage-vehicle-combo:after{content:'⌄';position:absolute;right:12px;top:17px;color:#fff;pointer-events:none;font-size:18px}
+.garage-sidebar-unified .sidebar-footer{display:flex;align-items:center;gap:8px}
+.garage-sidebar-unified .sidebar-footer>div:nth-child(2){min-width:0;overflow:hidden}
+.garage-sidebar-unified .sidebar-footer span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.garage-sidebar-unified .sidebar-footer button{white-space:nowrap;font-size:11px}
