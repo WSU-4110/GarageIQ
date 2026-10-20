@@ -36,3 +36,28 @@
 .garage-page .garage-actions{gap:12px;}
 @media(max-width:1050px){.garage-reminder-row{grid-template-columns:1fr 1fr;}.garage-reminder-row .row-remove{justify-self:end;}}
 @media(max-width:650px){.garage-reminder-row{grid-template-columns:1fr;}.garage-archive-toggle{grid-template-columns:1fr 1fr;}.garage-archive-mod{grid-template-columns:1fr 1fr;}}
+
+
+/* Final team-review polish: match maintenance and modification form typography. */
+.garage-page .garage-reminder-row > input[aria-label="Reminder name"],
+.garage-page .garage-reminder-row input[aria-label="Reminder name"] {
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  line-height: 1.4;
+}
+.garage-page .garage-reminder-row input,
+.garage-page .garage-reminder-row select,
+.garage-page .service-editor-row input,
+.garage-page .service-editor-row select,
+.garage-page .mod-editor-row input,
+.garage-page .mod-editor-row select {
+  font-size: 13px;
+  font-family: inherit;
+}
+.garage-page .garage-reminder-row .garage-reminder-due {font-size:12px;}
+.garage-page .garage-reminder-row .garage-reminder-due small {font-size:11px;}
+.garage-vehicle-card .garage-car-art {overflow:hidden;position:relative;}
+.garage-vehicle-card .garage-shared-vehicle-img {display:block;width:100%;height:100%;object-fit:cover;border-radius:inherit;}
+.vehicle-photo-placeholder.garage-photo-profile {overflow:hidden;position:relative;padding:0;}
+.vehicle-photo-placeholder.garage-photo-profile > img {width:100%;height:100%;object-fit:cover;display:block;}
+.vehicle-photo-placeholder.garage-photo-profile > span {position:absolute;left:12px;bottom:12px;z-index:1;background:rgba(0,0,0,.65);color:white;border-radius:5px;padding:5px 8px;}

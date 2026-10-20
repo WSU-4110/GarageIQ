@@ -22,6 +22,7 @@ import {
 } from '../lib/vehicleCatalog.js';
 
 import GarageSidebar from '../components/GarageSidebar.jsx';
+import { digitsOnly, isOdometer } from '../lib/maintenanceRules.js';
 
 export default function VehicleProfile() {
   const { user } = useAuth();
@@ -175,6 +176,10 @@ export default function VehicleProfile() {
       return;
     }
 
+    if (!isOdometer(String(current.Mileage ?? ''))) {
+      setMessage('Mileage must be between 0 and 2,000,000 whole miles.');
+      return;
+    }
     setSaving(true);
     setMessage('');
 
@@ -353,8 +358,8 @@ export default function VehicleProfile() {
         )}
 
         <section className="garage-panel garage-profile-layout">
-          <div className="vehicle-photo-placeholder">
-            🚘
+          <div className="vehicle-photo-placeholder garage-photo-patched">
+            <img src="https://images.unsplash.com/photo-1486006920555-c77dcf18193c?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&q=85&w=1600" alt="Garage vehicle placeholder" />
             <span>Vehicle profile</span>
           </div>
 
@@ -498,11 +503,13 @@ export default function VehicleProfile() {
               Current mileage (optional)
 
               <input
-                type="number"
-                min="0"
+                type="text"
+                inputMode="numeric"
+                pattern="[0-9]*"
+                maxLength={7}
                 value={vehicle.Mileage ?? ''}
                 onChange={(e) =>
-                  update('Mileage', e.target.value)
+                  update('Mileage', digitsOnly(e.target.value))
                 }
                 placeholder="Miles"
               />

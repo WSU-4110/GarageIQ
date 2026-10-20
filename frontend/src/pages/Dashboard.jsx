@@ -202,7 +202,7 @@ export default function Dashboard() {
             <div className="panel activity-panel">
               <div className="panel-heading">
                 <div><p className="eyebrow">Build log</p><h3>Recent modifications</h3></div>
-                <button onClick={() => navigate("/vehicle")}>View all <Icon name="arrow" size={15} /></button>
+                <button onClick={() => navigate("/modifications")}>View all <Icon name="arrow" size={15} /></button>
               </div>
               <div className="mod-list">
                 {recentModifications.length ? recentModifications.map((mod) => (
@@ -219,7 +219,7 @@ export default function Dashboard() {
             <div className="panel health-panel">
               <div className="panel-heading">
                 <div><p className="eyebrow">Vehicle health</p><h3>Maintenance</h3></div>
-                <button onClick={() => navigate("/vehicle")}>Edit history <Icon name="arrow" size={15} /></button>
+                <button onClick={() => navigate("/maintenance")}>Edit history <Icon name="arrow" size={15} /></button>
               </div>
               <div className="service-item">
                 <div className="service-icon"><Icon name="calendar" /></div>
@@ -233,7 +233,7 @@ export default function Dashboard() {
                 <div className="service-icon"><Icon name="calendar" /></div>
                 <div><strong>Transmission service</strong><span>{formatStoredDate(profile?.LastTransmissionService)}</span></div>
               </div>
-              <button className="full-button" onClick={() => navigate("/vehicle")}>Edit service history <Icon name="arrow" size={15} /></button>
+              <button className="full-button" onClick={() => navigate("/maintenance")}>Edit service history <Icon name="arrow" size={15} /></button>
             </div>
 
             <div className="panel planner-panel">

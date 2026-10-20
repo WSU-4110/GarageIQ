@@ -13,3 +13,5 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 );
 
 import "./styles/sidebar-repair.css";
+
+import "./styles/final-polish.css";

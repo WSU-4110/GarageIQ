@@ -14,6 +14,7 @@ const paths = {
   map: <><path d="m3 6 5-3 8 3 5-3v15l-5 3-8-3-5 3Z"/><path d="M8 3v15M16 6v15"/></>,
 };
 function Icon({name,size=18}) {return <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{paths[name]}</svg>}
+const oldCarImage = 'https://images.unsplash.com/photo-1486006920555-c77dcf18193c?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&q=85&w=1600';
 const entries=[
   ['/dashboard','grid','Overview'],
   ['/vehicle','car','My garage'],
@@ -41,7 +42,7 @@ export default function GarageSidebar({selected=''}) {
     <nav><p className="eyebrow">Workspace</p>{entries.map(([url,glyph,name])=><Link className={`nav-item ${selected===name?'active':''}`} to={url} key={url}><Icon name={glyph}/><span>{name}</span></Link>)}</nav>
     <div className="garage-switcher">
       <p className="eyebrow">Active vehicle</p>
-      {active ? <div className="garage-vehicle-combo"><Link to="/vehicle" className="garage-vehicle-combo-link" title="View vehicle profile"><span className="mini-car">🚘</span><span className="garage-vehicle-name"><strong>{active.Nickname||vehicleLabel(active)}</strong><small>{vehicleLabel(active)}</small></span></Link><select value={index} onChange={switchVehicle} aria-label="Switch active vehicle" title="Switch active vehicle">{vehicles.map((v,i)=><option key={v.id||i} value={i}>{v.Nickname||vehicleLabel(v)}</option>)}</select></div>:<button className="garage-add-vehicle" onClick={()=>navigate('/vehicle')}>＋ Add a vehicle</button>}
+      {active ? <div className="garage-vehicle-combo"><Link to="/vehicle" className="garage-vehicle-combo-link" title="View vehicle profile"><span className="mini-car"><img src={oldCarImage} alt="" /></span><span className="garage-vehicle-name"><strong>{active.Nickname||vehicleLabel(active)}</strong><small>{vehicleLabel(active)}</small></span></Link><select value={index} onChange={switchVehicle} aria-label="Switch active vehicle" title="Switch active vehicle">{vehicles.map((v,i)=><option key={v.id||i} value={i}>{v.Nickname||vehicleLabel(v)}</option>)}</select></div>:<button className="garage-add-vehicle" onClick={()=>navigate('/vehicle')}>＋ Add a vehicle</button>}
     </div>
     <div className="sidebar-footer"><div className="avatar">{initials}</div><div><strong>{displayName}</strong><span>{user?.email}</span></div><button onClick={async()=>{await signOut(auth);navigate('/login');}} aria-label="Sign out">Sign out</button></div>
   </aside>;
