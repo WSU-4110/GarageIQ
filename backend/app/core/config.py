@@ -22,6 +22,8 @@ class Settings(BaseSettings):
     guides_dir: Path = APP_DIR / "data" / "guides"
     # When true, requests must carry a valid Firebase ID token.
     require_auth: bool = False
+    # Extra allowed browser origins (JSON list), e.g. a custom domain. *.vercel.app is always allowed.
+    cors_origins: list[str] = ["http://localhost:5173"]
 
 
 @lru_cache
