@@ -1,0 +1,40 @@
+/* GarageIQ final visual polish: additive overrides; preserves existing responsive layout */
+/* Tighten reminders typography to match modification editor cells. */
+.garage-reminder-row > input[aria-label="Reminder name"] {font-size:13px!important;font-weight:600;line-height:1.3;height:42px;}
+.garage-reminder-row label input {font-size:12px!important;font-weight:500;height:40px;}
+.garage-reminder-row > label {white-space:nowrap;}
+.garage-reminder-due {font-size:12px;}
+.garage-upcoming-card strong{font-size:13px!important;font-weight:700;}
+/* Same original photographic vehicle art on the profile page. */
+.garage-profile-layout .vehicle-photo-placeholder.garage-photo-patched{padding:0;position:relative;overflow:hidden;background:#1d2022;}
+.garage-profile-layout .vehicle-photo-placeholder.garage-photo-patched img{width:100%;height:100%;display:block;object-fit:cover;}
+.garage-profile-layout .vehicle-photo-placeholder.garage-photo-patched span{position:absolute;left:13px;bottom:13px;z-index:2;color:white;background:#15181bbb;padding:5px 8px;border-radius:5px;font-size:11px;}
+
+.garage-sidebar-unified .garage-vehicle-combo-link .mini-car{overflow:hidden;background:#242628;}
+.garage-sidebar-unified .garage-vehicle-combo-link .mini-car img{height:100%;width:100%;object-fit:cover;border-radius:7px;}
+.garage-category-picker{border:1px solid #e9e7e4;background:#faf9f7;border-radius:9px;padding:3px 6px;}
+.garage-category-picker>span{display:inline-flex;align-items:center;justify-content:center;width:25px;min-width:25px;height:25px;border-radius:7px;color:#e96533;background:#fff1eb;font-size:16px;}
+.garage-category-picker select{border:0!important;background:transparent!important;box-shadow:none!important;padding-left:2px!important;}
+.mod-editor-row select.garage-status-installed{background:#e8f6ef!important;color:#196244!important;border-color:#c4e5d3!important;font-weight:700;}
+.mod-editor-row select.garage-status-planned{background:#fff2e9!important;color:#a14b1f!important;border-color:#f6d6bf!important;font-weight:700;}
+.mod-editor-row select.garage-status-researching{background:#eef2f6!important;color:#496077!important;border-color:#dce5ed!important;font-weight:700;}
+.garage-vehicle-card .garage-car-art{font-size:0;background:#1f2225;overflow:hidden;}
+.garage-vehicle-card .garage-car-art img{display:block;width:100%;height:100%;object-fit:cover;}
+.garage-reminder-row select{width:100%;min-width:0;border:1px solid #dededb;border-radius:6px;padding:10px;background:#fff;}
+.garage-reminder-row label input{width:100%;max-width:130px;}
+.garage-reminder-row{grid-template-columns:minmax(155px,2fr) minmax(155px,1.2fr) minmax(145px,1.1fr) minmax(175px,1.5fr) 28px;}
+.garage-reminder-due small{line-height:1.35;}
+.garage-reminder-due.is-due{color:#ae421c;}
+.garage-reminder-due.is-okay{color:#216f50;}
+.garage-upcoming-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:12px;}
+.garage-upcoming-card{border:1px solid #e8e6e2;background:#fff;border-radius:12px;padding:14px;min-height:110px;display:flex;flex-direction:column;gap:7px;}
+.garage-upcoming-card strong{font-size:15px;color:#202427;}
+.garage-upcoming-card p{font-size:12px;line-height:1.45;margin:0;color:#62676b;}
+.garage-upcoming-card .garage-due-flag{align-self:flex-start;font-size:10px;font-weight:800;border-radius:100px;padding:4px 9px;background:#eef0f1;color:#62676b;}
+.garage-upcoming-card .garage-due-flag.is-due{background:#fff0e7;color:#a33d17;}
+.garage-upcoming-card .garage-due-flag.is-okay{background:#e9f6ee;color:#196f4d;}
+.garage-validation-hint{font-size:11px;color:#868987;margin-top:6px;}
+.garage-archive-toggle strong{color:#23272a;}
+.garage-archive-toggle span:last-child{color:#d95a29;font-weight:700;}
+@media(max-width:1120px){.garage-reminder-row{grid-template-columns:1fr 1fr;}.garage-upcoming-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media(max-width:650px){.garage-reminder-row,.garage-upcoming-grid{grid-template-columns:1fr;}}
