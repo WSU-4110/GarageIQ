@@ -1,6 +1,9 @@
 from contextlib import asynccontextmanager
+from typing import Optional
 
 from fastapi import Depends, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
+from pydantic import BaseModel
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from firebase_admin import auth
 from app.firebase_config import db
@@ -29,6 +32,13 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(title="GarageIQ API", version="1.1.0", lifespan=lifespan)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=get_settings().cors_origins,
+    allow_origin_regex=r"https://.*\.vercel\.app",
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 app.include_router(vehicles.router)
 app.include_router(advice.router)
 app.include_router(advice.router, prefix="/api")
