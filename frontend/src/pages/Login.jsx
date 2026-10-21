@@ -4,6 +4,7 @@ import { sendPasswordResetEmail, signInWithEmailAndPassword } from "firebase/aut
 import useAuth from "../hooks/useAuth.js";
 import { getAuthErrorMessage } from "../lib/authErrors.js";
 import { auth } from "../lib/firebase.js";
+import GoogleSignInButton from "../components/GoogleSignInButton.jsx";
 
 export default function Login() {
   const navigate = useNavigate();
@@ -61,6 +62,12 @@ export default function Login() {
         <button className="primary-button auth-submit" type="submit" disabled={submitting || !firebaseConfigured}>
           {submitting ? "Signing in..." : "Sign in"}
         </button>
+        <div className="auth-divider">or</div>
+        <GoogleSignInButton
+          disabled={submitting}
+          onError={setError}
+          onSuccess={() => navigate("/dashboard", { replace: true })}
+        />
         <p className="auth-switch">Don't have an account? <Link to="/signup">Create one</Link></p>
         <p className="auth-note">Sign in with your GarageIQ account to access your private vehicle profile.</p>
       </form>
