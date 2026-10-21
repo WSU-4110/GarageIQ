@@ -6,7 +6,6 @@ import Advisor from "./pages/Advisor.jsx";
 import Login from "./pages/Login.jsx";
 import Signup from "./pages/Signup.jsx";
 import VehicleProfile from "./pages/VehicleProfile.jsx";
-import VerifyEmail from "./pages/VerifyEmail.jsx";
 import { MaintenancePage, ModificationsPage } from "./pages/GaragePages.jsx";
 
 function LoadingPage() {
@@ -22,13 +21,7 @@ function ProtectedRoute({ children }) {
   if (loading) {
     return <LoadingPage />;
   }
-  if (!user) {
-    return <Navigate to="/login" replace />;
-  }
-  if (!user.emailVerified) {
-    return <Navigate to="/verify-email" replace />;
-  }
-  return children;
+  return user ? children : <Navigate to="/login" replace />;
 }
 
 function GuestRoute({ children }) {
@@ -47,7 +40,6 @@ export default function App() {
           <Route path="/" element={<Navigate to="/dashboard" replace />} />
           <Route path="/login" element={<GuestRoute><Login /></GuestRoute>} />
           <Route path="/signup" element={<Signup />} />
-          <Route path="/verify-email" element={<VerifyEmail />} />
           <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
           <Route path="/vehicle" element={<ProtectedRoute><VehicleProfile /></ProtectedRoute>} />
           <Route path="/modifications" element={<ProtectedRoute><ModificationsPage /></ProtectedRoute>} />

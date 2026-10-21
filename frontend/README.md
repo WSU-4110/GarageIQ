@@ -22,21 +22,7 @@ document is not read, modified, or migrated.
    own Firebase Auth UID.
 5. Add `localhost` and your deployed site domain to Firebase Authentication's
    **Authorized domains** if they are not already listed.
-6. Enable **Authentication → Sign-in method → Google** (pick a support email and save).
-7. (Recommended) Under **Authentication → Settings → Password policy**, require a minimum
-length of 8 with lowercase/uppercase letters and numeric characters, and enforce it, so the
-rule also applies server-side and not only in the signup form.
-8. (Optional) Under **Authentication → Templates → Email address verification**, customize the
-verification email's sender name, subject, and message.
-9. Run `npm run dev` from this `frontend` directory.
-
-### Sign-in behavior
-
-- **Email/password sign-up** requires a password of at least 8 characters containing letters and
-numbers (`src/lib/passwordValidation.js`). A verification email is sent on sign-up, and the app
-routes to `/verify-email` until the address is verified; all protected pages require a verified email.
-- **Google sign-in** is available on the login and signup pages. Google accounts arrive already
-verified. A `users/{uid}` profile is created on first Google sign-in.
+6. Run `npm run dev` from this `frontend` directory.
 
 The browser Firebase configuration is public client configuration, not a
 service-account credential. Never put a service-account key in this frontend.
