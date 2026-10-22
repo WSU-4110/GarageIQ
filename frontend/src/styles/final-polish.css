@@ -10,8 +10,6 @@
 .garage-profile-layout .vehicle-photo-placeholder.garage-photo-patched img{width:100%;height:100%;display:block;object-fit:cover;}
 .garage-profile-layout .vehicle-photo-placeholder.garage-photo-patched span{position:absolute;left:13px;bottom:13px;z-index:2;color:white;background:#15181bbb;padding:5px 8px;border-radius:5px;font-size:11px;}
 
-.garage-sidebar-unified .garage-vehicle-combo-link .mini-car{overflow:hidden;background:#242628;}
-.garage-sidebar-unified .garage-vehicle-combo-link .mini-car img{height:100%;width:100%;object-fit:cover;border-radius:7px;}
 .garage-category-picker{border:1px solid #e9e7e4;background:#faf9f7;border-radius:9px;padding:3px 6px;}
 .garage-category-picker>span{display:inline-flex;align-items:center;justify-content:center;width:25px;min-width:25px;height:25px;border-radius:7px;color:#e96533;background:#fff1eb;font-size:16px;}
 .garage-category-picker select{border:0!important;background:transparent!important;box-shadow:none!important;padding-left:2px!important;}
