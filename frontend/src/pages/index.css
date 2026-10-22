@@ -24,8 +24,6 @@ nav { display: grid; gap: 4px; }
 nav .eyebrow, .garage-switcher .eyebrow { padding-left: 11px; }
 .nav-item { width: 100%; display: flex; align-items: center; gap: 13px; padding: 11px 12px; color: #9c9ea0; background: transparent; border: 0; border-radius: 7px; font-size: 13px; font-weight: 600; text-align: left; transition: .2s ease; }
 .nav-item:hover { color: #fff; background: #1c1d1e; }
-.nav-item.unavailable { color: #74787b; opacity: .62; }
-.nav-item.unavailable:hover { color: #85898c; background: #1c1d1e; }
 .nav-item.active { color: #fff; background: #272829; box-shadow: inset 3px 0 #f46432; }
 .nav-item.active svg { color: #f46432; }
 .garage-switcher { margin-top: auto; padding-top: 28px; }
