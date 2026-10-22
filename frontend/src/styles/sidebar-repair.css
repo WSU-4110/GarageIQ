@@ -5,7 +5,7 @@
 .garage-sidebar-unified .brand>span:last-child{color:white}
 .garage-sidebar-unified .brand>span:last-child span{color:#f46432}
 .garage-sidebar-unified .brand-mark svg{color:#111;stroke:#111}
-.garage-sidebar-unified .garage-switcher{margin-top:auto;margin-bottom:20px}
+.garage-sidebar-unified .garage-switcher{margin-top:auto;margin-bottom:0}
 .garage-vehicle-combo{position:relative;display:flex;align-items:center;min-height:58px;border:1px solid #373839;background:#1c1d1f;border-radius:9px;padding:10px 36px 10px 10px}
 .garage-vehicle-combo-link{display:flex;align-items:center;gap:9px;min-width:0;text-decoration:none;color:#fff}
 .garage-vehicle-combo-link .mini-car{width:37px;height:37px;display:flex;align-items:center;justify-content:center;border-radius:7px;background:#292b2d;flex-shrink:0}
