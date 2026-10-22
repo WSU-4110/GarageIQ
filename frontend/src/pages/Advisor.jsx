@@ -8,8 +8,16 @@ const GREEN = "#2e9e5b";
 
 function installedMods(profile) {
   const mods = profile?.Modifications;
-  if (Array.isArray(mods)) return mods;
-  return typeof mods === "string" ? mods.split(/\r?\n/).filter(Boolean) : [];
+  if (Array.isArray(mods)) {
+    return mods.flatMap((mod) => {
+      if (typeof mod === "string") return mod.trim() ? [mod.trim()] : [];
+      if (!mod || typeof mod !== "object" || (mod.status && mod.status !== "Installed")) return [];
+      const name = typeof mod.title === "string" ? mod.title : mod.name;
+      if (typeof name !== "string") return [];
+      return name.trim() ? [name.trim()] : [];
+    });
+  }
+  return typeof mods === "string" ? mods.split(/\r?\n/).map((mod) => mod.trim()).filter(Boolean) : [];
 }
 
 function Tag({ children, color }) {
