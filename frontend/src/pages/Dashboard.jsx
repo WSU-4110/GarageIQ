@@ -128,9 +128,11 @@ export default function Dashboard() {
           {navItems.map((item) => (
             <button
               key={item.label}
-              className={active === item.label ? "nav-item active" : "nav-item"}
+              className={`nav-item ${active === item.label ? "active" : ""} ${item.label === "Find shops" ? "unavailable" : ""}`}
+              aria-disabled={item.label === "Find shops"}
               onClick={() => {
-                if (item.label === "My garage") navigate("/vehicle");
+                if (item.label === "Find shops") notify("Find shops is not available yet.");
+                else if (item.label === "My garage") navigate("/vehicle");
                 else if (item.label === "Modifications") navigate("/modifications");
                 else if (item.label === "Maintenance") navigate("/maintenance");
                 else setActive(item.label);
