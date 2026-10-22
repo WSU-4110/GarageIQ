@@ -526,6 +526,26 @@ export default function VehicleProfile() {
                 ? '✓ Supported for recommendations. Explore the modification advisor.'
                 : 'ⓘ Recommendations not yet available for this vehicle. Modification, maintenance, and build tracking remain available.'}
             </div>
+
+            <div className="profile-save-actions">
+              <button
+                className="primary-button"
+                onClick={() => save()}
+                disabled={saving}
+              >
+                {saving
+                  ? 'Saving…'
+                  : 'Save vehicle profile'}
+              </button>
+
+              <button
+                className="secondary-button"
+                onClick={addVehicle}
+                disabled={saving}
+              >
+                ＋ Save another vehicle
+              </button>
+            </div>
           </div>
         </section>
 
@@ -582,24 +602,6 @@ export default function VehicleProfile() {
         </section>
 
         <div className="garage-actions profile-actions">
-          <button
-            className="primary-button"
-            onClick={() => save()}
-            disabled={saving}
-          >
-            {saving
-              ? 'Saving…'
-              : 'Save vehicle profile'}
-          </button>
-
-          <button
-            className="secondary-button"
-            onClick={addVehicle}
-            disabled={saving}
-          >
-            ＋ Save another vehicle
-          </button>
-
           {vehicles.length > 0 && (
             <button
               className="delete-button"

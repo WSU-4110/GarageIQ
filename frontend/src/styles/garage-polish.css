@@ -16,6 +16,8 @@
 .vehicle-photo-placeholder { min-height: 245px; overflow: hidden; background: linear-gradient(130deg, rgba(9,12,15,.25),rgba(9,12,15,.66)), url('/src/assets/hero.png') center / cover, #292e32; }
 .vehicle-photo-placeholder span { padding: 7px 10px; background:rgba(0,0,0,.5); border-radius:5px; }
 .recommendation-note { border: 1px solid #d6e9dc; line-height:1.55; }
+.profile-save-actions { display:flex; justify-content:flex-end; gap:12px; }
+.profile-save-actions .primary-button, .profile-save-actions .secondary-button { min-height:39px; }
 .vehicle-list { grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); }
 .vehicle-list-item { padding:15px; min-height:68px; }
 .garage-actions { margin-top: 20px; }
