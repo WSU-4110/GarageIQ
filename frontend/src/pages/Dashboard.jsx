@@ -5,6 +5,8 @@ import useAuth from "../hooks/useAuth.js";
 import useUserProfile from "../hooks/useUserProfile.js";
 import { auth } from "../lib/firebase.js";
 import { formatStoredDate } from "../lib/profileDates.js";
+import { activeIndex, getVehicles, payloadForVehicles } from "../lib/vehicleData.js";
+import { saveUserProfile } from "../lib/userProfile.js";
 
 const carImage =
   "https://images.unsplash.com/photo-1486006920555-c77dcf18193c?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&q=85&w=1600";
@@ -55,6 +57,9 @@ export default function Dashboard() {
   const displayName =
     profile?.name || user?.displayName || user?.email?.split("@")[0] || "Driver";
   const vehicleName = profile?.Car?.trim() || "";
+  const vehicles = getVehicles(profile);
+  const vehicleIndex = activeIndex(profile, vehicles);
+  const activeVehicle = vehicles[vehicleIndex];
   const modifications = (Array.isArray(profile?.Modifications) ? profile.Modifications : [])
     .map((modification, index) => {
       if (typeof modification === "string") {
@@ -89,6 +94,16 @@ export default function Dashboard() {
     setToast(message);
     window.setTimeout(() => setToast(""), 2200);
   };
+
+  async function handleVehicleChange(event) {
+    const nextIndex = Number(event.target.value);
+    if (!user || !profile || !vehicles[nextIndex] || nextIndex === vehicleIndex) return;
+    try {
+      await saveUserProfile(user.uid, payloadForVehicles(profile, vehicles, nextIndex));
+    } catch (switchError) {
+      notify(`Could not switch vehicles: ${switchError.message}`);
+    }
+  }
 
   async function handleSignOut() {
     try {
@@ -146,11 +161,10 @@ export default function Dashboard() {
 
         <div className="garage-switcher">
           <p className="eyebrow">Active vehicle</p>
-          <button onClick={() => navigate("/vehicle")}>
+          {activeVehicle ? <div className="garage-vehicle-combo"><button className="garage-vehicle-combo-profile" onClick={() => navigate("/vehicle")} title="View vehicle profile">
             <span className="mini-car"><img src={carImage} alt="" /></span>
-            <span><strong>{vehicleName || "Add your vehicle"}</strong><small>Vehicle profile</small></span>
-            <Icon name="chevron" size={14} />
-          </button>
+            <span><strong>{activeVehicle.Nickname || vehicleName}</strong><small>Vehicle profile</small></span>
+          </button><select aria-label="Switch active vehicle" title="Switch active vehicle" value={vehicleIndex} onChange={handleVehicleChange}>{vehicles.map((vehicle, index) => <option key={vehicle.id || index} value={index}>{vehicle.Nickname || [vehicle.Year, vehicle.Make, vehicle.Model, vehicle.Trim].filter(Boolean).join(" ") || vehicle.Car || "New vehicle"}</option>)}</select></div> : <button onClick={() => navigate("/vehicle")}><span><strong>Add your vehicle</strong><small>Vehicle profile</small></span></button>}
         </div>
 
         <div className="sidebar-footer">

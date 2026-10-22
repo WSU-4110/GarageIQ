@@ -4,7 +4,8 @@ import { signOut } from 'firebase/auth';
 import useAuth from '../hooks/useAuth.js';
 import useUserProfile from '../hooks/useUserProfile.js';
 import { auth } from '../lib/firebase.js';
-import { activeIndex, getVehicles, vehicleLabel } from '../lib/vehicleData.js';
+import { activeIndex, getVehicles, payloadForVehicles, vehicleLabel } from '../lib/vehicleData.js';
+import { saveUserProfile } from '../lib/userProfile.js';
 
 const paths = {
   grid: <><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></>,
@@ -36,6 +37,15 @@ export default function GarageSidebar({selected=''}) {
     setToast(message);
     window.setTimeout(()=>setToast(''),2200);
   }
+  async function handleVehicleChange(event) {
+    const nextIndex = Number(event.target.value);
+    if (!user || !profile || !vehicles[nextIndex] || nextIndex === index) return;
+    try {
+      await saveUserProfile(user.uid, payloadForVehicles(profile, vehicles, nextIndex));
+    } catch (error) {
+      notify(`Could not switch vehicles: ${error.message}`);
+    }
+  }
   const displayName=profile?.name||user?.displayName||user?.email?.split('@')[0]||'Driver';
   const initials=displayName.split(/\s+/).filter(Boolean).slice(0,2).map(x=>x[0]?.toUpperCase()).join('');
   return <><aside className="sidebar garage-sidebar-unified">
@@ -43,7 +53,7 @@ export default function GarageSidebar({selected=''}) {
     <nav><p className="eyebrow">Workspace</p>{entries.map(([url,glyph,name])=>name==='Find shops'?<button className="nav-item unavailable" type="button" aria-disabled="true" onClick={()=>notify('Find shops is not available yet.')} key={name}><Icon name={glyph}/><span>{name}</span></button>:<Link className={`nav-item ${selected===name?'active':''}`} to={url} key={url}><Icon name={glyph}/><span>{name}</span></Link>)}</nav>
     <div className="garage-switcher">
       <p className="eyebrow">Active vehicle</p>
-      {active ? <button onClick={()=>navigate('/vehicle')} title="View vehicle profile"><span className="mini-car"><img src={oldCarImage} alt="" /></span><span><strong>{active.Nickname||vehicleLabel(active)}</strong><small>Vehicle profile</small></span><Icon name="chevron" size={14}/></button>:<button className="garage-add-vehicle" onClick={()=>navigate('/vehicle')}>＋ Add a vehicle</button>}
+      {active ? <div className="garage-vehicle-combo"><button className="garage-vehicle-combo-profile" onClick={()=>navigate('/vehicle')} title="View vehicle profile"><span className="mini-car"><img src={oldCarImage} alt="" /></span><span><strong>{active.Nickname||vehicleLabel(active)}</strong><small>Vehicle profile</small></span></button><select aria-label="Switch active vehicle" title="Switch active vehicle" value={index} onChange={handleVehicleChange}>{vehicles.map((vehicle, vehicleIndex)=><option key={vehicle.id||vehicleIndex} value={vehicleIndex}>{vehicle.Nickname||vehicleLabel(vehicle)}</option>)}</select></div>:<button className="garage-add-vehicle" onClick={()=>navigate('/vehicle')}>Add a vehicle</button>}
     </div>
     <div className="sidebar-footer"><div className="avatar">{initials}</div><div><strong>{displayName}</strong><span>{user?.email}</span></div><button onClick={async()=>{await signOut(auth);navigate('/login');}} aria-label="Sign out">Sign out</button></div>
   </aside>{toast&&<div className="toast" role="status"><Icon name="check" size={16}/>{toast}</div>}</>;
