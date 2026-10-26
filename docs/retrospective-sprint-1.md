@@ -203,11 +203,3 @@ We propose **four major task groups**, one per team member. They are ordered by 
 
 - For Presentation 3, the team will show the four major deliverables, a dated burndown, assigned GitHub issues, and peer-approved PRs.
 
-
-
----
-
-
-
-**GitHub submission:** Save this file as `docs/retrospective-sprint-1.md` on the team repository and submit its direct GitHub link in Canvas. Peer Review 1 is a separate individual submission.
-
