@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { signOut } from 'firebase/auth';
 import useAuth from '../hooks/useAuth.js';
 import useUserProfile from '../hooks/useUserProfile.js';
-import { auth, localDemoMode } from '../lib/firebase.js';
+import { auth } from '../lib/firebase.js';
 import { activeIndex, getVehicles, payloadForVehicles, vehicleLabel } from '../lib/vehicleData.js';
 import { saveUserProfile } from '../lib/userProfile.js';
 
@@ -55,6 +55,6 @@ export default function GarageSidebar({selected=''}) {
       <p className="eyebrow">Active vehicle</p>
       {active ? <div className="garage-vehicle-combo"><button className="garage-vehicle-combo-profile" onClick={()=>navigate('/vehicle')} title="View vehicle profile"><span className="mini-car"><img src={oldCarImage} alt="" /></span><span><strong>{active.Nickname||vehicleLabel(active)}</strong><small>Vehicle profile</small></span></button><select aria-label="Switch active vehicle" title="Switch active vehicle" value={index} onChange={handleVehicleChange}>{vehicles.map((vehicle, vehicleIndex)=><option key={vehicle.id||vehicleIndex} value={vehicleIndex}>{vehicle.Nickname||vehicleLabel(vehicle)}</option>)}</select></div>:<button className="garage-add-vehicle" onClick={()=>navigate('/vehicle')}>Add a vehicle</button>}
     </div>
-    <div className="sidebar-footer"><div className="avatar">{initials}</div><div><strong>{displayName}</strong><span>{user?.email}</span></div><button onClick={async()=>{if(localDemoMode){notify('Local demo mode is active.');return;}await signOut(auth);navigate('/login');}} aria-label="Sign out">Sign out</button></div>
+    <div className="sidebar-footer"><div className="avatar">{initials}</div><div><strong>{displayName}</strong><span>{user?.email}</span></div><button onClick={async()=>{await signOut(auth);navigate('/login');}} aria-label="Sign out">Sign out</button></div>
   </aside>{toast&&<div className="toast" role="status"><Icon name="check" size={16}/>{toast}</div>}</>;
 }

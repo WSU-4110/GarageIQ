@@ -53,7 +53,6 @@ export function payloadForVehicles(profile, vehicles, index) {
   return { ...profile, Vehicles: vehicles, ActiveVehicleIndex: safe, ...legacyMirror(vehicles[safe]) };
 }
 
-
 export function payloadForActiveUpdate(profile, patch) {
   const vehicles = getVehicles(profile);
   if (!vehicles.length) throw new Error('Add a vehicle in My Garage first.');

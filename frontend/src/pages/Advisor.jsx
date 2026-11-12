@@ -1,5 +1,6 @@
 
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import useAuth from "../hooks/useAuth.js";
 import useUserProfile from "../hooks/useUserProfile.js";
 import { getAdvice, parseCar } from "../lib/advisor.js";
@@ -97,11 +98,13 @@ export default function Advisor() {
   }
 
   if (loading) {
-    return <section id="advisor" className="garage-panel mod-advisor-panel"><p role="status">Loading your vehicle...</p></section>;
+    return <div className="auth-page"><p role="status">Loading your vehicle...</p></div>;
   }
 
   return (
-    <section id="advisor" className="garage-panel mod-advisor-panel">
+    <div className="auth-page">
+      <section className="auth-card">
+        <div className="brand auth-brand"><span className="brand-mark">⚡</span><span>GARAGE<span>IQ</span></span></div>
         <p className="eyebrow orange">Mod advisor</p>
         <h1>Find mods for your car</h1>
         <form onSubmit={handleSubmit}>
@@ -122,7 +125,7 @@ export default function Advisor() {
             />
           </label>
           {error && <p className="form-message error-message" role="alert">{error}</p>}
-          <button className="primary-button" type="submit" disabled={busy}>
+          <button className="primary-button auth-submit" type="submit" disabled={busy}>
             {busy ? "Searching..." : "Get recommendations"}
           </button>
         </form>
@@ -156,6 +159,8 @@ export default function Advisor() {
             ))}
           </div>
         )}
-    </section>
+        <p className="auth-switch"><Link to="/dashboard">Back to dashboard</Link></p>
+      </section>
+    </div>
   );
 }

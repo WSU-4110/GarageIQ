@@ -50,7 +50,7 @@ main { width: calc(100% - 246px); margin-left: 246px; }
 .search:focus-within { background: white; border-color: #c7c7c2; }
 .search input { min-width: 0; flex: 1; color: #222; background: transparent; border: 0; outline: 0; font-size: 11px; }
 .search kbd { padding: 2px 6px; color: #8b8d8f; background: #f4f4f1; border: 1px solid #d6d6d1; border-radius: 4px; font: 10px "Manrope"; }
-.header-actions { margin-left: auto; display: flex; align-items: center; gap: 10px; }
+.header-actions { display: flex; align-items: center; gap: 10px; }
 .icon-button, .menu-button { width: 36px; height: 36px; display: grid; place-items: center; color: #444; background: transparent; border: 1px solid #d8d8d3; border-radius: 6px; }
 .primary-button, .secondary-button, .full-button { display: flex; align-items: center; justify-content: center; gap: 8px; border: 0; border-radius: 6px; font-size: 11px; font-weight: 700; }
 .primary-button { padding: 11px 16px; color: white; background: #e95827; box-shadow: 0 4px 12px rgba(233,88,39,.18); }
@@ -150,12 +150,6 @@ main { width: calc(100% - 246px); margin-left: 246px; }
 .garage-panel-heading { margin-bottom: 16px; display: flex; align-items: center; justify-content: space-between; gap: 18px; }
 .garage-panel-heading .eyebrow { margin-bottom: 5px; }
 .garage-panel-heading h2 { margin: 0; font: 700 23px/1 "Barlow Condensed", sans-serif; text-transform: uppercase; }
-.mod-advisor-panel > h1 { margin: 0 0 18px; color: #191a1b; font: 700 30px/1.05 "Barlow Condensed", sans-serif; text-transform: uppercase; }
-.mod-advisor-panel form { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
-.mod-advisor-panel form label { display: grid; gap: 7px; color: #55585a; font-size: 12px; font-weight: 700; }
-.mod-advisor-panel input, .mod-advisor-panel textarea { width: 100%; padding: 10px; color: #242526; background: white; border: 1px solid #d9d9d5; border-radius: 5px; font: 12px "Manrope",sans-serif; }
-.mod-advisor-panel textarea, .mod-advisor-panel form label:nth-of-type(5), .mod-advisor-panel form button { grid-column: 1 / -1; }
-.mod-advisor-panel textarea { resize: vertical; }
 .garage-vehicle-card { margin-bottom: 16px; padding: 14px; display: flex; align-items: center; gap: 16px; background: #fafaf8; border: 1px solid #deded8; border-radius: 9px; }
 .garage-car-art, .vehicle-photo-placeholder { display: grid; place-items: center; color: #f46432; background: linear-gradient(140deg,#25282b,#51575b); border-radius: 7px; }
 .garage-car-art { width: 116px; height: 72px; font-size: 36px; }

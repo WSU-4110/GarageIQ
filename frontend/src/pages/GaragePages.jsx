@@ -1,12 +1,11 @@
-import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import useAuth from '../hooks/useAuth.js';
 import useUserProfile from '../hooks/useUserProfile.js';
 import { saveUserProfile } from '../lib/userProfile.js';
 import { toDateInputValue } from '../lib/profileDates.js';
 import { getActiveVehicle, payloadForActiveUpdate, vehicleLabel } from '../lib/vehicleData.js';
 import GarageSidebar from '../components/GarageSidebar.jsx';
-import Advisor from './Advisor.jsx';
 import { digitsOnly, maintenanceError, calculateReminder, todayLocalISO, isFutureDate, monthsDraft } from '../lib/maintenanceRules.js';
 
 const GARAGE_CAR_IMAGE = "https://images.unsplash.com/photo-1486006920555-c77dcf18193c?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&q=85&w=1600";
@@ -38,8 +37,7 @@ function BrandField({brand,onChange}){
 }
 
 export function ModificationsPage(){
- const {user}=useAuth();const {profile,loading,error}=useUserProfile();
- useEffect(()=>{if(!loading&&window.location.hash==='#advisor')document.getElementById('advisor')?.scrollIntoView({behavior:'smooth',block:'start'});},[loading]);
+ const {user}=useAuth();const {profile,loading,error}=useUserProfile();const navigate=useNavigate();
  const vehicle=getActiveVehicle(profile);const [draft,setDraft]=useState(null);const [query,setQuery]=useState('');const [busy,setBusy]=useState(false);const [message,setMessage]=useState('');const [open,setOpen]=useState(null);
 const rows = draft?.id === vehicle?.id ? (draft?.rows ?? initialMods(vehicle)) : initialMods(vehicle); const history=vehicle?.BuildHistory||[];
  const filtered=rows.map((r,i)=>({...r,index:i})).filter(r=>`${r.category} ${r.title} ${r.brand} ${r.notes}`.toLowerCase().includes(query.toLowerCase()));
@@ -49,7 +47,7 @@ const rows = draft?.id === vehicle?.id ? (draft?.rows ?? initialMods(vehicle)) :
  async function archive(){const suggested=`Version ${history.length+1}`;const label=window.prompt('Name this build snapshot:',suggested);if(!label?.trim())return;await persist({Modifications:rows,BuildHistory:[...history,{label:label.trim(),archivedAt:new Date().toISOString(),modifications:structuredClone(rows)}]},'Build version archived.');}
  async function restore(build){if(!window.confirm(`Restore “${build.label}”? Your current build will be archived first.`))return;await persist({Modifications:build.modifications||[],BuildHistory:[...history,{label:`Before restoring ${build.label} — ${new Date().toLocaleDateString()}`,archivedAt:new Date().toISOString(),modifications:structuredClone(rows)}]},'Build restored; previous build backed up.');}
  if(loading)return <div className="auth-page">Loading modifications…</div>;
- return <Frame title="Build log & modifications" kicker="Primary build" subtitle="Organize modifications, track installation details, and review your previous builds." selected="Modifications">
+ return <Frame title="Build log & modifications" kicker="Primary build" subtitle="Organize modifications, track installation details, and review your previous builds." selected="Modifications" extra={<button className="primary-button" onClick={()=>navigate('/advisor')}>⚡ Mod Advisor</button>}>
  {error&&<p className="form-message error-message">{error}</p>}{vehicle?<VehicleCard vehicle={vehicle}/>:<p>Add a vehicle in My Garage to begin.</p>}
  <section className="garage-panel"><div className="garage-panel-heading"><div><p className="eyebrow">Modification log</p><h2>Your modifications</h2></div><input className="garage-search" value={query} onChange={e=>setQuery(e.target.value)} placeholder="Search modifications…"/></div>
  <div className="mod-editor-head"><span>Category</span><span>Modification name</span><span>Brand</span><span>Status</span><span>Date installed</span><span>Notes</span><span/></div>
@@ -58,7 +56,6 @@ const rows = draft?.id === vehicle?.id ? (draft?.rows ?? initialMods(vehicle)) :
  <section className="garage-panel"><div className="garage-panel-heading"><div><p className="eyebrow">Build history</p><h2>Archived builds / previous versions</h2></div><button className="secondary-button" disabled={busy||!vehicle} onClick={archive}>＋ Archive current build</button></div>
  {[...history].reverse().map((b,i)=><div className="garage-archive-item" key={`${b.archivedAt}-${i}`}><button className="history-row garage-archive-toggle" onClick={()=>setOpen(open===i?null:i)} aria-expanded={open===i}><strong>{b.label||`Version ${history.length-i}`}</strong><span>{b.archivedAt?dateStr(b.archivedAt.slice(0,10)):'Unknown date'}</span><span>{b.modifications?.length||0} modifications</span><span>{open===i?'⌃':'⌄'} View build</span></button>{open===i&&<div className="garage-archive-detail">{(b.modifications||[]).map((m,j)=><div className="garage-archive-mod" key={j}><b>{typeof m==='string'?m:m.title}</b><span>{m.category||'Custom'}</span><span>{m.brand||'—'}</span><span>{m.status||'Installed'}</span></div>)}<button className="secondary-button" disabled={busy} onClick={()=>restore(b)}>Restore this version</button></div>}</div>)}
  {!history.length&&<p className="empty-state">Archive a build to preserve a snapshot of its modifications.</p>}</section>
- <Advisor />
  </Frame>;
 }
 
