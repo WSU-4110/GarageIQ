@@ -1,8 +1,15 @@
+
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import useAuth from "../hooks/useAuth.js";
 import useUserProfile from "../hooks/useUserProfile.js";
 import { getAdvice, parseCar } from "../lib/advisor.js";
+import {
+  AdviceContext,
+  PerformanceStrategy,
+  HandlingStrategy,
+  GeneralStrategy
+} from "../lib/adviceStrategies.js";
 
 const GREEN = "#2e9e5b";
 
@@ -65,13 +72,24 @@ export default function Advisor() {
     setError("");
     setResult(null);
     try {
+      let strategy = new GeneralStrategy();
+
+      if (/horsepower|speed|acceleration|power|turbo/i.test(question)) {
+        strategy = new PerformanceStrategy();
+      } else if (/handling|suspension|cornering|steering/i.test(question)) {
+        strategy = new HandlingStrategy();
+      }
+
+      const adviceContext = new AdviceContext(strategy);
+      const strategyQuestion = adviceContext.getQuestion(question);
+
       setResult(await getAdvice(user, {
         year: Number(vehicle.year),
         make: vehicle.make.trim(),
         model: vehicle.model.trim(),
         trim: vehicle.trim.trim() || null,
         mileage: 0,
-      }, question, installedMods(profile)));
+      }, strategyQuestion, installedMods(profile)));
     } catch (adviceError) {
       setError(adviceError.message);
     } finally {
