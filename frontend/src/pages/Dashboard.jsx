@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { signOut } from 'firebase/auth';
 import useAuth from "../hooks/useAuth.js";
 import useUserProfile from "../hooks/useUserProfile.js";
-import { auth } from "../lib/firebase.js";
+import { auth, localDemoMode } from "../lib/firebase.js";
 import { formatStoredDate } from "../lib/profileDates.js";
 import { activeIndex, getVehicles, payloadForVehicles } from "../lib/vehicleData.js";
 import { saveUserProfile } from "../lib/userProfile.js";
@@ -19,7 +19,6 @@ const paths = {
   calendar: <><rect x="3" y="5" width="18" height="16" rx="2" /><path d="M16 3v4M8 3v4M3 10h18" /></>,
   map: <><path d="m3 6 5-3 8 3 5-3v15l-5 3-8-3-5 3Z" /><path d="M8 3v15M16 6v15" /></>,
   plus: <path d="M12 5v14M5 12h14" />,
-  search: <><circle cx="11" cy="11" r="7" /><path d="m20 20-4-4" /></>,
   bell: <><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9" /><path d="M10 21h4" /></>,
   bolt: <path d="m13 2-8 12h7l-1 8 8-12h-7Z" />,
   arrow: <><path d="M5 12h14M13 6l6 6-6 6" /></>,
@@ -53,7 +52,6 @@ export default function Dashboard() {
   const [active, setActive] = useState("Overview");
   const [menuOpen, setMenuOpen] = useState(false);
   const [toast, setToast] = useState("");
-  const [search, setSearch] = useState("");
 
   const displayName =
     profile?.name || user?.displayName || user?.email?.split("@")[0] || "Driver";
@@ -107,7 +105,7 @@ export default function Dashboard() {
         index,
       };
     });
-  const recentModifications = modifications.filter((item) => `${item.title} ${item.category}`.toLowerCase().includes(search.toLowerCase())).slice(0, 3);
+  const recentModifications = modifications.slice(0, 3);
   const initials = displayName
     .split(/\s+/)
     .filter(Boolean)
@@ -131,6 +129,10 @@ export default function Dashboard() {
   }
 
   async function handleSignOut() {
+    if (localDemoMode) {
+      notify("Local demo mode is active.");
+      return;
+    }
     try {
       await signOut(auth);
       navigate("/login", { replace: true });
@@ -203,15 +205,8 @@ export default function Dashboard() {
         <header className="topbar">
           <button className="menu-button" onClick={() => setMenuOpen(true)} aria-label="Open menu"><Icon name="menu" /></button>
           <div className="mobile-brand">GARAGE<span>IQ</span></div>
-          <label className="search">
-            <Icon name="search" />
-            <input placeholder="Search your garage..." aria-label="Search your garage" value={search} onChange={(event) => setSearch(event.target.value)} />
-            <kbd>⌘ K</kbd>
-          </label>
           <div className="header-actions">
             <button className="icon-button" aria-label="Notifications" onClick={() => notify("Notifications are not connected yet.")}><Icon name="bell" /></button>
-            <button className="primary-button" onClick={() => navigate("/advisor")}>Mod advisor</button>
-            <button className="primary-button" onClick={() => navigate("/modifications")}><Icon name="plus" /> Add modification</button>
           </div>
         </header>
 
