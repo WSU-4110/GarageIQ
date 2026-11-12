@@ -3,6 +3,8 @@ export const MAX_ODOMETER = 2000000;
 export const MAX_INTERVAL_MILES = 100000;
 export const MIN_INTERVAL_MILES = 500;
 export const MAX_MONTHS = 60;
+const DUE_SOON_MILES = 500;
+const DUE_SOON_DAYS = 30;
 // Local date avoids UTC off-by-one issues near midnight.
 export function todayLocalISO() {
   const now = new Date();
@@ -55,6 +57,12 @@ function matchingServices(reminder, services) {
   );
 }
 
+function calendarDaysBetween(from, to) {
+  const fromDay = Date.UTC(from.getFullYear(), from.getMonth(), from.getDate());
+  const toDay = Date.UTC(to.getFullYear(), to.getMonth(), to.getDate());
+  return Math.round((toDay - fromDay) / 86400000);
+}
+
 // Each strategy evaluates one independent kind of maintenance interval.
 // Add a new interval type by implementing calculate() and registering it below.
 export class MileageReminderStrategy {
@@ -72,13 +80,16 @@ export class MileageReminderStrategy {
 
     return {
       dueNow: remainingMiles !== null && remainingMiles <= 0,
+      overdue: remainingMiles !== null && remainingMiles < 0,
       remainingMiles,
       mileageText: remainingMiles === null
         ? hasInterval
           ? 'Needs service mileage'
           : 'No mileage interval'
         : remainingMiles <= 0
-          ? 'Mileage due'
+          ? remainingMiles < 0
+            ? `${Math.abs(remainingMiles).toLocaleString()} mi overdue`
+            : 'Mileage due'
           : `${remainingMiles.toLocaleString()} mi remaining`,
       needsBaseline: hasInterval && targetMileage === null,
     };
@@ -86,7 +97,7 @@ export class MileageReminderStrategy {
 }
 
 export class TimeReminderStrategy {
-  calculate(reminder, services, today) {
+  calculate(reminder, services, _currentMileage, today) {
     const hasInterval = String(reminder.months ?? '') !== '' && Number(reminder.months) >= 0.5;
     const lastService = matchingServices(reminder, services)
       .filter(service => /^\d{4}-\d{2}-\d{2}$/.test(service.date || ''))
@@ -95,11 +106,12 @@ export class TimeReminderStrategy {
     const dueDate = hasInterval && lastService
       ? plusMonths(lastService.date, Number(reminder.months))
       : null;
-    const isDue = dueDate && dueDate.getTime() <
-      new Date(today.getFullYear(), today.getMonth(), today.getDate() + 1).getTime();
+    const daysRemaining = dueDate ? calendarDaysBetween(today, dueDate) : null;
 
     return {
-      dueNow: Boolean(isDue),
+      dueNow: daysRemaining !== null && daysRemaining <= 0,
+      overdue: daysRemaining !== null && daysRemaining < 0,
+      daysRemaining,
       dueDate,
       nextDate: dueDate
         ? dueDate.toLocaleDateString(undefined, {
@@ -122,10 +134,12 @@ export class ReminderCalculator {
     const results = this.strategies.map(strategy =>
       strategy.calculate(reminder, services, currentMileage, today)
     );
-    return results.reduce(
+    const result = results.reduce(
       (combined, result) => ({
         dueNow: combined.dueNow || result.dueNow,
+        overdue: combined.overdue || result.overdue,
         remainingMiles: result.remainingMiles ?? combined.remainingMiles,
+        daysRemaining: result.daysRemaining ?? combined.daysRemaining,
         dueDate: result.dueDate ?? combined.dueDate,
         nextDate: result.nextDate || combined.nextDate,
         mileageText: result.mileageText ?? combined.mileageText,
@@ -133,13 +147,23 @@ export class ReminderCalculator {
       }),
       {
         dueNow: false,
+        overdue: false,
         remainingMiles: null,
+        daysRemaining: null,
         dueDate: null,
         nextDate: '',
         mileageText: 'No mileage interval',
         needsBaseline: false,
       }
     );
+
+    return {
+      ...result,
+      dueSoon: !result.dueNow && (
+        (result.remainingMiles > 0 && result.remainingMiles <= DUE_SOON_MILES) ||
+        (result.daysRemaining > 0 && result.daysRemaining <= DUE_SOON_DAYS)
+      ),
+    };
   }
 }
 

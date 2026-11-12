@@ -7,6 +7,7 @@ import { auth } from "../lib/firebase.js";
 import { formatStoredDate } from "../lib/profileDates.js";
 import { activeIndex, getVehicles, payloadForVehicles } from "../lib/vehicleData.js";
 import { saveUserProfile } from "../lib/userProfile.js";
+import { calculateReminder } from "../lib/maintenanceRules.js";
 
 const carImage =
   "https://images.unsplash.com/photo-1486006920555-c77dcf18193c?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&q=85&w=1600";
@@ -60,6 +61,30 @@ export default function Dashboard() {
   const vehicles = getVehicles(profile);
   const vehicleIndex = activeIndex(profile, vehicles);
   const activeVehicle = vehicles[vehicleIndex];
+  const maintenanceItems = (Array.isArray(activeVehicle?.Reminders) ? activeVehicle.Reminders : [])
+    .map((reminder, index) => {
+      const status = calculateReminder(
+        reminder,
+        Array.isArray(activeVehicle?.Services) ? activeVehicle.Services : [],
+        activeVehicle?.Mileage
+      );
+      const detail = [
+        status.mileageText !== "No mileage interval" ? status.mileageText : "",
+        status.nextDate ? `Due ${status.nextDate}` : "",
+      ].filter(Boolean).join(" · ");
+
+      return {
+        reminder,
+        status,
+        detail: detail || (status.needsBaseline ? "Add a matching service record to calculate" : "No calculated target"),
+        index,
+      };
+    })
+    .sort((a, b) => {
+      const priority = (status) => status.overdue ? 0 : status.dueNow ? 1 : status.dueSoon ? 2 : status.needsBaseline ? 3 : 4;
+      return priority(a.status) - priority(b.status) || a.index - b.index;
+    })
+    .slice(0, 3);
   const modifications = (Array.isArray(profile?.Modifications) ? profile.Modifications : [])
     .map((modification, index) => {
       if (typeof modification === "string") {
@@ -234,21 +259,19 @@ export default function Dashboard() {
 
             <div className="panel health-panel">
               <div className="panel-heading">
-                <div><p className="eyebrow">Vehicle health</p><h3>Maintenance</h3></div>
+                <div><p className="eyebrow">Vehicle health</p><h3>Maintenance recommendations</h3></div>
                 <button onClick={() => navigate("/maintenance")}>Edit history <Icon name="arrow" size={15} /></button>
               </div>
-              <div className="service-item">
-                <div className="service-icon"><Icon name="calendar" /></div>
-                <div><strong>Oil change</strong><span>{formatStoredDate(profile?.LastOilChange)}</span></div>
-              </div>
-              <div className="service-item">
-                <div className="service-icon"><Icon name="calendar" /></div>
-                <div><strong>Tire rotation</strong><span>{formatStoredDate(profile?.LastTireRotation)}</span></div>
-              </div>
-              <div className="service-item">
-                <div className="service-icon"><Icon name="calendar" /></div>
-                <div><strong>Transmission service</strong><span>{formatStoredDate(profile?.LastTransmissionService)}</span></div>
-              </div>
+              {maintenanceItems.length ? maintenanceItems.map(({ reminder, status, detail, index }) => (
+                <div className="service-item maintenance-recommendation" key={`${reminder.name}-${index}`}>
+                  <div className="service-icon"><Icon name="calendar" /></div>
+                  <div><strong>{reminder.name || "Maintenance service"}</strong><span>{detail}</span></div>
+                  <b className={`maintenance-status ${status.overdue || status.dueNow ? "is-due" : status.dueSoon ? "is-soon" : status.needsBaseline ? "is-needs-history" : "is-upcoming"}`}>
+                    {status.overdue ? "Overdue" : status.dueNow ? "Due now" : status.dueSoon ? "Due soon" : status.needsBaseline ? "Needs service history" : "Upcoming"}
+                  </b>
+                </div>
+              )) : <p className="maintenance-empty">No maintenance recommendations available. Add a saved interval to create a schedule.</p>}
+              <p className="maintenance-disclaimer">Based on your saved intervals and service history. Follow your owner’s manual and a qualified service professional’s guidance.</p>
               <button className="full-button" onClick={() => navigate("/maintenance")}>Edit service history <Icon name="arrow" size={15} /></button>
             </div>
 

@@ -30,6 +30,7 @@
 .garage-upcoming-card p{font-size:12px;line-height:1.45;margin:0;color:#62676b;}
 .garage-upcoming-card .garage-due-flag{align-self:flex-start;font-size:10px;font-weight:800;border-radius:100px;padding:4px 9px;background:#eef0f1;color:#62676b;}
 .garage-upcoming-card .garage-due-flag.is-due{background:#fff0e7;color:#a33d17;}
+.garage-upcoming-card .garage-due-flag.is-soon{background:#f4e7c9;color:#8a5a16;}
 .garage-upcoming-card .garage-due-flag.is-okay{background:#e9f6ee;color:#196f4d;}
 .garage-validation-hint{font-size:11px;color:#868987;margin-top:6px;}
 .garage-archive-toggle strong{color:#23272a;}

@@ -103,6 +103,12 @@ main { width: calc(100% - 246px); margin-left: 246px; }
 .service-item strong, .service-item span { display: block; font-size: 10px; }
 .service-item span { margin-top: 4px; color: #8b8c8e; font-size: 9px; }
 .service-item b { padding: 4px 7px; color: #b24c2b; background: #f7e3db; border-radius: 10px; font-size: 8px; }
+.service-item .maintenance-status { flex: 0 0 auto; margin-left: 4px; padding: 4px 7px; color: #55715d; background: #e9f0eb; border-radius: 10px; font-size: 8px; white-space: nowrap; }
+.service-item .maintenance-status.is-due { color: #a33d17; background: #fff0e7; }
+.service-item .maintenance-status.is-soon { color: #8a5a16; background: #f4e7c9; }
+.service-item .maintenance-status.is-needs-history { color: #62676b; background: #eef0f1; }
+.maintenance-empty, .maintenance-disclaimer { margin: 0 22px 12px; color: #818386; font-size: 9px; line-height: 1.5; }
+.maintenance-disclaimer { margin-bottom: 0; }
 .progress { height: 4px; margin: 0 22px; overflow: hidden; background: #e4e4df; border-radius: 4px; }
 .progress span { display: block; width: 78%; height: 100%; background: #e95827; }
 .odometer { margin: 16px 22px; display: flex; justify-content: space-between; color: #818386; font-size: 9px; }
