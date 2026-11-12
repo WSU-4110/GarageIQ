@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react";
 import { onAuthStateChanged } from "firebase/auth";
-import { auth, firebaseConfigured, localDemoMode } from "../lib/firebase.js";
+import { auth, firebaseConfigured } from "../lib/firebase.js";
 import AuthContext from "./authContext.js";
 
 export function AuthProvider({ children }) {
-  const [user, setUser] = useState(localDemoMode ? { uid: "garageiq-local-demo", email: "demo@garageiq.local", displayName: "Demo Driver" } : null);
+  const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(Boolean(auth));
   const [error, setError] = useState("");
 
   useEffect(() => {
-    if (!auth || localDemoMode) {
+    if (!auth) {
       return undefined;
     }
 
@@ -28,7 +28,7 @@ export function AuthProvider({ children }) {
   }, []);
 
   return (
-    <AuthContext.Provider value={{ user, loading, error, firebaseConfigured: firebaseConfigured || localDemoMode }}>
+    <AuthContext.Provider value={{ user, loading, error, firebaseConfigured }}>
       {children}
     </AuthContext.Provider>
   );

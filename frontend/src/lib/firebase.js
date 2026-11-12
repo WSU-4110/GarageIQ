@@ -12,7 +12,6 @@ const firebaseConfig = {
 export const firebaseConfigured = Object.values(firebaseConfig).every(
   (value) => typeof value === "string" && value.trim().length > 0,
 );
-export const localDemoMode = import.meta.env.VITE_LOCAL_DEMO_MODE === "true";
 
 const app = firebaseConfigured ? initializeApp(firebaseConfig) : null;
 
