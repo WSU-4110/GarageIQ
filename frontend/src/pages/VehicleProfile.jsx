@@ -5,12 +5,11 @@ import { Link } from 'react-router-dom';
 import useAuth from '../hooks/useAuth.js';
 import useUserProfile from '../hooks/useUserProfile.js';
 import { saveUserProfile } from '../lib/userProfile.js';
+import { VehicleProfileRepository } from '../lib/vehicleProfileRepository.js';
 
 import {
   activeIndex,
   emptyVehicle,
-  getVehicles,
-  payloadForVehicles,
   vehicleLabel,
 } from '../lib/vehicleData.js';
 
@@ -23,6 +22,8 @@ import {
 
 import GarageSidebar from '../components/GarageSidebar.jsx';
 import { digitsOnly, isOdometer } from '../lib/maintenanceRules.js';
+
+const vehicleProfiles = new VehicleProfileRepository(saveUserProfile);
 
 export default function VehicleProfile() {
   const { user } = useAuth();
@@ -44,7 +45,7 @@ export default function VehicleProfile() {
   const vehicles =
     draft?.base === profile
       ? draft.vehicles
-      : getVehicles(profile);
+      : vehicleProfiles.list(profile);
 
   const selected =
     draft?.base === profile
@@ -198,13 +199,7 @@ export default function VehicleProfile() {
         return v;
       });
 
-      const payload = payloadForVehicles(
-        profile,
-        corrected,
-        nextIndex
-      );
-
-      await saveUserProfile(user.uid, payload);
+      await vehicleProfiles.save(user.uid, profile, corrected, nextIndex);
 
       setDraft(null);
       setMessage('Vehicle profile saved.');
@@ -221,7 +216,7 @@ export default function VehicleProfile() {
     if (
       draft?.base === profile &&
       JSON.stringify(draft.vehicles) !==
-        JSON.stringify(getVehicles(profile))
+        JSON.stringify(vehicleProfiles.list(profile))
     ) {
       if (
         !window.confirm(
@@ -235,14 +230,7 @@ export default function VehicleProfile() {
     setSaving(true);
 
     try {
-      await saveUserProfile(
-        user.uid,
-        payloadForVehicles(
-          profile,
-          getVehicles(profile),
-          index
-        )
-      );
+      await vehicleProfiles.save(user.uid, profile, vehicleProfiles.list(profile), index);
 
       setDraft(null);
       setMessage('');
@@ -278,14 +266,7 @@ export default function VehicleProfile() {
     setSaving(true);
 
     try {
-      await saveUserProfile(
-        user.uid,
-        payloadForVehicles(
-          profile,
-          remaining,
-          next
-        )
-      );
+      await vehicleProfiles.save(user.uid, profile, remaining, next);
 
       setDraft(null);
       setMessage('Vehicle removed.');
