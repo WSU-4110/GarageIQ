@@ -6,6 +6,8 @@ numpy
 pyyaml
 httpx
 firebase-admin
+rank-bm25
+fastembed
 # Optional local embeddings (set GARAGEIQ_EMBEDDER=fastembed): fastembed
 # Dev
 pytest
