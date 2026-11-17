@@ -30,4 +30,3 @@ Profile and vehicle fields are saved to the signed-in user's `users/{uid}`
 document: `name`, `email`, `Car`, `LastOilChange`, `LastTireRotation`,
 `LastTransmissionService`, and `Modifications`. Cloud Storage uploads are not
 implemented yet; the planner, shop, and build-sheet export panels remain demo UI.
-
