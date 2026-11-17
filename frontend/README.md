@@ -31,18 +31,3 @@ document: `name`, `email`, `Car`, `LastOilChange`, `LastTireRotation`,
 `LastTransmissionService`, and `Modifications`. Cloud Storage uploads are not
 implemented yet; the planner, shop, and build-sheet export panels remain demo UI.
 
-## Unit tests
-
-Maintenance rules are tested with Node.js's built-in test runner (`node:test`)
-and strict assertions (`node:assert/strict`), so no additional test package is
-needed. From this `frontend` directory, run all tests with:
-
-```powershell
-npm test
-```
-
-To run one test by name, use Node's test-name filter. For example:
-
-```powershell
-node --test --test-name-pattern="monthsDraft" src/lib/maintenanceRules.test.js
-```
