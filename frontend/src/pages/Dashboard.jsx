@@ -3,10 +3,12 @@ import { useNavigate } from 'react-router-dom';
 import { signOut } from 'firebase/auth';
 import useAuth from "../hooks/useAuth.js";
 import useUserProfile from "../hooks/useUserProfile.js";
-import { auth } from "../lib/firebase.js";
+import { auth, localDemoMode } from "../lib/firebase.js";
 import { formatStoredDate } from "../lib/profileDates.js";
 import { activeIndex, getVehicles, payloadForVehicles } from "../lib/vehicleData.js";
 import { saveUserProfile } from "../lib/userProfile.js";
+import { calculateReminder } from "../lib/maintenanceRules.js";
+import { getCheckWorkflow, getVisibleReminders } from "../lib/maintenanceWorkflow.js";
 
 const carImage =
   "https://images.unsplash.com/photo-1486006920555-c77dcf18193c?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&q=85&w=1600";
@@ -18,7 +20,6 @@ const paths = {
   calendar: <><rect x="3" y="5" width="18" height="16" rx="2" /><path d="M16 3v4M8 3v4M3 10h18" /></>,
   map: <><path d="m3 6 5-3 8 3 5-3v15l-5 3-8-3-5 3Z" /><path d="M8 3v15M16 6v15" /></>,
   plus: <path d="M12 5v14M5 12h14" />,
-  search: <><circle cx="11" cy="11" r="7" /><path d="m20 20-4-4" /></>,
   bell: <><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9" /><path d="M10 21h4" /></>,
   bolt: <path d="m13 2-8 12h7l-1 8 8-12h-7Z" />,
   arrow: <><path d="M5 12h14M13 6l6 6-6 6" /></>,
@@ -52,7 +53,6 @@ export default function Dashboard() {
   const [active, setActive] = useState("Overview");
   const [menuOpen, setMenuOpen] = useState(false);
   const [toast, setToast] = useState("");
-  const [search, setSearch] = useState("");
 
   const displayName =
     profile?.name || user?.displayName || user?.email?.split("@")[0] || "Driver";
@@ -60,6 +60,31 @@ export default function Dashboard() {
   const vehicles = getVehicles(profile);
   const vehicleIndex = activeIndex(profile, vehicles);
   const activeVehicle = vehicles[vehicleIndex];
+  const modCheckWorkflow = getCheckWorkflow(activeVehicle);
+  const maintenanceItems = getVisibleReminders(activeVehicle).visible
+    .map((reminder, index) => {
+      const status = calculateReminder(
+        reminder,
+        Array.isArray(activeVehicle?.Services) ? activeVehicle.Services : [],
+        activeVehicle?.Mileage
+      );
+      const detail = [
+        status.mileageText !== "No mileage interval" ? status.mileageText : "",
+        status.nextDate ? `Due ${status.nextDate}` : "",
+      ].filter(Boolean).join(" · ");
+
+      return {
+        reminder,
+        status,
+        detail: detail || (status.needsBaseline ? "Add a matching service record to calculate" : "No calculated target"),
+        index,
+      };
+    })
+    .sort((a, b) => {
+      const priority = (status) => status.overdue ? 0 : status.dueNow ? 1 : status.dueSoon ? 2 : status.needsBaseline ? 3 : 4;
+      return priority(a.status) - priority(b.status) || a.index - b.index;
+    })
+    .slice(0, 3);
   const modifications = (Array.isArray(profile?.Modifications) ? profile.Modifications : [])
     .map((modification, index) => {
       if (typeof modification === "string") {
@@ -82,7 +107,7 @@ export default function Dashboard() {
         index,
       };
     });
-  const recentModifications = modifications.filter((item) => `${item.title} ${item.category}`.toLowerCase().includes(search.toLowerCase())).slice(0, 3);
+  const recentModifications = modifications.slice(0, 3);
   const initials = displayName
     .split(/\s+/)
     .filter(Boolean)
@@ -106,6 +131,10 @@ export default function Dashboard() {
   }
 
   async function handleSignOut() {
+    if (localDemoMode) {
+      notify("Local demo mode is active.");
+      return;
+    }
     try {
       await signOut(auth);
       navigate("/login", { replace: true });
@@ -178,15 +207,8 @@ export default function Dashboard() {
         <header className="topbar">
           <button className="menu-button" onClick={() => setMenuOpen(true)} aria-label="Open menu"><Icon name="menu" /></button>
           <div className="mobile-brand">GARAGE<span>IQ</span></div>
-          <label className="search">
-            <Icon name="search" />
-            <input placeholder="Search your garage..." aria-label="Search your garage" value={search} onChange={(event) => setSearch(event.target.value)} />
-            <kbd>⌘ K</kbd>
-          </label>
           <div className="header-actions">
             <button className="icon-button" aria-label="Notifications" onClick={() => notify("Notifications are not connected yet.")}><Icon name="bell" /></button>
-            <button className="primary-button" onClick={() => navigate("/advisor")}>Mod advisor</button>
-            <button className="primary-button" onClick={() => navigate("/modifications")}><Icon name="plus" /> Add modification</button>
           </div>
         </header>
 
@@ -234,21 +256,26 @@ export default function Dashboard() {
 
             <div className="panel health-panel">
               <div className="panel-heading">
-                <div><p className="eyebrow">Vehicle health</p><h3>Maintenance</h3></div>
+                <div><p className="eyebrow">Vehicle health</p><h3>Maintenance recommendations</h3></div>
                 <button onClick={() => navigate("/maintenance")}>Edit history <Icon name="arrow" size={15} /></button>
               </div>
-              <div className="service-item">
-                <div className="service-icon"><Icon name="calendar" /></div>
-                <div><strong>Oil change</strong><span>{formatStoredDate(profile?.LastOilChange)}</span></div>
-              </div>
-              <div className="service-item">
-                <div className="service-icon"><Icon name="calendar" /></div>
-                <div><strong>Tire rotation</strong><span>{formatStoredDate(profile?.LastTireRotation)}</span></div>
-              </div>
-              <div className="service-item">
-                <div className="service-icon"><Icon name="calendar" /></div>
-                <div><strong>Transmission service</strong><span>{formatStoredDate(profile?.LastTransmissionService)}</span></div>
-              </div>
+              {maintenanceItems.length ? maintenanceItems.map(({ reminder, status, detail, index }) => (
+                <div className="service-item maintenance-recommendation" key={`${reminder.name}-${index}`}>
+                  <div className="service-icon"><Icon name="calendar" /></div>
+                  <div><strong>{reminder.name || "Maintenance service"}</strong><span>{detail}{reminder.modBased ? ' · Modified schedule' : ''}</span></div>
+                  <b className={`maintenance-status ${status.overdue || status.dueNow ? "is-due" : status.dueSoon ? "is-soon" : status.needsBaseline ? "is-needs-history" : "is-upcoming"}`}>
+                    {status.overdue ? "Overdue" : status.dueNow ? "Due now" : status.dueSoon ? "Due soon" : status.needsBaseline ? "Needs service history" : "Upcoming"}
+                  </b>
+                </div>
+              )) : <p className="maintenance-empty">No maintenance recommendations available. Add a saved interval to create a schedule.</p>}
+              {modCheckWorkflow.items.length > 0 && (
+                <div className="service-item maintenance-recommendation">
+                  <div className="service-icon"><Icon name="wrench" /></div>
+                  <div><strong>{modCheckWorkflow.pending.length} modification checks remaining</strong><span>{modCheckWorkflow.scheduled.length} scheduled · {modCheckWorkflow.completed.length} completed · {modCheckWorkflow.ignored.length} ignored</span></div>
+                  <button className="secondary-button" type="button" onClick={() => navigate('/maintenance')}>Review</button>
+                </div>
+              )}
+              <p className="maintenance-disclaimer">Based on your saved intervals and service history. Follow your owner’s manual and a qualified service professional’s guidance.</p>
               <button className="full-button" onClick={() => navigate("/maintenance")}>Edit service history <Icon name="arrow" size={15} /></button>
             </div>
 

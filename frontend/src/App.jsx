@@ -1,8 +1,8 @@
+
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { AuthProvider } from "./context/AuthContext.jsx";
 import useAuth from "./hooks/useAuth.js";
 import Dashboard from "./pages/Dashboard.jsx";
-import Advisor from "./pages/Advisor.jsx";
 import Login from "./pages/Login.jsx";
 import Signup from "./pages/Signup.jsx";
 import VehicleProfile from "./pages/VehicleProfile.jsx";
@@ -19,17 +19,21 @@ function LoadingPage() {
 
 function ProtectedRoute({ children }) {
   const { user, loading } = useAuth();
+
   if (loading) {
     return <LoadingPage />;
   }
+
   return user ? children : <Navigate to="/login" replace />;
 }
 
 function GuestRoute({ children }) {
   const { user, loading } = useAuth();
+
   if (loading) {
     return <LoadingPage />;
   }
+
   return user ? <Navigate to="/dashboard" replace /> : children;
 }
 
@@ -46,7 +50,7 @@ export default function App() {
           <Route path="/modifications" element={<ProtectedRoute><ModificationsPage /></ProtectedRoute>} />
           <Route path="/maintenance" element={<ProtectedRoute><MaintenancePage /></ProtectedRoute>} />
           <Route path="/shops" element={<ProtectedRoute><ShopFinder /></ProtectedRoute>} />
-          <Route path="/advisor" element={<ProtectedRoute><Advisor /></ProtectedRoute>} />
+          <Route path="/advisor" element={<Navigate to="/modifications#advisor" replace />} />
           <Route path="*" element={<Navigate to="/dashboard" replace />} />
         </Routes>
       </BrowserRouter>

@@ -1,0 +1,202 @@
+- id: universal-full-body-vinyl-wrap
+  name: Full-Body Vinyl Wrap
+  aliases:
+  - car wrap
+  - color change wrap
+  category: exterior
+  summary: Changes the car's entire visible finish using colored vinyl film, including matte, satin, gloss or textured
+    looks.
+  advice: Wrap quality depends on preparation and underlying paint; removal can damage poor paint.
+  tags:
+  - exterior
+  - appearance
+  - color
+  - wrap
+  - paint
+  - styling
+  source: GarageIQ editorial (unverified; modification category only, not product fitment)
+  license: unspecified
+  verified: false
+- id: universal-partial-vinyl-accent-wrap
+  name: Partial Vinyl Accent Wrap
+  aliases:
+  - accent wrap
+  - roof wrap
+  category: exterior
+  summary: Adds contrasting color to selected exterior panels such as roof, mirrors or accents.
+  advice: Check panel edges, adhesive compatibility and existing surface condition.
+  tags:
+  - exterior
+  - appearance
+  - roof
+  - blackout
+  - color
+  source: GarageIQ editorial (unverified; modification category only, not product fitment)
+  license: unspecified
+  verified: false
+- id: universal-paint-protection-film
+  name: Paint Protection Film
+  aliases:
+  - ppf
+  - clear bra
+  - protective film
+  category: exterior
+  summary: Protects painted exterior surfaces from chips and abrasion using transparent protective film.
+  advice: Installation quality affects appearance; film does not prevent all impacts or damage.
+  tags:
+  - exterior
+  - paint
+  - protection
+  - cosmetic
+  source: GarageIQ editorial (unverified; modification category only, not product fitment)
+  license: unspecified
+  verified: false
+- id: universal-paint-correction
+  name: Paint Correction
+  aliases:
+  - paint polishing
+  - swirl removal
+  category: exterior
+  summary: Uses controlled correction and polishing to reduce some swirl marks and restore gloss on painted exterior
+    panels.
+  advice: Measure clearcoat and avoid excessive material removal; deep scratches may not polish out.
+  tags:
+  - exterior
+  - appearance
+  - gloss
+  - paint
+  - detailing
+  source: GarageIQ editorial (unverified; modification category only, not product fitment)
+  license: unspecified
+  verified: false
+- id: universal-ceramic-coating
+  name: Ceramic Coating
+  aliases:
+  - ceramic paint protection
+  - nano coating
+  category: exterior
+  summary: Applies a protective surface coating that may improve water behavior and ease washing of exterior finishes.
+  advice: Does not replace protective film against stone chips; preparation determines durability.
+  tags:
+  - exterior
+  - appearance
+  - paint
+  - protection
+  source: GarageIQ editorial (unverified; modification category only, not product fitment)
+  license: unspecified
+  verified: false
+- id: universal-exterior-chrome-delete-wrap
+  name: Exterior Chrome Delete Wrap
+  aliases:
+  - chrome delete
+  - blackout trim
+  category: exterior
+  summary: Covers suitable chrome-look window or body trim with darker vinyl or finish for a cleaner blacked-out
+    exterior.
+  advice: Preserve sensors, lights and visibility; poor trim preparation may cause peeling.
+  tags:
+  - exterior
+  - appearance
+  - black
+  - wrap
+  - styling
+  source: GarageIQ editorial (unverified; modification category only, not product fitment)
+  license: unspecified
+  verified: false
+- id: universal-exterior-decals-and-graphics
+  name: Exterior Decals and Graphics
+  aliases:
+  - decals
+  - livery
+  - stripes
+  category: exterior
+  summary: Adds removable visual graphics, race-inspired stripes or custom branding to exterior panels.
+  advice: Confirm local regulations, surface condition and placement that does not reduce visibility.
+  tags:
+  - exterior
+  - appearance
+  - customization
+  - graphics
+  source: GarageIQ editorial (unverified; modification category only, not product fitment)
+  license: unspecified
+  verified: false
+- id: universal-exterior-trim-restoration
+  name: Exterior Trim Restoration
+  aliases:
+  - plastic trim restorer
+  - black trim restoration
+  category: exterior
+  summary: Restores the visual appearance of faded or chalky exterior plastic and rubber trim.
+  advice: Results and compatibility depend on the trim material and product.
+  tags:
+  - exterior
+  - appearance
+  - restoration
+  - black
+  source: GarageIQ editorial (unverified; modification category only, not product fitment)
+  license: unspecified
+  verified: false
+- id: universal-headlamp-lens-restoration
+  name: Headlamp Lens Restoration
+  aliases:
+  - headlight polishing
+  - cloudy headlights
+  category: exterior
+  summary: Restores oxidation-damaged exterior plastic headlamp lenses to improve clarity and appearance.
+  advice: Proper UV protection, optical output and beam aim must be verified after restoration.
+  tags:
+  - exterior
+  - appearance
+  - lighting
+  - maintenance
+  source: GarageIQ editorial (unverified; modification category only, not product fitment)
+  license: unspecified
+  verified: false
+- id: universal-wheel-refinishing
+  name: Wheel Refinishing
+  aliases:
+  - powder coat wheels
+  - wheel paint
+  category: exterior
+  summary: Changes wheel appearance through refinishing or repainting of suitable wheels.
+  advice: Structural cracks, heat-treatment requirements and coating process affect safety.
+  tags:
+  - wheels
+  - appearance
+  - color
+  - exterior
+  source: GarageIQ editorial (unverified; modification category only, not product fitment)
+  license: unspecified
+  verified: false
+- id: universal-brake-caliper-refinishing
+  name: Brake Caliper Refinishing
+  aliases:
+  - painted calipers
+  - caliper paint
+  category: exterior
+  summary: Changes visible brake caliper color with suitable temperature-resistant coating.
+  advice: Avoid coatings on friction, sealing and moving surfaces.
+  tags:
+  - appearance
+  - brakes
+  - exterior
+  - color
+  source: GarageIQ editorial (unverified; modification category only, not product fitment)
+  license: unspecified
+  verified: false
+- id: universal-exterior-paint-respray
+  name: Exterior Paint Respray
+  aliases:
+  - repaint
+  - paint job
+  category: exterior
+  summary: Repaints exterior panels or the complete body to restore or change the car's visual finish.
+  advice: Surface preparation, rust repair and paint compatibility determine results.
+  tags:
+  - exterior
+  - appearance
+  - paint
+  - color
+  source: GarageIQ editorial (unverified; modification category only, not product fitment)
+  license: unspecified
+  verified: false
