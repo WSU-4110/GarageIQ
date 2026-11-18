@@ -64,7 +64,15 @@ class Mod(Scoped):
     verified: bool = False
 
     def search_text(self) -> str:
-        return f"{self.name}. {self.category}. {self.summary} {self.advice} {' '.join(self.tags)}"
+        return " ".join([
+            self.name,
+            " ".join(self.aliases),
+            self.category,
+            self.summary,
+            self.advice,
+            " ".join(self.tags),
+        ])
+
 
 
 class GuideChunk(Scoped):
