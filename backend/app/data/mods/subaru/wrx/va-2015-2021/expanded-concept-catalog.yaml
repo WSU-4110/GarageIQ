@@ -1,0 +1,3214 @@
+- id: wrx-va-catalog-performance-muffler
+  name: Performance Muffler
+  aliases: []
+  category: exhaust
+  summary: Changes the exhaust outlet sound and perceived tone with a different muffler design.
+  advice: Check noise restrictions, cabin drone and the exact exhaust diameter. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - exhaust
+  - performance
+  - muffler
+  - sound
+  - tone
+  - noise
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-chambered-muffler
+  name: Chambered Muffler
+  aliases: []
+  category: exhaust
+  summary: Alters exhaust tone using an internal chambered muffler architecture.
+  advice: Cabin resonance and flow characteristics depend on the complete system. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - exhaust
+  - chambered
+  - muffler
+  - sound
+  - tone
+  - noise
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-straight-through-muffler
+  name: Straight-Through Muffler
+  aliases: []
+  category: exhaust
+  summary: Uses a perforated core and packing to alter restriction and exhaust sound.
+  advice: More sound is not evidence of a useful horsepower gain. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - exhaust
+  - straight
+  - through
+  - muffler
+  - sound
+  - tone
+  - noise
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-valved-exhaust
+  name: Valved Exhaust
+  aliases: []
+  category: exhaust
+  summary: Allows selectable exhaust volume with an actuated exhaust valve.
+  advice: Confirm fail-safe valve operation, wiring, noise rules and physical clearance. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - exhaust
+  - valved
+  - sound
+  - tone
+  - noise
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-exhaust-cutout
+  name: Exhaust Cutout
+  aliases: []
+  category: exhaust
+  summary: Reroutes flow through a selectable exhaust bypass.
+  advice: Many configurations are illegal for street use; confirm local rules before purchase. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - exhaust
+  - cutout
+  - sound
+  - tone
+  - noise
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-dual-exhaust-conversion
+  name: Dual Exhaust Conversion
+  aliases: []
+  category: exhaust
+  summary: Changes the exhaust routing or outlet configuration.
+  advice: Existing underbody space and engine exhaust architecture determine feasibility. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - exhaust
+  - dual
+  - conversion
+  - sound
+  - tone
+  - noise
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-exhaust-tip-change
+  name: Exhaust Tip Change
+  aliases: []
+  category: exhaust
+  summary: Alters visible outlet styling and sometimes perceived sound at close range.
+  advice: Outlet appearance does not establish performance gains. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - exhaust
+  - tip
+  - change
+  - sound
+  - tone
+  - noise
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-exhaust-hanger-upgrade
+  name: Exhaust Hanger Upgrade
+  aliases: []
+  category: exhaust
+  summary: Replaces worn or soft mounts controlling exhaust movement and vibration.
+  advice: Too-stiff hangers can transmit vibration into the cabin. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - exhaust
+  - hanger
+  - upgrade
+  - sound
+  - tone
+  - noise
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-exhaust-heat-shielding
+  name: Exhaust Heat Shielding
+  aliases: []
+  category: exhaust
+  summary: Adds shielding near exhaust components to reduce heat exposure.
+  advice: Verify safe clearances and avoid trapping moisture around critical components. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - exhaust
+  - heat
+  - shielding
+  - sound
+  - tone
+  - noise
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-exhaust-wrap
+  name: Exhaust Wrap
+  aliases: []
+  category: exhaust
+  summary: Insulates part of the exhaust path to change heat distribution.
+  advice: Some wraps retain moisture and can accelerate corrosion or damage components. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - exhaust
+  - wrap
+  - sound
+  - tone
+  - noise
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-custom-exhaust-fabrication
+  name: Custom Exhaust Fabrication
+  aliases: []
+  category: exhaust
+  summary: Tailors exhaust routing and components for a specific build goal.
+  advice: Check structural mounting, leaks, emissions rules and the exact chassis geometry. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - exhaust
+  - custom
+  - fabrication
+  - sound
+  - tone
+  - noise
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-high-flow-catalytic-converter
+  name: High-Flow Catalytic Converter
+  aliases: []
+  category: exhaust
+  summary: Uses a catalytic converter designed for higher flow with emissions control.
+  advice: Legal certification is vehicle and jurisdiction dependent; do not remove required emissions equipment. Confirm
+    specific vehicle/engine/trim/body-style applicability before selecting parts.
+  tags:
+  - exhaust
+  - high
+  - flow
+  - catalytic
+  - converter
+  - sound
+  - tone
+  - noise
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-exhaust-leak-repair
+  name: Exhaust Leak Repair
+  aliases: []
+  category: exhaust
+  summary: Restores sealed exhaust flow and addresses noise from leaks.
+  advice: Check for dangerous carbon monoxide intrusion before driving. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - exhaust
+  - leak
+  - repair
+  - sound
+  - tone
+  - noise
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-exhaust-drone-diagnosis
+  name: Exhaust Drone Diagnosis
+  aliases: []
+  category: exhaust
+  summary: Identifies cruising-speed cabin resonance sources in an exhaust setup.
+  advice: Test at steady engine load before assuming a resonator or muffler will solve it. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - exhaust
+  - drone
+  - diagnosis
+  - sound
+  - tone
+  - noise
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-exhaust-resonator-tuning
+  name: Exhaust Resonator Tuning
+  aliases: []
+  category: exhaust
+  summary: Adjusts exhaust resonance and certain objectionable sound frequencies.
+  advice: Frequency response depends on pipe dimensions and system location. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - exhaust
+  - resonator
+  - tuning
+  - sound
+  - tone
+  - noise
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-panel-air-filter
+  name: Panel Air Filter
+  aliases: []
+  category: intake
+  summary: Replaces an air filter element while retaining the standard airbox.
+  advice: Correct sealing and filtration matter more than advertised power gains. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - intake
+  - panel
+  - air
+  - filter
+  - engine
+  - performance
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-sealed-intake-airbox
+  name: Sealed Intake Airbox
+  aliases: []
+  category: intake
+  summary: Uses a closed intake enclosure designed to draw less engine-bay heat.
+  advice: Check water exposure, sensor mounting and tuning requirements. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - intake
+  - sealed
+  - airbox
+  - engine
+  - performance
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-short-ram-intake
+  name: Short Ram Intake
+  aliases: []
+  category: intake
+  summary: Replaces part of intake plumbing with a shorter intake path.
+  advice: Engine-bay heat and airflow calibration can negate expected benefits. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - intake
+  - short
+  - ram
+  - engine
+  - performance
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-intake-snorkel
+  name: Intake Snorkel
+  aliases: []
+  category: intake
+  summary: Redirects the intake opening or feed path for air delivery.
+  advice: Verify weather protection, splash exposure and packaging. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - intake
+  - snorkel
+  - engine
+  - performance
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-intake-ducting
+  name: Intake Ducting
+  aliases: []
+  category: intake
+  summary: Changes the air feed to the intake system.
+  advice: Prevent debris or water ingestion and avoid obstructing safety components. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - intake
+  - ducting
+  - engine
+  - performance
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-intake-heat-shield
+  name: Intake Heat Shield
+  aliases: []
+  category: intake
+  summary: Separates an intake filter from adjacent engine-bay heat.
+  advice: Evaluate actual intake temperatures rather than appearance alone. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - intake
+  - heat
+  - shield
+  - engine
+  - performance
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-intake-pipe-upgrade
+  name: Intake Pipe Upgrade
+  aliases: []
+  category: intake
+  summary: Changes intake tubing geometry or material.
+  advice: Sensor placement and diameter changes may affect fuel calibration. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - intake
+  - pipe
+  - upgrade
+  - engine
+  - performance
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-throttle-body-upgrade
+  name: Throttle Body Upgrade
+  aliases: []
+  category: intake
+  summary: Changes the throttle opening or body hardware for airflow goals.
+  advice: Electronic throttle compatibility and tuning requirements vary by engine. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - intake
+  - throttle
+  - body
+  - upgrade
+  - engine
+  - performance
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-intake-manifold-upgrade
+  name: Intake Manifold Upgrade
+  aliases: []
+  category: intake
+  summary: Changes the intake manifold geometry for different airflow characteristics.
+  advice: Port spacing, engine calibration and rpm targets are application dependent. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - intake
+  - manifold
+  - upgrade
+  - engine
+  - performance
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-intake-manifold-spacer
+  name: Intake Manifold Spacer
+  aliases: []
+  category: intake
+  summary: Adds a spacer between intake assemblies to change geometry or insulation.
+  advice: Fitment and measurable performance benefits are engine specific. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - intake
+  - manifold
+  - spacer
+  - engine
+  - performance
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-throttle-body-cleaning
+  name: Throttle Body Cleaning
+  aliases: []
+  category: intake
+  summary: Removes deposits that may affect idle or throttle response.
+  advice: Follow manufacturer procedures for electronic throttles. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - intake
+  - throttle
+  - body
+  - cleaning
+  - engine
+  - performance
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-intake-leak-inspection
+  name: Intake Leak Inspection
+  aliases: []
+  category: intake
+  summary: Tests for unmetered air leaks and degraded intake seals.
+  advice: Incorrect readings can mimic a tuning problem; diagnose before buying parts. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - intake
+  - leak
+  - inspection
+  - engine
+  - performance
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-ecu-calibration
+  name: ECU Calibration
+  aliases: []
+  category: engine
+  summary: Adjusts engine control parameters for a specific hardware setup.
+  advice: Use competent tuning and monitor knock, fueling, temperatures and legal compliance. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - engine
+  - ecu
+  - calibration
+  - performance
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-dyno-calibration
+  name: Dyno Calibration
+  aliases: []
+  category: engine
+  summary: Measures and refines calibration under controlled load.
+  advice: Results depend on dyno procedures, fuel quality and engine condition. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - engine
+  - dyno
+  - calibration
+  - performance
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-engine-data-logging
+  name: Engine Data Logging
+  aliases: []
+  category: engine
+  summary: Records combustion and operating parameters for diagnosis and calibration.
+  advice: Choose valid sensors and interpret logs using the correct engine strategy. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - engine
+  - data
+  - logging
+  - performance
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-spark-plug-selection
+  name: Spark Plug Selection
+  aliases: []
+  category: engine
+  summary: Selects spark plugs appropriate to operating temperature and engine setup.
+  advice: Incorrect heat range or gap can cause misfire and engine damage. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - engine
+  - spark
+  - plug
+  - selection
+  - performance
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-ignition-coil-service
+  name: Ignition Coil Service
+  aliases: []
+  category: engine
+  summary: Inspects or replaces weak ignition components to address misfires.
+  advice: Verify the fault rather than assuming stronger coils add power. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - engine
+  - ignition
+  - coil
+  - service
+  - performance
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-oil-catch-can
+  name: Oil Catch Can
+  aliases: []
+  category: engine
+  summary: Captures some oil mist in a crankcase ventilation path.
+  advice: Routing, draining and emissions rules depend on the engine. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - engine
+  - oil
+  - catch
+  - can
+  - performance
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-pcv-system-service
+  name: PCV System Service
+  aliases: []
+  category: engine
+  summary: Maintains crankcase pressure and ventilation routing.
+  advice: Faulty PCV systems can produce leaks, idle issues or oil consumption. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - engine
+  - pcv
+  - system
+  - service
+  - performance
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-engine-oil-cooler
+  name: Engine Oil Cooler
+  aliases: []
+  category: engine
+  summary: Adds or improves heat rejection for engine oil under demanding use.
+  advice: Avoid excessive pressure drop and overcooling; check thermostat needs. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - engine
+  - oil
+  - cooler
+  - performance
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-baffled-oil-pan
+  name: Baffled Oil Pan
+  aliases: []
+  category: engine
+  summary: Reduces oil movement away from the pickup during sustained cornering.
+  advice: Proper design and installation are engine-specific. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - engine
+  - baffled
+  - oil
+  - pan
+  - performance
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-oil-pressure-monitoring
+  name: Oil Pressure Monitoring
+  aliases: []
+  category: engine
+  summary: Adds instrumentation for identifying lubrication issues.
+  advice: Use reliable sensors and correct pressure reference points. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - engine
+  - oil
+  - pressure
+  - monitoring
+  - performance
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-oil-temperature-monitoring
+  name: Oil Temperature Monitoring
+  aliases: []
+  category: engine
+  summary: Tracks oil temperature during street or track use.
+  advice: Temperature alone must be interpreted against oil and engine specifications. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - engine
+  - oil
+  - temperature
+  - monitoring
+  - performance
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-engine-mount-service
+  name: Engine Mount Service
+  aliases: []
+  category: engine
+  summary: Replaces deteriorated powertrain mounting hardware.
+  advice: Avoid selecting mounts solely for stiffness; comfort and alignment matter. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - engine
+  - mount
+  - service
+  - performance
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-performance-engine-mount
+  name: Performance Engine Mount
+  aliases: []
+  category: engine
+  summary: Reduces drivetrain movement using revised mount compliance.
+  advice: Stiffer mounts often increase cabin noise and vibration. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - engine
+  - performance
+  - mount
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-timing-system-maintenance
+  name: Timing System Maintenance
+  aliases: []
+  category: engine
+  summary: Inspects timing components according to the specific engine design.
+  advice: Interference-engine failure risks and service intervals vary. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - engine
+  - timing
+  - system
+  - maintenance
+  - performance
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-valve-clearance-inspection
+  name: Valve Clearance Inspection
+  aliases: []
+  category: engine
+  summary: Checks valve lash or related valvetrain adjustment where applicable.
+  advice: Only applicable to engines with the relevant service provisions. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - engine
+  - valve
+  - clearance
+  - inspection
+  - performance
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-compression-test
+  name: Compression Test
+  aliases: []
+  category: engine
+  summary: Measures cylinder sealing as a baseline before major power changes.
+  advice: Temperature, throttle position and test procedure affect results. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - engine
+  - compression
+  - test
+  - performance
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-leakdown-test
+  name: Leakdown Test
+  aliases: []
+  category: engine
+  summary: Identifies leakage paths through rings, valves or head sealing surfaces.
+  advice: Interpret percentage and leakage location together. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - engine
+  - leakdown
+  - test
+  - performance
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-crankcase-pressure-test
+  name: Crankcase Pressure Test
+  aliases: []
+  category: engine
+  summary: Measures pressure or vacuum trends that can indicate ventilation problems.
+  advice: Avoid diagnosing internal wear from a single operating point. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - engine
+  - crankcase
+  - pressure
+  - test
+  - performance
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-engine-rebuild-planning
+  name: Engine Rebuild Planning
+  aliases: []
+  category: engine
+  summary: Defines machining, tolerances and components for major engine repair.
+  advice: Cost and reliability depend on inspection and measured component condition. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - engine
+  - rebuild
+  - planning
+  - performance
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-forged-internal-components
+  name: Forged Internal Components
+  aliases: []
+  category: engine
+  summary: Uses forged rods or pistons in an engine build targeting different loads.
+  advice: Requires machine work, tolerances, fueling and calibration matched to the build. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - engine
+  - forged
+  - internal
+  - components
+  - performance
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-camshaft-profile-upgrade
+  name: Camshaft Profile Upgrade
+  aliases: []
+  category: engine
+  summary: Changes valve lift or timing characteristics where mechanically supported.
+  advice: Idle quality, emissions and powerband changes can be substantial. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - engine
+  - camshaft
+  - profile
+  - upgrade
+  - performance
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-valve-spring-upgrade
+  name: Valve Spring Upgrade
+  aliases: []
+  category: engine
+  summary: Changes valvetrain spring control for higher-load operating conditions.
+  advice: Incorrect spring pressure can accelerate wear or cause failure. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - engine
+  - valve
+  - spring
+  - upgrade
+  - performance
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-cylinder-head-porting
+  name: Cylinder Head Porting
+  aliases: []
+  category: engine
+  summary: Modifies airflow pathways in a cylinder head.
+  advice: Quality depends on flow testing and maintaining durability. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - engine
+  - cylinder
+  - head
+  - porting
+  - performance
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-head-gasket-service
+  name: Head Gasket Service
+  aliases: []
+  category: engine
+  summary: Repairs a failed cylinder-head sealing interface.
+  advice: Check root cause such as overheating and verify flatness. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - engine
+  - head
+  - gasket
+  - service
+  - performance
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-harmonic-damper-service
+  name: Harmonic Damper Service
+  aliases: []
+  category: engine
+  summary: Restores crankshaft torsional vibration control with correct components.
+  advice: Undersized or unsuitable pulleys can create reliability problems. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - engine
+  - harmonic
+  - damper
+  - service
+  - performance
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-lightweight-pulley-evaluation
+  name: Lightweight Pulley Evaluation
+  aliases: []
+  category: engine
+  summary: Considers rotational inertia changes in accessory pulley systems.
+  advice: Evaluate charging, cooling and torsional vibration consequences. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - engine
+  - lightweight
+  - pulley
+  - evaluation
+  - performance
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-engine-bay-heat-management
+  name: Engine Bay Heat Management
+  aliases: []
+  category: engine
+  summary: Shields sensitive intake, electrical or fluid components from heat.
+  advice: Avoid trapping heat against wiring and hoses. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - engine
+  - bay
+  - heat
+  - management
+  - performance
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-injector-service
+  name: Injector Service
+  aliases: []
+  category: fueling
+  summary: Cleans, tests or replaces fuel injectors to correct uneven delivery.
+  advice: Match injector characteristics and ECU calibration. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - fueling
+  - injector
+  - service
+  - engine
+  - performance
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-injector-upgrade
+  name: Injector Upgrade
+  aliases: []
+  category: fueling
+  summary: Uses injectors sized for a different fuel delivery requirement.
+  advice: Deadtime, flow and spray pattern must match the calibration and engine. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - fueling
+  - injector
+  - upgrade
+  - engine
+  - performance
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-fuel-pump-service
+  name: Fuel Pump Service
+  aliases: []
+  category: fueling
+  summary: Evaluates pump pressure, flow and electrical supply.
+  advice: Replace pumps based on measured delivery, not noise alone. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - fueling
+  - fuel
+  - pump
+  - service
+  - engine
+  - performance
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-high-flow-fuel-pump
+  name: High-Flow Fuel Pump
+  aliases: []
+  category: fueling
+  summary: Adds fuel delivery capacity for builds with proven need.
+  advice: Verify regulator, wiring and fuel control compatibility. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - fueling
+  - high
+  - flow
+  - fuel
+  - pump
+  - engine
+  - performance
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-fuel-pressure-regulator
+  name: Fuel Pressure Regulator
+  aliases: []
+  category: fueling
+  summary: Changes or restores fuel pressure control where the architecture permits.
+  advice: Incorrect pressure can create dangerous lean or rich conditions. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - fueling
+  - fuel
+  - pressure
+  - regulator
+  - engine
+  - performance
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-fuel-line-upgrade
+  name: Fuel Line Upgrade
+  aliases: []
+  category: fueling
+  summary: Revises fuel tubing for pressure or routing requirements.
+  advice: Use rated components, proper fittings and fire-safe routing. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - fueling
+  - fuel
+  - line
+  - upgrade
+  - engine
+  - performance
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-fuel-filter-maintenance
+  name: Fuel Filter Maintenance
+  aliases: []
+  category: fueling
+  summary: Restores filtration where a serviceable filter exists.
+  advice: System designs vary; depressurize correctly before service. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - fueling
+  - fuel
+  - filter
+  - maintenance
+  - engine
+  - performance
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-flex-fuel-conversion
+  name: Flex Fuel Conversion
+  aliases: []
+  category: fueling
+  summary: Allows calibration for variable ethanol concentrations on supported systems.
+  advice: Needs suitable fuel components, composition sensing and validated tuning. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - fueling
+  - flex
+  - fuel
+  - conversion
+  - engine
+  - performance
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-ethanol-content-sensor
+  name: Ethanol Content Sensor
+  aliases: []
+  category: fueling
+  summary: Measures fuel ethanol mixture for supported calibration strategies.
+  advice: Sensor location and ECU integration require verification. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - fueling
+  - ethanol
+  - content
+  - sensor
+  - engine
+  - performance
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-fuel-system-pressure-logging
+  name: Fuel System Pressure Logging
+  aliases: []
+  category: fueling
+  summary: Monitors supply pressure during load and transients.
+  advice: Use appropriate-rated sensors and diagnose pressure drop safely. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - fueling
+  - fuel
+  - system
+  - pressure
+  - logging
+  - engine
+  - performance
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-fuel-tank-vent-service
+  name: Fuel Tank Vent Service
+  aliases: []
+  category: fueling
+  summary: Repairs venting or evaporative emissions components.
+  advice: Emissions system modifications may be regulated or prohibited. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - fueling
+  - fuel
+  - tank
+  - vent
+  - service
+  - engine
+  - performance
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-intercooler-upgrade
+  name: Intercooler Upgrade
+  aliases: []
+  category: forced induction
+  summary: Improves charge-air temperature management on applicable boosted engines.
+  advice: Pressure drop, ducting and packaging may offset thermal benefits. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - forced
+  - induction
+  - intercooler
+  - upgrade
+  - engine
+  - performance
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-intercooler-pipe-upgrade
+  name: Intercooler Pipe Upgrade
+  aliases: []
+  category: forced induction
+  summary: Revises charge piping for packaging or boost-leak resistance.
+  advice: Check clamps, couplers, pressure ratings and pressure sensor locations. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - forced
+  - induction
+  - intercooler
+  - pipe
+  - upgrade
+  - engine
+  - performance
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-boost-leak-testing
+  name: Boost Leak Testing
+  aliases: []
+  category: forced induction
+  summary: Pressure-tests the air path for leaks on boosted applications.
+  advice: Do not exceed safe component pressures during testing. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - forced
+  - induction
+  - boost
+  - leak
+  - testing
+  - engine
+  - performance
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-wastegate-control-review
+  name: Wastegate Control Review
+  aliases: []
+  category: forced induction
+  summary: Assesses turbocharger boost-control hardware and calibration.
+  advice: Incorrect control can cause overboost and engine damage. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - forced
+  - induction
+  - wastegate
+  - control
+  - review
+  - engine
+  - performance
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-bypass-valve-service
+  name: Bypass Valve Service
+  aliases: []
+  category: forced induction
+  summary: Restores recirculation valve operation on supported turbo systems.
+  advice: Incorrect venting may upset metered-air fueling. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - forced
+  - induction
+  - bypass
+  - valve
+  - service
+  - engine
+  - performance
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-charge-air-temperature-logging
+  name: Charge Air Temperature Logging
+  aliases: []
+  category: forced induction
+  summary: Tracks charge-air temperature during repeated acceleration.
+  advice: Compare ambient conditions and sensor locations before interpreting results. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - forced
+  - induction
+  - charge
+  - air
+  - temperature
+  - logging
+  - engine
+  - performance
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-turbocharger-oil-feed-service
+  name: Turbocharger Oil Feed Service
+  aliases: []
+  category: forced induction
+  summary: Inspects turbo oil supply and drain integrity.
+  advice: Starvation and leaks can rapidly damage turbo bearings. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - forced
+  - induction
+  - turbocharger
+  - oil
+  - feed
+  - service
+  - engine
+  - performance
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-turbocharger-replacement
+  name: Turbocharger Replacement
+  aliases: []
+  category: forced induction
+  summary: Replaces a failed or application-specific turbocharger assembly.
+  advice: Oil supply, cooling, exhaust fit and ECU calibration must be compatible. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - forced
+  - induction
+  - turbocharger
+  - replacement
+  - engine
+  - performance
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-turbocharger-heat-shield
+  name: Turbocharger Heat Shield
+  aliases: []
+  category: forced induction
+  summary: Protects neighboring components from turbine housing heat.
+  advice: Verify material temperature rating and safe mounting. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - forced
+  - induction
+  - turbocharger
+  - heat
+  - shield
+  - engine
+  - performance
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-boost-pressure-monitoring
+  name: Boost Pressure Monitoring
+  aliases: []
+  category: forced induction
+  summary: Displays measured boost pressure for diagnostic use.
+  advice: Ensure sensor scaling and source location are correct. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - forced
+  - induction
+  - boost
+  - pressure
+  - monitoring
+  - engine
+  - performance
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-compressor-inlet-upgrade
+  name: Compressor Inlet Upgrade
+  aliases: []
+  category: forced induction
+  summary: Changes inlet packaging and restrictions upstream of the turbocharger.
+  advice: Inlet sizing and calibration needs vary by platform. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - forced
+  - induction
+  - compressor
+  - inlet
+  - upgrade
+  - engine
+  - performance
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-turbo-inlet-seal-inspection
+  name: Turbo Inlet Seal Inspection
+  aliases: []
+  category: forced induction
+  summary: Checks inlet seals and couplings for unmetered air or leaks.
+  advice: Diagnose plumbing before increasing boost pressure. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - forced
+  - induction
+  - turbo
+  - inlet
+  - seal
+  - inspection
+  - engine
+  - performance
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-radiator-service
+  name: Radiator Service
+  aliases: []
+  category: cooling
+  summary: Restores radiator efficiency and coolant containment.
+  advice: Coolant type and bleeding procedure are engine specific. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - cooling
+  - radiator
+  - service
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-aluminum-radiator-upgrade
+  name: Aluminum Radiator Upgrade
+  aliases: []
+  category: cooling
+  summary: Changes radiator construction or capacity for cooling demands.
+  advice: Verify fan control, fitment and correct operating temperature. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - cooling
+  - aluminum
+  - radiator
+  - upgrade
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-cooling-fan-upgrade
+  name: Cooling Fan Upgrade
+  aliases: []
+  category: cooling
+  summary: Changes fan or shroud performance for idle and low-speed cooling.
+  advice: Check electrical capacity, airflow direction and controls. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - cooling
+  - fan
+  - upgrade
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-thermostat-service
+  name: Thermostat Service
+  aliases: []
+  category: cooling
+  summary: Replaces a failed thermostat to restore proper temperature regulation.
+  advice: Running cooler is not automatically better for efficiency or wear. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - cooling
+  - thermostat
+  - service
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-coolant-hose-upgrade
+  name: Coolant Hose Upgrade
+  aliases: []
+  category: cooling
+  summary: Replaces aged hoses or revisions for packaging.
+  advice: Use appropriate pressure and temperature ratings. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - cooling
+  - coolant
+  - hose
+  - upgrade
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-coolant-expansion-tank
+  name: Coolant Expansion Tank
+  aliases: []
+  category: cooling
+  summary: Repairs or replaces the expansion or overflow reservoir.
+  advice: Match the system's cap and pressure architecture. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - cooling
+  - coolant
+  - expansion
+  - tank
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-coolant-flush
+  name: Coolant Flush
+  aliases: []
+  category: cooling
+  summary: Renews coolant according to approved service chemistry.
+  advice: Mixing incompatible coolant formulations can be harmful. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - cooling
+  - coolant
+  - flush
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-water-pump-service
+  name: Water Pump Service
+  aliases: []
+  category: cooling
+  summary: Evaluates coolant circulation and pump leakage.
+  advice: Some pumps are timing-system driven; follow the correct procedure. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - cooling
+  - water
+  - pump
+  - service
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-differential-cooler
+  name: Differential Cooler
+  aliases: []
+  category: cooling
+  summary: Adds heat management for high-load differential use when justified.
+  advice: Pumping, contamination control and leak prevention are essential. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - cooling
+  - differential
+  - cooler
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-radiator-air-ducting
+  name: Radiator Air Ducting
+  aliases: []
+  category: cooling
+  summary: Guides airflow through the heat exchanger rather than around it.
+  advice: Avoid blocking intercoolers or air-conditioning condensers. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - cooling
+  - radiator
+  - air
+  - ducting
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-coolant-temperature-logging
+  name: Coolant Temperature Logging
+  aliases: []
+  category: cooling
+  summary: Measures temperatures to identify heat-soak or airflow limitations.
+  advice: Compare under the same conditions before interpreting differences. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - cooling
+  - coolant
+  - temperature
+  - logging
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-transmission-mount-upgrade
+  name: Transmission Mount Upgrade
+  aliases: []
+  category: transmission
+  summary: Changes gearbox movement and driveline feel.
+  advice: Stiffness can increase noise, vibration and harshness. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - transmission
+  - mount
+  - upgrade
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-gearbox-oil-temperature-monitoring
+  name: Gearbox Oil Temperature Monitoring
+  aliases: []
+  category: transmission
+  summary: Tracks temperature in high-load gearbox applications.
+  advice: Sensor installation and interpretation depend on gear oil design. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - transmission
+  - gearbox
+  - oil
+  - temperature
+  - monitoring
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-transmission-cooler-line-inspection
+  name: Transmission Cooler Line Inspection
+  aliases: []
+  category: transmission
+  summary: Checks fluid hoses and connections on cooled gearboxes.
+  advice: Leaks can cause rapid transmission damage. Confirm specific vehicle/engine/trim/body-style applicability before
+    selecting parts.
+  tags:
+  - transmission
+  - cooler
+  - line
+  - inspection
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-differential-fluid-service
+  name: Differential Fluid Service
+  aliases: []
+  category: drivetrain
+  summary: Maintains gear lubricant according to axle specification.
+  advice: Confirm limited-slip additive and fluid grade requirements. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - drivetrain
+  - differential
+  - fluid
+  - service
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-limited-slip-differential
+  name: Limited Slip Differential
+  aliases: []
+  category: drivetrain
+  summary: Adds or changes traction distribution on applicable drive axles.
+  advice: Mechanical compatibility and handling changes require careful assessment. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - drivetrain
+  - limited
+  - slip
+  - differential
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-differential-bushing-upgrade
+  name: Differential Bushing Upgrade
+  aliases: []
+  category: drivetrain
+  summary: Changes compliance in differential mounting.
+  advice: Increased vibration and gear noise are possible. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - drivetrain
+  - differential
+  - bushing
+  - upgrade
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-driveshaft-inspection
+  name: Driveshaft Inspection
+  aliases: []
+  category: drivetrain
+  summary: Checks joints, alignment, support bearings and balance.
+  advice: Vibration can indicate serious wear requiring repair. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - drivetrain
+  - driveshaft
+  - inspection
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-lightweight-driveshaft
+  name: Lightweight Driveshaft
+  aliases: []
+  category: drivetrain
+  summary: Reduces driveline rotational mass in supported installations.
+  advice: Speed rating, balance and crash behavior are critical. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - drivetrain
+  - lightweight
+  - driveshaft
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-cv-joint-service
+  name: CV Joint Service
+  aliases: []
+  category: drivetrain
+  summary: Replaces degraded constant-velocity joints and boots.
+  advice: Worn joints can fail under load; use correct axle specifications. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - drivetrain
+  - cv
+  - joint
+  - service
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-axle-shaft-upgrade
+  name: Axle Shaft Upgrade
+  aliases: []
+  category: drivetrain
+  summary: Changes axle strength for documented load requirements.
+  advice: Spline, length and hub compatibility must be verified. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - drivetrain
+  - axle
+  - shaft
+  - upgrade
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-wheel-bearing-service
+  name: Wheel Bearing Service
+  aliases: []
+  category: drivetrain
+  summary: Restores bearing health and reduces dangerous play or noise.
+  advice: Use correct torque procedures and bearing design. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - drivetrain
+  - wheel
+  - bearing
+  - service
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-differential-ratio-change
+  name: Differential Ratio Change
+  aliases: []
+  category: drivetrain
+  summary: Changes final drive gearing for acceleration and cruising tradeoffs.
+  advice: Speedometer, traction control and gear pairing may be affected. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - drivetrain
+  - differential
+  - ratio
+  - change
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-transmission-tunnel-heat-shield
+  name: Transmission Tunnel Heat Shield
+  aliases: []
+  category: drivetrain
+  summary: Protects cabin floor and drivetrain surroundings from exhaust heat.
+  advice: Mounting must not contact moving drivetrain components. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - drivetrain
+  - transmission
+  - tunnel
+  - heat
+  - shield
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-powertrain-mount-inspection
+  name: Powertrain Mount Inspection
+  aliases: []
+  category: drivetrain
+  summary: Checks mounting wear before power or handling changes.
+  advice: Mount design and failure signs vary with vehicle. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - drivetrain
+  - powertrain
+  - mount
+  - inspection
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-lowering-springs
+  name: Lowering Springs
+  aliases: []
+  category: suspension
+  summary: Reduces ride height using replacement springs.
+  advice: Suspension travel, damper compatibility and alignment can worsen if poorly selected. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - suspension
+  - lowering
+  - springs
+  - handling
+  - driving
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-progressive-spring-set
+  name: Progressive Spring Set
+  aliases: []
+  category: suspension
+  summary: Changes suspension response using variable-rate spring geometry.
+  advice: Final ride and handling depend on matching damper travel. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - suspension
+  - progressive
+  - spring
+  - set
+  - handling
+  - driving
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-camber-adjustable-arms
+  name: Camber Adjustable Arms
+  aliases: []
+  category: suspension
+  summary: Expands alignment adjustability with supported control arms.
+  advice: Check joints, strength and alignment limits. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - suspension
+  - camber
+  - adjustable
+  - arms
+  - handling
+  - driving
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-toe-adjustable-arms
+  name: Toe Adjustable Arms
+  aliases: []
+  category: suspension
+  summary: Adds alignment adjustment for toe on supported axle designs.
+  advice: Incorrect toe produces rapid tire wear and unstable tracking. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - suspension
+  - toe
+  - adjustable
+  - arms
+  - handling
+  - driving
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-adjustable-end-links
+  name: Adjustable End Links
+  aliases: []
+  category: suspension
+  summary: Corrects sway bar linkage geometry for modified ride heights.
+  advice: Misadjustment can introduce preload or clearance issues. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - suspension
+  - adjustable
+  - end
+  - links
+  - handling
+  - driving
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-suspension-bushing-refresh
+  name: Suspension Bushing Refresh
+  aliases: []
+  category: suspension
+  summary: Replaces aged rubber or compliant suspension connections.
+  advice: Worn bushings can undermine alignment and braking stability. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - suspension
+  - bushing
+  - refresh
+  - handling
+  - driving
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-polyurethane-bushings
+  name: Polyurethane Bushings
+  aliases: []
+  category: suspension
+  summary: Changes suspension compliance using a stiffer bushing material.
+  advice: May increase harshness and binding if poorly applied. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - suspension
+  - polyurethane
+  - bushings
+  - handling
+  - driving
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-suspension-ball-joint-service
+  name: Suspension Ball Joint Service
+  aliases: []
+  category: suspension
+  summary: Restores worn articulating suspension joints.
+  advice: Failed joints can cause loss of steering control. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - suspension
+  - ball
+  - joint
+  - service
+  - handling
+  - driving
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-strut-top-mount-replacement
+  name: Strut Top Mount Replacement
+  aliases: []
+  category: suspension
+  summary: Addresses noise or looseness at the top of a strut assembly.
+  advice: Spring preload makes some procedures hazardous without proper tools. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - suspension
+  - strut
+  - top
+  - mount
+  - replacement
+  - handling
+  - driving
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-chassis-brace
+  name: Chassis Brace
+  aliases: []
+  category: suspension
+  summary: Adds structural reinforcement around suspension mounting locations.
+  advice: Gains depend on chassis stiffness and the brace design. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - suspension
+  - chassis
+  - brace
+  - handling
+  - driving
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-ride-height-corner-balance
+  name: Ride Height Corner Balance
+  aliases: []
+  category: suspension
+  summary: Measures and adjusts corner weights on supported adjustable suspensions.
+  advice: Must consider driver weight, fuel and intended use. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - suspension
+  - ride
+  - height
+  - corner
+  - balance
+  - handling
+  - driving
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-alignment-geometry-review
+  name: Alignment Geometry Review
+  aliases: []
+  category: suspension
+  summary: Measures camber, caster and toe after suspension modifications.
+  advice: Correct alignment targets depend on tire, driving use and chassis. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - suspension
+  - alignment
+  - geometry
+  - review
+  - handling
+  - driving
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-high-performance-brake-fluid
+  name: High Performance Brake Fluid
+  aliases: []
+  category: brakes
+  summary: Selects fluid appropriate to braking temperatures and standards.
+  advice: Moisture, compatibility and replacement frequency matter. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - brakes
+  - high
+  - performance
+  - brake
+  - fluid
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-brake-rotor-selection
+  name: Brake Rotor Selection
+  aliases: []
+  category: brakes
+  summary: Selects rotors for thermal capacity, wear and intended use.
+  advice: Rotor dimensions and ventilation must match brake hardware. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - brakes
+  - brake
+  - rotor
+  - selection
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-slotted-rotor-evaluation
+  name: Slotted Rotor Evaluation
+  aliases: []
+  category: brakes
+  summary: Assesses rotor surface features and their tradeoffs.
+  advice: Slots do not guarantee reduced braking distance. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - brakes
+  - slotted
+  - rotor
+  - evaluation
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-two-piece-brake-rotor
+  name: Two-Piece Brake Rotor
+  aliases: []
+  category: brakes
+  summary: Uses a separate rotor hat and friction ring on applicable kits.
+  advice: Check thermal expansion design, fasteners and fitment. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - brakes
+  - two
+  - piece
+  - brake
+  - rotor
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-big-brake-kit
+  name: Big Brake Kit
+  aliases: []
+  category: brakes
+  summary: Replaces brake hardware to change thermal and braking performance.
+  advice: Verify brake bias, wheel clearance, ABS compatibility and homologation. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - brakes
+  - big
+  - brake
+  - kit
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-caliper-rebuild
+  name: Caliper Rebuild
+  aliases: []
+  category: brakes
+  summary: Replaces seals or hardware in worn brake calipers.
+  advice: Hydraulic components require careful procedures and testing. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - brakes
+  - caliper
+  - rebuild
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-brake-cooling-ducts
+  name: Brake Cooling Ducts
+  aliases: []
+  category: brakes
+  summary: Directs airflow toward brake components in sustained hard use.
+  advice: Routing must not interfere with steering or suspension travel. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - brakes
+  - brake
+  - cooling
+  - ducts
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-brake-bleeding-procedure
+  name: Brake Bleeding Procedure
+  aliases: []
+  category: brakes
+  summary: Removes trapped gas and renews hydraulic braking feel.
+  advice: Follow model-specific bleeding procedures, including ABS requirements. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - brakes
+  - brake
+  - bleeding
+  - procedure
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-parking-brake-service
+  name: Parking Brake Service
+  aliases: []
+  category: brakes
+  summary: Restores reliable mechanical or electronic parking brake operation.
+  advice: Electronic service modes and actuator calibration vary. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - brakes
+  - parking
+  - brake
+  - service
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-brake-proportioning-assessment
+  name: Brake Proportioning Assessment
+  aliases: []
+  category: brakes
+  summary: Evaluates changes to front and rear braking balance.
+  advice: Improper brake balance can reduce stability under hard braking. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - brakes
+  - brake
+  - proportioning
+  - assessment
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-brake-temperature-logging
+  name: Brake Temperature Logging
+  aliases: []
+  category: brakes
+  summary: Monitors rotor and pad temperature during track use.
+  advice: Sensor technique affects the measured values. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - brakes
+  - brake
+  - temperature
+  - logging
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-brake-pedal-bushing-service
+  name: Brake Pedal Bushing Service
+  aliases: []
+  category: brakes
+  summary: Addresses excess free play in pedal linkages.
+  advice: Verify hydraulic and mechanical causes rather than masking a fault. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - brakes
+  - brake
+  - pedal
+  - bushing
+  - service
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-lightweight-wheel-set
+  name: Lightweight Wheel Set
+  aliases: []
+  category: wheels
+  summary: Reduces wheel assembly mass with compatible rims.
+  advice: Strength, load rating, offset and brake clearance take priority. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - wheels
+  - lightweight
+  - wheel
+  - set
+  - handling
+  - driving
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-wheel-offset-assessment
+  name: Wheel Offset Assessment
+  aliases: []
+  category: wheels
+  summary: Checks effective wheel placement relative to hubs and fenders.
+  advice: Incorrect offset can affect bearing loads and scrub radius. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - wheels
+  - wheel
+  - offset
+  - assessment
+  - handling
+  - driving
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-tire-compound-selection
+  name: Tire Compound Selection
+  aliases: []
+  category: wheels
+  summary: Chooses tire rubber appropriate to temperature and grip needs.
+  advice: Wet-weather and cold-temperature operation may dictate safer choices. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - wheels
+  - tire
+  - compound
+  - selection
+  - handling
+  - driving
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-performance-all-season-tires
+  name: Performance All Season Tires
+  aliases: []
+  category: wheels
+  summary: Balances handling and year-round temperature range.
+  advice: Not equivalent to winter tires on snow and ice. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - wheels
+  - performance
+  - all
+  - season
+  - tires
+  - handling
+  - driving
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-summer-performance-tires
+  name: Summer Performance Tires
+  aliases: []
+  category: wheels
+  summary: Prioritizes warm-weather grip and steering response.
+  advice: Many cannot be used safely in freezing temperatures. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - wheels
+  - summer
+  - performance
+  - tires
+  - handling
+  - driving
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-winter-tire-package
+  name: Winter Tire Package
+  aliases: []
+  category: wheels
+  summary: Provides tires formulated for low temperatures and snow conditions.
+  advice: Use matching tire sizes and avoid mismatched traction sets. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - wheels
+  - winter
+  - tire
+  - package
+  - handling
+  - driving
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-track-tire-selection
+  name: Track Tire Selection
+  aliases: []
+  category: wheels
+  summary: Evaluates specialized high-grip compounds for closed-course use.
+  advice: Heat cycles, rain and cold grip can differ substantially from road tires. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - wheels
+  - track
+  - tire
+  - selection
+  - handling
+  - driving
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-tire-pressure-monitoring
+  name: Tire Pressure Monitoring
+  aliases: []
+  category: wheels
+  summary: Observes tire inflation and temperature changes.
+  advice: Use vehicle-appropriate pressure and reliable sensors. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - wheels
+  - tire
+  - pressure
+  - monitoring
+  - handling
+  - driving
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-wheel-spacer-evaluation
+  name: Wheel Spacer Evaluation
+  aliases: []
+  category: wheels
+  summary: Changes effective wheel offset using a properly designed spacer.
+  advice: Fastener engagement, hub centering and legality must be verified. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - wheels
+  - wheel
+  - spacer
+  - evaluation
+  - handling
+  - driving
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-stud-conversion
+  name: Stud Conversion
+  aliases: []
+  category: wheels
+  summary: Changes wheel hardware from bolts to studs on supported hubs.
+  advice: Torque, thread engagement and material strength matter. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - wheels
+  - stud
+  - conversion
+  - handling
+  - driving
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-hub-centric-ring
+  name: Hub Centric Ring
+  aliases: []
+  category: wheels
+  summary: Corrects wheel center bore fit when approved and necessary.
+  advice: Does not compensate for incorrect lug-seat or load requirements. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - wheels
+  - hub
+  - centric
+  - ring
+  - handling
+  - driving
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-tire-rotation-plan
+  name: Tire Rotation Plan
+  aliases: []
+  category: wheels
+  summary: Distributes wear for tires and drivetrains that permit rotation.
+  advice: Directional and staggered layouts can restrict options. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - wheels
+  - tire
+  - rotation
+  - plan
+  - handling
+  - driving
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-front-splitter
+  name: Front Splitter
+  aliases: []
+  category: aero
+  summary: Alters front underbody airflow and front-end aerodynamic loads.
+  advice: Ground clearance, structural mounting and road use are critical. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - aero
+  - front
+  - splitter
+  - handling
+  - driving
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-rear-wing
+  name: Rear Wing
+  aliases: []
+  category: aero
+  summary: Adds rear aerodynamic surface intended for performance use.
+  advice: Changes aero balance and structural loads; gains require proper testing. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - aero
+  - rear
+  - wing
+  - handling
+  - driving
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-rear-spoiler
+  name: Rear Spoiler
+  aliases: []
+  category: aero
+  summary: Changes rear airflow or appearance with a body-mounted spoiler.
+  advice: A visual spoiler may not create measurable downforce. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - aero
+  - rear
+  - spoiler
+  - handling
+  - driving
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-rear-diffuser
+  name: Rear Diffuser
+  aliases: []
+  category: aero
+  summary: Guides airflow beneath the rear body on suitable aero packages.
+  advice: Performance depends on complete underbody flow and clearance. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - aero
+  - rear
+  - diffuser
+  - handling
+  - driving
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-underbody-panel
+  name: Underbody Panel
+  aliases: []
+  category: aero
+  summary: Smooths airflow under selected chassis areas.
+  advice: Maintain cooling access, drainage and service access. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - aero
+  - underbody
+  - panel
+  - handling
+  - driving
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-brake-air-guide
+  name: Brake Air Guide
+  aliases: []
+  category: aero
+  summary: Channels air toward braking components without full ducts.
+  advice: Confirm wheel and suspension clearance throughout travel. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - aero
+  - brake
+  - air
+  - guide
+  - handling
+  - driving
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-hood-ventilation
+  name: Hood Ventilation
+  aliases: []
+  category: aero
+  summary: Creates an air-exit path for underhood heat or pressure on suitable bodywork.
+  advice: Water intrusion and structural cutting are major considerations. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - aero
+  - hood
+  - ventilation
+  - handling
+  - driving
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-canard-evaluation
+  name: Canard Evaluation
+  aliases: []
+  category: aero
+  summary: Assesses small front aerodynamic devices and their tradeoffs.
+  advice: Can increase drag and usually requires balance with the whole aero system. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - aero
+  - canard
+  - evaluation
+  - handling
+  - driving
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-wheel-arch-venting
+  name: Wheel Arch Venting
+  aliases: []
+  category: aero
+  summary: Changes wheel well airflow through venting or liners.
+  advice: Protect wiring and ensure debris and water management. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - aero
+  - wheel
+  - arch
+  - venting
+  - handling
+  - driving
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-front-lip
+  name: Front Lip
+  aliases: []
+  category: exterior
+  summary: Adds a cosmetic or aerodynamic lower bumper extension.
+  advice: Road clearance and secure attachment matter. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - exterior
+  - front
+  - lip
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-side-skirt
+  name: Side Skirt
+  aliases: []
+  category: exterior
+  summary: Adds a lower body styling or airflow surface.
+  advice: Check jack points, ground clearance and water drainage. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - exterior
+  - side
+  - skirt
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-rear-bumper-valance
+  name: Rear Bumper Valance
+  aliases: []
+  category: exterior
+  summary: Changes rear bumper styling around an exhaust or diffuser area.
+  advice: Check exhaust heat and exact body fitment. Confirm specific vehicle/engine/trim/body-style applicability before
+    selecting parts.
+  tags:
+  - exterior
+  - rear
+  - bumper
+  - valance
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-fender-rolling
+  name: Fender Rolling
+  aliases: []
+  category: exterior
+  summary: Modifies fender lip clearance for tires on supported metal panels.
+  advice: Can crack paint or compromise corrosion protection. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - exterior
+  - fender
+  - rolling
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-fender-liner-modification
+  name: Fender Liner Modification
+  aliases: []
+  category: exterior
+  summary: Changes liner clearance for wheel or tire travel.
+  advice: Protect harnesses and road debris barriers. Confirm specific vehicle/engine/trim/body-style applicability before
+    selecting parts.
+  tags:
+  - exterior
+  - fender
+  - liner
+  - modification
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-hood-strut-retrofit
+  name: Hood Strut Retrofit
+  aliases: []
+  category: exterior
+  summary: Uses gas struts to support a hood on supported hardware.
+  advice: Mount strength and correct hood geometry are essential. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - exterior
+  - hood
+  - strut
+  - retrofit
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-paint-protection-film
+  name: Paint Protection Film
+  aliases: []
+  category: exterior
+  summary: Protects vulnerable painted panels from chips and abrasion.
+  advice: Installation and maintenance determine appearance and lifespan. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - exterior
+  - paint
+  - protection
+  - film
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-vinyl-wrap
+  name: Vinyl Wrap
+  aliases: []
+  category: exterior
+  summary: Changes exterior appearance using a removable film.
+  advice: Proper surface preparation and paint condition are essential. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - exterior
+  - vinyl
+  - wrap
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-ceramic-coating
+  name: Ceramic Coating
+  aliases: []
+  category: exterior
+  summary: Adds a protective surface treatment to exterior finishes.
+  advice: Does not replace paint protection film against physical impacts. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - exterior
+  - ceramic
+  - coating
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-mud-flaps
+  name: Mud Flaps
+  aliases: []
+  category: exterior
+  summary: Reduces road spray or debris striking paint and nearby traffic.
+  advice: Verify wheel travel clearance and attachment. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - exterior
+  - mud
+  - flaps
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-led-headlamp-retrofit
+  name: LED Headlamp Retrofit
+  aliases: []
+  category: lighting
+  summary: Evaluates replacement illumination hardware for a given optical housing.
+  advice: Incorrect lamps can produce glare or be illegal; use approved assemblies. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - lighting
+  - led
+  - headlamp
+  - retrofit
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-headlight-restoration
+  name: Headlight Restoration
+  aliases: []
+  category: lighting
+  summary: Restores degraded headlamp lenses or housings.
+  advice: Correct aim and beam pattern matter for nighttime safety. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - lighting
+  - headlight
+  - restoration
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-headlight-aim-adjustment
+  name: Headlight Aim Adjustment
+  aliases: []
+  category: lighting
+  summary: Corrects headlamp beam alignment.
+  advice: Use the manufacturer procedure and appropriate alignment equipment. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - lighting
+  - headlight
+  - aim
+  - adjustment
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-fog-lamp-service
+  name: Fog Lamp Service
+  aliases: []
+  category: lighting
+  summary: Repairs auxiliary fog lighting when originally fitted.
+  advice: Wiring and allowable use vary by jurisdiction. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - lighting
+  - fog
+  - lamp
+  - service
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-reverse-light-upgrade
+  name: Reverse Light Upgrade
+  aliases: []
+  category: lighting
+  summary: Improves visibility during reversing where legal and compatible.
+  advice: Do not create glare to other drivers or overload circuits. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - lighting
+  - reverse
+  - light
+  - upgrade
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-turn-signal-repair
+  name: Turn Signal Repair
+  aliases: []
+  category: lighting
+  summary: Restores proper turn indication and flasher rate.
+  advice: Changes must comply with lighting regulations. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - lighting
+  - turn
+  - signal
+  - repair
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-brake-light-service
+  name: Brake Light Service
+  aliases: []
+  category: lighting
+  summary: Repairs failed brake lamps, wiring and switches.
+  advice: Confirm all brake light functions before driving. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - lighting
+  - brake
+  - light
+  - service
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-interior-ambient-lighting
+  name: Interior Ambient Lighting
+  aliases: []
+  category: lighting
+  summary: Adds cabin accent illumination without obstructing visibility.
+  advice: Power and wiring must be fused and routed safely. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - lighting
+  - interior
+  - ambient
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-license-plate-lamp-service
+  name: License Plate Lamp Service
+  aliases: []
+  category: lighting
+  summary: Restores illumination of the registration plate.
+  advice: Color and brightness may be regulated. Confirm specific vehicle/engine/trim/body-style applicability before
+    selecting parts.
+  tags:
+  - lighting
+  - license
+  - plate
+  - lamp
+  - service
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-exterior-marker-light-service
+  name: Exterior Marker Light Service
+  aliases: []
+  category: lighting
+  summary: Restores required side and position lights.
+  advice: Avoid unapproved colors or placements. Confirm specific vehicle/engine/trim/body-style applicability before
+    selecting parts.
+  tags:
+  - lighting
+  - exterior
+  - marker
+  - light
+  - service
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-supportive-seat-upgrade
+  name: Supportive Seat Upgrade
+  aliases: []
+  category: interior
+  summary: Changes seat comfort or lateral support for driving demands.
+  advice: Airbag, occupant detection and seatbelt mounting integrity matter. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - interior
+  - supportive
+  - seat
+  - upgrade
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-seat-rail-inspection
+  name: Seat Rail Inspection
+  aliases: []
+  category: interior
+  summary: Checks seat mounting rails and locking mechanisms.
+  advice: Seat retention is crash-critical; do not improvise mounts. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - interior
+  - seat
+  - rail
+  - inspection
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-steering-wheel-restoration
+  name: Steering Wheel Restoration
+  aliases: []
+  category: interior
+  summary: Repairs worn controls and grip surfaces.
+  advice: Never compromise airbag function or steering attachment. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - interior
+  - steering
+  - wheel
+  - restoration
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-shift-knob-upgrade
+  name: Shift Knob Upgrade
+  aliases: []
+  category: interior
+  summary: Changes hand feel or ergonomics of a manual shifter.
+  advice: Verify shift pattern indication and attachment. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - interior
+  - shift
+  - knob
+  - upgrade
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-pedal-grip-upgrade
+  name: Pedal Grip Upgrade
+  aliases: []
+  category: interior
+  summary: Changes pedal surface traction or ergonomics.
+  advice: Must not interfere with pedal travel or create slipping hazards. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - interior
+  - pedal
+  - grip
+  - upgrade
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-sound-deadening
+  name: Sound Deadening
+  aliases: []
+  category: interior
+  summary: Reduces cabin noise or vibration with damping and insulation materials.
+  advice: Extra mass and moisture trapping are tradeoffs. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - interior
+  - sound
+  - deadening
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-cabin-air-filter-service
+  name: Cabin Air Filter Service
+  aliases: []
+  category: interior
+  summary: Improves HVAC filtration where a replaceable filter is fitted.
+  advice: Follow correct airflow direction and housing sealing. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - interior
+  - cabin
+  - air
+  - filter
+  - service
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-hvac-blower-service
+  name: HVAC Blower Service
+  aliases: []
+  category: interior
+  summary: Restores reliable cabin fan airflow.
+  advice: Diagnose resistor, motor and control faults before replacement. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - interior
+  - hvac
+  - blower
+  - service
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-interior-trim-restoration
+  name: Interior Trim Restoration
+  aliases: []
+  category: interior
+  summary: Repairs clips, panels and worn trim to reduce rattles.
+  advice: Avoid blocking airbag deployment paths. Confirm specific vehicle/engine/trim/body-style applicability before
+    selecting parts.
+  tags:
+  - interior
+  - trim
+  - restoration
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-dashboard-rattle-diagnosis
+  name: Dashboard Rattle Diagnosis
+  aliases: []
+  category: interior
+  summary: Locates noise from loose components or trim interfaces.
+  advice: Test under controlled conditions rather than dismantling blindly. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - interior
+  - dashboard
+  - rattle
+  - diagnosis
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-ergonomic-driving-position
+  name: Ergonomic Driving Position
+  aliases: []
+  category: interior
+  summary: Adjusts seat and steering position for reach and visibility.
+  advice: Keep safe distance from airbags and full pedal control. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - interior
+  - ergonomic
+  - driving
+  - position
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-instrument-cluster-service
+  name: Instrument Cluster Service
+  aliases: []
+  category: interior
+  summary: Repairs failed gauges, display or illumination.
+  advice: Odometer and immobilizer changes may require special legal procedures. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - interior
+  - instrument
+  - cluster
+  - service
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-obd-ii-diagnostic-scan
+  name: OBD II Diagnostic Scan
+  aliases: []
+  category: electronics
+  summary: Reads diagnostic trouble codes and monitored sensor values.
+  advice: Codes indicate possible systems, not automatically failed components. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - electronics
+  - obd
+  - ii
+  - diagnostic
+  - scan
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-wideband-air-fuel-monitor
+  name: Wideband Air Fuel Monitor
+  aliases: []
+  category: electronics
+  summary: Measures mixture using a suitable lambda sensor and controller.
+  advice: Placement, sensor calibration and exhaust leaks affect accuracy. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - electronics
+  - wideband
+  - air
+  - fuel
+  - monitor
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-knock-monitoring
+  name: Knock Monitoring
+  aliases: []
+  category: electronics
+  summary: Records knock-related indicators during engine calibration.
+  advice: Knock sensing and interpretation are engine-controller dependent. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - electronics
+  - knock
+  - monitoring
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-can-bus-data-logging
+  name: CAN Bus Data Logging
+  aliases: []
+  category: electronics
+  summary: Captures vehicle network telemetry for diagnostics and analysis.
+  advice: Never transmit arbitrary frames into a safety-critical network. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - electronics
+  - can
+  - bus
+  - data
+  - logging
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-gps-lap-timer
+  name: GPS Lap Timer
+  aliases: []
+  category: electronics
+  summary: Measures repeatable track timing and position data.
+  advice: Use only where timing devices are permitted and safe. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - electronics
+  - gps
+  - lap
+  - timer
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-dash-camera
+  name: Dash Camera
+  aliases: []
+  category: electronics
+  summary: Records road events from a fixed camera installation.
+  advice: Wiring, privacy and windshield-obstruction laws apply. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - electronics
+  - dash
+  - camera
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-battery-health-test
+  name: Battery Health Test
+  aliases: []
+  category: electronics
+  summary: Evaluates state of charge and battery health.
+  advice: Confirm chemistry and rated capacity before interpreting results. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - electronics
+  - battery
+  - health
+  - test
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-alternator-output-test
+  name: Alternator Output Test
+  aliases: []
+  category: electronics
+  summary: Diagnoses charging performance under different electrical loads.
+  advice: Voltage alone may not establish alternator condition. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - electronics
+  - alternator
+  - output
+  - test
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-ground-strap-service
+  name: Ground Strap Service
+  aliases: []
+  category: electronics
+  summary: Restores electrical return paths affected by corrosion or wear.
+  advice: Use correct conductor sizing and mounting points. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - electronics
+  - ground
+  - strap
+  - service
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-ecu-sensor-calibration
+  name: ECU Sensor Calibration
+  aliases: []
+  category: electronics
+  summary: Checks sensor plausibility and learned values after approved service.
+  advice: Procedures and scan tools depend on the specific control system. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - electronics
+  - ecu
+  - sensor
+  - calibration
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-auxiliary-gauge-installation
+  name: Auxiliary Gauge Installation
+  aliases: []
+  category: electronics
+  summary: Adds temperature or pressure instrumentation for monitoring.
+  advice: Protect sensor wiring, use appropriate ports and preserve safety equipment. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - electronics
+  - auxiliary
+  - gauge
+  - installation
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-audio-system-upgrade
+  name: Audio System Upgrade
+  aliases: []
+  category: electronics
+  summary: Changes speakers, amplification or signal processing.
+  advice: Charging capacity, safe wiring and speaker fitment need verification. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - electronics
+  - audio
+  - system
+  - upgrade
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-pre-modification-inspection
+  name: Pre Modification Inspection
+  aliases: []
+  category: maintenance
+  summary: Reviews fluid leaks, brakes, tires, mounts and diagnostics before upgrades.
+  advice: Correct existing faults before adding stress or performance changes. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - maintenance
+  - pre
+  - modification
+  - inspection
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-service-history-review
+  name: Service History Review
+  aliases: []
+  category: maintenance
+  summary: Compiles known maintenance and replacement history.
+  advice: Missing history introduces uncertainty rather than proving a component is healthy. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - maintenance
+  - service
+  - history
+  - review
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-fluid-analysis
+  name: Fluid Analysis
+  aliases: []
+  category: maintenance
+  summary: Uses laboratory analysis to detect certain fluid contamination or wear indicators.
+  advice: Trends are more useful than one isolated sample. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - maintenance
+  - fluid
+  - analysis
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-belt-and-pulley-inspection
+  name: Belt and Pulley Inspection
+  aliases: []
+  category: maintenance
+  summary: Checks accessory belts, tensioners and pulley condition.
+  advice: Belt layouts and service procedures differ by engine. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - maintenance
+  - belt
+  - and
+  - pulley
+  - inspection
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-vacuum-leak-diagnosis
+  name: Vacuum Leak Diagnosis
+  aliases: []
+  category: maintenance
+  summary: Tests intake and vacuum plumbing for unintended air paths.
+  advice: Avoid flammable sprays and use appropriate diagnostic tools. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - maintenance
+  - vacuum
+  - leak
+  - diagnosis
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-engine-misfire-diagnosis
+  name: Engine Misfire Diagnosis
+  aliases: []
+  category: maintenance
+  summary: Investigates spark, fuel, compression and control causes for misfire.
+  advice: Unburned fuel can damage catalysts; do not continue hard driving. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - maintenance
+  - engine
+  - misfire
+  - diagnosis
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-exhaust-emissions-inspection
+  name: Exhaust Emissions Inspection
+  aliases: []
+  category: maintenance
+  summary: Checks exhaust aftertreatment and emissions-related faults.
+  advice: Use legal inspection procedures and preserve required equipment. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - maintenance
+  - exhaust
+  - emissions
+  - inspection
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-suspension-noise-diagnosis
+  name: Suspension Noise Diagnosis
+  aliases: []
+  category: maintenance
+  summary: Traces knocks, squeaks and clunks to worn suspension or mounting parts.
+  advice: Undetected safety-critical wear requires prompt repair. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - maintenance
+  - suspension
+  - noise
+  - diagnosis
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-brake-fade-diagnosis
+  name: Brake Fade Diagnosis
+  aliases: []
+  category: maintenance
+  summary: Determines whether fade relates to pads, fluid, cooling or braking use.
+  advice: Severe fade requires reducing speed and safely ending the drive. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - maintenance
+  - brake
+  - fade
+  - diagnosis
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-tire-wear-pattern-analysis
+  name: Tire Wear Pattern Analysis
+  aliases: []
+  category: maintenance
+  summary: Interprets asymmetric or uneven tread wear for alignment and suspension clues.
+  advice: Tire pressure and driving conditions must be considered. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - maintenance
+  - tire
+  - wear
+  - pattern
+  - analysis
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-cooling-system-pressure-test
+  name: Cooling System Pressure Test
+  aliases: []
+  category: maintenance
+  summary: Checks for leaks and cap/system pressure issues.
+  advice: Never open a hot pressurized cooling system. Confirm specific vehicle/engine/trim/body-style applicability
+    before selecting parts.
+  tags:
+  - maintenance
+  - cooling
+  - system
+  - pressure
+  - test
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
+- id: wrx-va-catalog-pre-track-inspection
+  name: Pre Track Inspection
+  aliases: []
+  category: maintenance
+  summary: Checks wheel torque, fluids, tires, leaks and safety systems before track driving.
+  advice: Event and vehicle requirements vary and supersede general checklists. Confirm specific vehicle/engine/trim/body-style
+    applicability before selecting parts.
+  tags:
+  - maintenance
+  - pre
+  - track
+  - inspection
+  source: GarageIQ editorial (unverified; general modification concept, NOT verified product fitment)
+  license: unspecified
+  verified: false
