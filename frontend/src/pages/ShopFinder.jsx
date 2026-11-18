@@ -66,9 +66,12 @@ export default function ShopFinder() {
       </section>
       <section className="garage-panel"><div className="garage-panel-heading"><div><p className="eyebrow">Live listings</p><h2>Search results {searched ? `(${shops.length})` : ''}</h2></div></div>
         {shops.length ? <div className="shop-results">{shops.map(shop => <article className="shop-result" key={shop.id}>
-          <div><h3>{shop.name}</h3><p>{shop.address}</p>
-            {typeof shop.rating === 'number' && <p>★ {shop.rating.toFixed(1)} / 5 (Google rating)</p>}
-            {shop.phone && <p><a href={`tel:${shop.phone.replace(/[^+\d]/g, '')}`}>{shop.phone}</a></p>}
+          <div className="shop-result-info">
+            <div className="shop-result-title"><h3>{shop.name}</h3>
+              {typeof shop.rating === 'number' && <span className="shop-rating" aria-label={`${shop.rating.toFixed(1)} out of 5 on Google`}><span aria-hidden="true">★</span> {shop.rating.toFixed(1)} <small>Google</small></span>}
+            </div>
+            {shop.address && <p className="shop-address"><span aria-hidden="true">⌖</span>{shop.address}</p>}
+            {shop.phone && <p className="shop-phone"><a href={`tel:${shop.phone.replace(/[^+\d]/g, '')}`}>{shop.phone}</a></p>}
           </div>
           <div className="shop-links">
             <a className="primary-button" href={shop.directions_url} target="_blank" rel="noopener noreferrer">Directions ↗</a>
