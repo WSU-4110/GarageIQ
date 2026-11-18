@@ -8,6 +8,7 @@ import { formatStoredDate } from "../lib/profileDates.js";
 import { activeIndex, getVehicles, payloadForVehicles } from "../lib/vehicleData.js";
 import { saveUserProfile } from "../lib/userProfile.js";
 import { calculateReminder } from "../lib/maintenanceRules.js";
+import { getCheckWorkflow, getVisibleReminders } from "../lib/maintenanceWorkflow.js";
 
 const carImage =
   "https://images.unsplash.com/photo-1486006920555-c77dcf18193c?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&q=85&w=1600";
@@ -59,7 +60,8 @@ export default function Dashboard() {
   const vehicles = getVehicles(profile);
   const vehicleIndex = activeIndex(profile, vehicles);
   const activeVehicle = vehicles[vehicleIndex];
-  const maintenanceItems = (Array.isArray(activeVehicle?.Reminders) ? activeVehicle.Reminders : [])
+  const modCheckWorkflow = getCheckWorkflow(activeVehicle);
+  const maintenanceItems = getVisibleReminders(activeVehicle).visible
     .map((reminder, index) => {
       const status = calculateReminder(
         reminder,
@@ -260,12 +262,19 @@ export default function Dashboard() {
               {maintenanceItems.length ? maintenanceItems.map(({ reminder, status, detail, index }) => (
                 <div className="service-item maintenance-recommendation" key={`${reminder.name}-${index}`}>
                   <div className="service-icon"><Icon name="calendar" /></div>
-                  <div><strong>{reminder.name || "Maintenance service"}</strong><span>{detail}</span></div>
+                  <div><strong>{reminder.name || "Maintenance service"}</strong><span>{detail}{reminder.modBased ? ' · Modified schedule' : ''}</span></div>
                   <b className={`maintenance-status ${status.overdue || status.dueNow ? "is-due" : status.dueSoon ? "is-soon" : status.needsBaseline ? "is-needs-history" : "is-upcoming"}`}>
                     {status.overdue ? "Overdue" : status.dueNow ? "Due now" : status.dueSoon ? "Due soon" : status.needsBaseline ? "Needs service history" : "Upcoming"}
                   </b>
                 </div>
               )) : <p className="maintenance-empty">No maintenance recommendations available. Add a saved interval to create a schedule.</p>}
+              {modCheckWorkflow.items.length > 0 && (
+                <div className="service-item maintenance-recommendation">
+                  <div className="service-icon"><Icon name="wrench" /></div>
+                  <div><strong>{modCheckWorkflow.pending.length} modification checks remaining</strong><span>{modCheckWorkflow.scheduled.length} scheduled · {modCheckWorkflow.completed.length} completed · {modCheckWorkflow.ignored.length} ignored</span></div>
+                  <button className="secondary-button" type="button" onClick={() => navigate('/maintenance')}>Review</button>
+                </div>
+              )}
               <p className="maintenance-disclaimer">Based on your saved intervals and service history. Follow your owner’s manual and a qualified service professional’s guidance.</p>
               <button className="full-button" onClick={() => navigate("/maintenance")}>Edit service history <Icon name="arrow" size={15} /></button>
             </div>

@@ -1,7 +1,7 @@
 // GarageIQ vehicle-scoped data. Older accounts may only have top-level fields.
 export const emptyVehicle = () => ({
   id: crypto.randomUUID(), Nickname: '', Year: '', Make: '', Model: '', Trim: '', Mileage: '',
-  Modifications: [], Services: [], Reminders: [], BuildHistory: [],
+  Modifications: [], Services: [], Reminders: [], ModMaintenanceIntervals: [], HiddenMaintenanceReminders: [], ModMaintenanceCheckDecisions: [], OneTimeMaintenanceChecks: [], BuildHistory: [],
 });
 
 export const vehicleLabel = (vehicle) => [vehicle?.Year, vehicle?.Make, vehicle?.Model, vehicle?.Trim].filter(Boolean).join(' ') || vehicle?.Car || 'New vehicle';
@@ -16,6 +16,10 @@ export function getVehicles(profile) {
       Modifications: Array.isArray(v.Modifications) ? v.Modifications : (i === (profile.ActiveVehicleIndex || 0) ? profile.Modifications || [] : []),
       Services: Array.isArray(v.Services) ? v.Services : (i === (profile.ActiveVehicleIndex || 0) ? profile.Services || [] : []),
       Reminders: Array.isArray(v.Reminders) ? v.Reminders : (i === (profile.ActiveVehicleIndex || 0) ? profile.Reminders || [] : []),
+      ModMaintenanceIntervals: Array.isArray(v.ModMaintenanceIntervals) ? v.ModMaintenanceIntervals : (i === (profile.ActiveVehicleIndex || 0) ? profile.ModMaintenanceIntervals || [] : []),
+      HiddenMaintenanceReminders: Array.isArray(v.HiddenMaintenanceReminders) ? v.HiddenMaintenanceReminders : (i === (profile.ActiveVehicleIndex || 0) ? profile.HiddenMaintenanceReminders || [] : []),
+      ModMaintenanceCheckDecisions: Array.isArray(v.ModMaintenanceCheckDecisions) ? v.ModMaintenanceCheckDecisions : (i === (profile.ActiveVehicleIndex || 0) ? profile.ModMaintenanceCheckDecisions || [] : []),
+      OneTimeMaintenanceChecks: Array.isArray(v.OneTimeMaintenanceChecks) ? v.OneTimeMaintenanceChecks : (i === (profile.ActiveVehicleIndex || 0) ? profile.OneTimeMaintenanceChecks || [] : []),
       BuildHistory: Array.isArray(v.BuildHistory) ? v.BuildHistory : (i === (profile.ActiveVehicleIndex || 0) ? profile.BuildHistory || [] : []),
     }));
   }
@@ -25,7 +29,7 @@ export function getVehicles(profile) {
     Year: profile.Year || '', Make: profile.Make || '', Model: profile.Model || '',
     Trim: profile.Trim || '', Mileage: profile.Mileage || '', Car: profile.Car || '',
     Modifications: profile.Modifications || [], Services: profile.Services || [],
-    Reminders: profile.Reminders || [], BuildHistory: profile.BuildHistory || [],
+    Reminders: profile.Reminders || [], ModMaintenanceIntervals: profile.ModMaintenanceIntervals || [], HiddenMaintenanceReminders: profile.HiddenMaintenanceReminders || [], ModMaintenanceCheckDecisions: profile.ModMaintenanceCheckDecisions || [], OneTimeMaintenanceChecks: profile.OneTimeMaintenanceChecks || [], BuildHistory: profile.BuildHistory || [],
   }];
 }
 
@@ -43,7 +47,7 @@ export function legacyMirror(vehicle) {
     Nickname: vehicle?.Nickname || '', Year: vehicle?.Year || '', Make: vehicle?.Make || '',
     Model: vehicle?.Model || '', Trim: vehicle?.Trim || '', Mileage: vehicle?.Mileage || '',
     Car: vehicle ? vehicleLabel(vehicle) : '', Modifications: vehicle?.Modifications || [],
-    Services: vehicle?.Services || [], Reminders: vehicle?.Reminders || [],
+    Services: vehicle?.Services || [], Reminders: vehicle?.Reminders || [], ModMaintenanceIntervals: vehicle?.ModMaintenanceIntervals || [], HiddenMaintenanceReminders: vehicle?.HiddenMaintenanceReminders || [], ModMaintenanceCheckDecisions: vehicle?.ModMaintenanceCheckDecisions || [], OneTimeMaintenanceChecks: vehicle?.OneTimeMaintenanceChecks || [],
     BuildHistory: vehicle?.BuildHistory || [],
   };
 }

@@ -7,7 +7,11 @@ import { toDateInputValue } from '../lib/profileDates.js';
 import { getActiveVehicle, payloadForActiveUpdate, vehicleLabel } from '../lib/vehicleData.js';
 import GarageSidebar from '../components/GarageSidebar.jsx';
 import Advisor from './Advisor.jsx';
-import { digitsOnly, maintenanceError, calculateReminder, todayLocalISO, isFutureDate, monthsDraft } from '../lib/maintenanceRules.js';
+import { digitsOnly, maintenanceError, todayLocalISO, isFutureDate } from '../lib/maintenanceRules.js';
+import ModMaintenanceSection from '../components/ModMaintenanceSection.jsx';
+import MaintenanceOverview from '../components/MaintenanceOverview.jsx';
+import LinkedReminderEditor, { LinkedModReminders } from '../components/LinkedReminderEditor.jsx';
+import { getEffectiveMaintenancePlan } from '../lib/modMaintenanceIntervals.js';
 
 const GARAGE_CAR_IMAGE = "https://images.unsplash.com/photo-1486006920555-c77dcf18193c?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&q=85&w=1600";
 const categories = ['Exhaust','Intake','Suspension','Wheels','Brakes','Tune','Interior','Custom'];
@@ -62,17 +66,6 @@ const rows = draft?.id === vehicle?.id ? (draft?.rows ?? initialMods(vehicle)) :
  </Frame>;
 }
 
-function ReminderEditor({reminder,onChange,onRemove,services,currentMileage}) {
- const status = calculateReminder(reminder, services, currentMileage);
- const statusLabel = status.overdue ? 'Overdue' : status.dueNow ? 'Due now' : status.dueSoon ? 'Due soon' : status.needsBaseline ? 'Needs service history' : 'Upcoming';
- return <div className="garage-reminder-row">
-   <input aria-label="Reminder name" maxLength={80} value={reminder.name||''} onChange={e=>onChange('name',e.target.value)} placeholder="Oil change, brake fluid…"/>
-   <label>Every <input type="text" inputMode="numeric" pattern="[0-9]*" aria-label="Mileage interval" value={reminder.mileage??''} onChange={e=>onChange('mileage',digitsOnly(e.target.value))} placeholder="5,000"/> miles</label>
-   <label>or <input type="text" inputMode="decimal" aria-label="Time interval months" placeholder="0.5–60" maxLength={5} value={reminder.months??''} onChange={e=>onChange('months',monthsDraft(e.target.value))}/> months</label>
-   <div className={`garage-reminder-due ${status.overdue||status.dueNow?'is-due':status.dueSoon?'is-soon':status.needsBaseline?'':'is-okay'}`}>{statusLabel}{status.mileageText !== 'No mileage interval' ? `: ${status.mileageText}` : ''}<small>{status.nextDate?`Next date: ${status.nextDate}`:status.needsBaseline?'Add a matching service record to calculate due date':'No date-based threshold'}</small></div>
-   <button className="row-remove" onClick={onRemove} aria-label="Remove reminder">×</button>
- </div>;
-}
 export function MaintenancePage(){
  const {user}=useAuth();const {profile,loading,error}=useUserProfile();const v=getActiveVehicle(profile);
  const [draft,setDraft]=useState(null);const [busy,setBusy]=useState(false);const [message,setMessage]=useState('');
@@ -85,6 +78,7 @@ const reminders =
   draft?.id === v?.id
     ? (draft?.reminders ?? (v?.Reminders || []))
     : (v?.Reminders || []);
+ const effectiveModMaintenancePlan = getEffectiveMaintenancePlan({ ...(v || {}), Reminders: reminders });
  function edit(nextServices=services,nextReminders=reminders){setDraft({id:v?.id,services:nextServices,reminders:nextReminders});setMessage('');}
  function update(i,k,value){edit(services.map((r,j)=>j===i?{...r,[k]:value}:r));}
  async function save(){const validation=maintenanceError(services,reminders);if(validation){setMessage(validation);return;}setBusy(true);try{await saveUserProfile(user.uid,payloadForActiveUpdate(profile,{Services:services,Reminders:reminders}));setDraft(null);setMessage('Maintenance history and intervals saved.');}catch(e){setMessage(`Could not save: ${e.message}`);}finally{setBusy(false);}}
@@ -92,14 +86,15 @@ const reminders =
  return <Frame title="Maintenance & repairs" kicker="Vehicle health" subtitle="Track service history, repairs, and custom time or mileage reminders." selected="Maintenance">
  {error&&<p className="form-message error-message">{error}</p>}{v?<VehicleCard vehicle={v}/>:<p>Add a vehicle in My Garage to begin.</p>}
  <div className="maintenance-summary"><div><small>HISTORY ENTRIES</small><strong>{services.length}</strong></div><div><small>CUSTOM REMINDERS</small><strong>{reminders.length}</strong></div><div><small>LAST SERVICE</small><strong>{pageDate(services)}</strong></div></div>
- <section className="garage-panel"><div className="garage-panel-heading"><div><p className="eyebrow">Maintenance schedule</p><h2>Upcoming reminders</h2></div><span className="field-hint">Based on your saved service dates, mileages and current odometer</span></div>
- <div className="garage-upcoming-grid">{reminders.length ? reminders.map((reminder,i)=>{const s=calculateReminder(reminder,services,v?.Mileage);const label=s.overdue?'Overdue':s.dueNow?'Due now':s.dueSoon?'Due soon':s.needsBaseline?'Needs service history':'Upcoming';const detail=s.mileageText==='No mileage interval'?(s.needsBaseline?'Add a matching service record to calculate':'Time-based interval'):s.mileageText;return <div className="garage-upcoming-card" key={i}><span className={`garage-due-flag ${s.overdue||s.dueNow?'is-due':s.dueSoon?'is-soon':s.needsBaseline?'':'is-okay'}`}>{label}</span><strong>{reminder.name||'Unnamed reminder'}</strong><p>{detail}</p><p>{s.nextDate?`Target date: ${s.nextDate}`:'No calculated target date'}</p></div>;}):<p className="empty-state">No recommendations available because no maintenance intervals are saved. You can still record maintenance manually below.</p>}</div></section>
+
+ <MaintenanceOverview key={`maintenance-overview-${v?.id || 'none'}`} vehicle={v} profile={profile} user={user} reminders={reminders} services={services} />
+ <ModMaintenanceSection key={`mod-maintenance-${v?.id || 'none'}`} vehicle={v} profile={profile} user={user} />
  <section className="garage-panel"><div className="garage-panel-heading"><div><p className="eyebrow">Service & repair history</p><h2>Vehicle history</h2></div><button className="secondary-button" onClick={()=>edit([...services,defaultService()])}>＋ Add service / repair</button></div><div className="history-table-head"><span>Item</span><span>Type</span><span>Date</span><span>Mileage</span><span>Notes</span><span/></div>
  {services.map((r,i)=><div className="service-editor-row" key={i}><input value={r.name||''} onChange={e=>update(i,'name',e.target.value)} placeholder="Oil change, A/C repair…"/><select value={r.type||'Maintenance'} onChange={e=>update(i,'type',e.target.value)}><option>Maintenance</option><option>Repair</option></select><input type="date" max={todayLocalISO()} value={r.date||''} onChange={e=>update(i,'date',e.target.value)}/><input type="text" inputMode="numeric" pattern="[0-9]*" maxLength={7} value={r.mileage??''} onChange={e=>update(i,'mileage',digitsOnly(e.target.value))} placeholder="Optional"/><input value={r.notes||''} onChange={e=>update(i,'notes',e.target.value)} placeholder="Details"/><button className="row-remove" aria-label="Remove service" onClick={()=>edit(services.filter((_,j)=>j!==i))}>×</button></div>)}
  <div className="garage-actions"><span className="field-hint">Date and mileage are optional (0–2,000,000 miles). Records are saved per vehicle.</span><button className="primary-button" disabled={!v||busy} onClick={save}>{busy?'Saving…':'Save history'}</button></div></section>
  <section className="garage-panel"><div className="garage-panel-heading"><div><p className="eyebrow">Custom intervals</p><h2>Maintenance reminders</h2><p className="field-hint">Set a mileage interval, a month interval, or both. Either can trigger a service reminder.</p></div><button className="secondary-button" onClick={()=>edit(services,[...reminders,{name:'',mileage:'',months:''}])}>＋ Add reminder</button></div>
  <p className="garage-validation-hint">Mileage: 500–100,000, steps of 500. Type months from 0.5–60, in steps of 0.5 (example: 6.5). At least one interval is required.</p>
- {reminders.map((r,i)=><ReminderEditor key={i} reminder={r} services={services} currentMileage={v?.Mileage} onChange={(k,value)=>edit(services,reminders.map((x,j)=>i===j?{...x,[k]:value}:x))} onRemove={()=>edit(services,reminders.filter((_,j)=>j!==i))}/>)}
- {!reminders.length&&<p className="empty-state">Add an interval to track the next mileage or time-based service.</p>}<div className="garage-actions"><button className="secondary-button" onClick={()=>edit(services,[...reminders,{name:'',mileage:'',months:''}])}>＋ Add custom reminder</button><button className="primary-button" disabled={!v||busy} onClick={save}>Save intervals</button></div>{message&&<p className="form-message" role="status">{message}</p>}</section>
+ {reminders.map((r,i)=><LinkedReminderEditor key={i} reminder={r} activeReminder={effectiveModMaintenancePlan.reminders.find(x=>x.name===r.name)} services={services} currentMileage={v?.Mileage} onChange={(k,value)=>edit(services,reminders.map((x,j)=>i===j?{...x,[k]:value}:x))} onRemove={()=>edit(services,reminders.filter((_,j)=>j!==i))}/>)}
+ {!effectiveModMaintenancePlan.reminders.length&&<p className="empty-state">Add an interval to track the next mileage or time-based service.</p>}<LinkedModReminders reminders={reminders} effective={effectiveModMaintenancePlan.reminders} services={services} currentMileage={v?.Mileage} /><div className="garage-actions"><button className="secondary-button" onClick={()=>edit(services,[...reminders,{name:'',mileage:'',months:''}])}>＋ Add custom reminder</button><button className="primary-button" disabled={!v||busy} onClick={save}>Save intervals</button></div>{message&&<p className="form-message" role="status">{message}</p>}</section>
  </Frame>;
 }
