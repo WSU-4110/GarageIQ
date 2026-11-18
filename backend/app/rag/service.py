@@ -1,3 +1,4 @@
+from app.rag.intent import filter_mod_hits
 from app.domain.models import AdviceResponse, GuideSnippet, Mod, Recommendation, VehicleCreate
 from app.rag.generate import Generator
 from app.rag.retriever import Retriever
@@ -31,7 +32,7 @@ class AdvisorService:
         top_k: int = 5,
         installed_mods: list[str] | None = None,
     ) -> AdviceResponse:
-        mod_hits = self.retriever.search(vehicle, question, top_k)
+        mod_hits = filter_mod_hits(question, self.retriever.search(vehicle, question, max(top_k, 25)))[:top_k]
         guide_hits = self.retriever.search_guides(vehicle, question)
         if not mod_hits and not guide_hits:
             return AdviceResponse(answer=NO_DATA, recommendations=[], sources=[], grounded=False)

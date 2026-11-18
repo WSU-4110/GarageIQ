@@ -1,0 +1,36 @@
+
+- id: hyundai-kia-33t-intercooler-upgrade
+  name: 3.3T Intercooler Upgrade
+  aliases:
+    - upgraded intercooler
+    - charge air cooling
+    - intercooler
+  category: cooling
+  summary: >
+    Upgraded charge-air cooling for Hyundai/Kia
+    3.3L twin-turbo V6 applications.
+  advice: >
+    The Kia Stinger GT and Genesis G70 3.3T
+    share related powertrain architecture.
+    Check exact engine, intercooler dimensions,
+    mounting points, piping and model-year
+    compatibility before selecting a product.
+  tags:
+    - cooling
+    - intercooler
+    - turbo
+    - charge air
+    - performance
+  fitments:
+    - make: Kia
+      models: [Stinger]
+      year_from: 2018
+      year_to: 2023
+      trims: [GT, GT1, GT2]
+    - make: Genesis
+      models: [G70]
+      year_from: 2019
+      year_to: 2023
+      trims: [3.3T]
+  source: GarageIQ editorial (unverified)
+  verified: false
