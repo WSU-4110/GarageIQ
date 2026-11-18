@@ -23,7 +23,7 @@ const entries=[
   ['/vehicle','car','My garage'],
   ['/modifications','bolt','Modifications'],
   ['/maintenance','calendar','Maintenance'],
-  [null,'map','Find shops'],
+  ['/shops','map','Find shops'],
 ];
 export default function GarageSidebar({selected=''}) {
   const [toast,setToast]=useState('');
@@ -50,7 +50,7 @@ export default function GarageSidebar({selected=''}) {
   const initials=displayName.split(/\s+/).filter(Boolean).slice(0,2).map(x=>x[0]?.toUpperCase()).join('');
   return <><aside className="sidebar garage-sidebar-unified">
     <Link className="brand" to="/dashboard"><span className="brand-mark"><Icon name="bolt" size={17}/></span><span>GARAGE<span>IQ</span></span></Link>
-    <nav><p className="eyebrow">Workspace</p>{entries.map(([url,glyph,name])=>name==='Find shops'?<button className="nav-item unavailable" type="button" aria-disabled="true" onClick={()=>notify('Find shops is not available yet.')} key={name}><Icon name={glyph}/><span>{name}</span></button>:<Link className={`nav-item ${selected===name?'active':''}`} to={url} key={url}><Icon name={glyph}/><span>{name}</span></Link>)}</nav>
+    <nav><p className="eyebrow">Workspace</p>{entries.map(([url,glyph,name])=><Link className={`nav-item ${selected===name?'active':''}`} to={url} key={url}><Icon name={glyph}/><span>{name}</span></Link>)}</nav>
     <div className="garage-switcher">
       <p className="eyebrow">Active vehicle</p>
       {active ? <div className="garage-vehicle-combo"><button className="garage-vehicle-combo-profile" onClick={()=>navigate('/vehicle')} title="View vehicle profile"><span className="mini-car"><img src={oldCarImage} alt="" /></span><span><strong>{active.Nickname||vehicleLabel(active)}</strong><small>Vehicle profile</small></span></button><select aria-label="Switch active vehicle" title="Switch active vehicle" value={index} onChange={handleVehicleChange}>{vehicles.map((vehicle, vehicleIndex)=><option key={vehicle.id||vehicleIndex} value={vehicleIndex}>{vehicle.Nickname||vehicleLabel(vehicle)}</option>)}</select></div>:<button className="garage-add-vehicle" onClick={()=>navigate('/vehicle')}>Add a vehicle</button>}
