@@ -20,6 +20,8 @@ class Settings(BaseSettings):
     ollama_model: str = "llama3.2:3b"
     knowledge_dir: Path = APP_DIR / "data" / "mods"
     guides_dir: Path = APP_DIR / "data" / "guides"
+    # Read only on the backend; never expose in Vite client variables.
+    google_places_api_key: str = ""
     # When true, requests must carry a valid Firebase ID token.
     require_auth: bool = False
     # Extra allowed browser origins (JSON list), e.g. a custom domain. *.vercel.app is always allowed.

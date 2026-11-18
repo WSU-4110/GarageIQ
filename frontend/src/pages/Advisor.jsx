@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import useAuth from "../hooks/useAuth.js";
 import useUserProfile from "../hooks/useUserProfile.js";
 import { getAdvice, parseCar } from "../lib/advisor.js";
+import { getActiveVehicle } from "../lib/vehicleData.js";
+import { garageRecommendationEngine } from "../lib/recommendationRules.js";
 import {
   AdviceContext,
   PerformanceStrategy,
@@ -14,7 +16,7 @@ import {
 const GREEN = "#2e9e5b";
 
 function installedMods(profile) {
-  const mods = profile?.Modifications;
+  const mods = getActiveVehicle(profile)?.Modifications ?? profile?.Modifications;
   if (Array.isArray(mods)) {
     return mods.flatMap((mod) => {
       if (typeof mod === "string") return mod.trim() ? [mod.trim()] : [];
@@ -59,7 +61,13 @@ export default function Advisor() {
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
 
-  const vehicle = { ...parseCar(profile?.Car), ...edits };
+  const activeVehicle = getActiveVehicle(profile);
+  const savedVehicle = activeVehicle ? {
+    year: String(activeVehicle.Year || ''), make: activeVehicle.Make || '',
+    model: activeVehicle.Model || '', trim: activeVehicle.Trim || '',
+  } : parseCar(profile?.Car);
+  const vehicle = { ...savedVehicle, ...edits };
+  const garageRecommendations = garageRecommendationEngine.evaluate(activeVehicle);
   const installed = new Set(result?.installed_ids);
 
   function updateField(event) {
@@ -88,7 +96,7 @@ export default function Advisor() {
         make: vehicle.make.trim(),
         model: vehicle.model.trim(),
         trim: vehicle.trim.trim() || null,
-        mileage: 0,
+        mileage: Number(activeVehicle?.Mileage || 0),
       }, strategyQuestion, installedMods(profile)));
     } catch (adviceError) {
       setError(adviceError.message);
@@ -107,6 +115,13 @@ export default function Advisor() {
         <div className="brand auth-brand"><span className="brand-mark">⚡</span><span>GARAGE<span>IQ</span></span></div>
         <p className="eyebrow orange">Mod advisor</p>
         <h1>Find mods for your car</h1>
+        {garageRecommendations.length > 0 && <div className="garage-recommendation-summary">
+          <h2>Recommendations from your garage</h2>
+          {garageRecommendations.map(item => <div key={item.id} className="recommendation-note">
+            <strong>{item.title}</strong><p>{item.detail}</p>
+          </div>)}
+          <p className="field-hint">Maintenance uses your saved intervals; upgrade fitment is checked by the advisor below.</p>
+        </div>}
         <form onSubmit={handleSubmit}>
           <label>Year<input name="year" type="number" value={vehicle.year} onChange={updateField} required /></label>
           <label>Make<input name="make" value={vehicle.make} onChange={updateField} required /></label>

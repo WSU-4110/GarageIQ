@@ -1,0 +1,118 @@
+@startuml
+skinparam classAttributeIconSize 0
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+skinparam classBackgroundColor #F8FAFC
+skinparam classBorderColor #2F475B
+skinparam ArrowColor #536D7B
+left to right direction
+
+package "Shop finder" {
+  class ShopSearchClient <<JavaScript>> {
+    +constructor(baseUrl, fetchImpl)
+    +search(user, filters)
+  }
+  class ShopFinderService <<Python>> {
+    +api_key: str
+    +search(location, service, make): list
+  }
+  class Shop <<Pydantic>> {
+    +id: str
+    +name: str
+    +address: str
+    +rating: float
+    +phone: str
+    +website: HttpUrl
+    +maps_url: HttpUrl
+    +directions_url: HttpUrl
+  }
+  class ShopSearchResponse <<Pydantic>> {
+    +shops: list[Shop]
+  }
+  component "ShopFinder.jsx" as ShopFinderPage
+  component "shops.py: search_shops()" as ShopsApi
+  cloud "Google Places Text Search" as Places
+  ShopFinderPage ..> ShopSearchClient : invokes
+  ShopSearchClient ..> ShopsApi : GET /api/shops
+  ShopsApi ..> ShopFinderService : constructs / searches
+  ShopsApi ..> ShopSearchResponse : returns
+  ShopSearchResponse "1" *-- "0..*" Shop
+  ShopFinderService ..> Places : HTTPS POST
+}
+
+package "Recommendation integration" {
+  class GarageRecommendationEngine <<JavaScript>> {
+    +evaluate(vehicle, today): list
+  }
+  class ReminderCalculator <<JavaScript>> {
+    +constructor(strategies)
+    +calculate(reminder, services, mileage, today)
+  }
+  class MileageReminderStrategy <<JavaScript>> {
+    +calculate(reminder, services, mileage)
+  }
+  class TimeReminderStrategy <<JavaScript>> {
+    +calculate(reminder, services, mileage, today)
+  }
+  class AdviceStrategy <<JavaScript>> {
+    +getQuestion(question)
+  }
+  class PerformanceStrategy <<JavaScript>> {
+    +getQuestion(question)
+  }
+  class HandlingStrategy <<JavaScript>> {
+    +getQuestion(question)
+  }
+  class GeneralStrategy <<JavaScript>> {
+    +getQuestion(question)
+  }
+  class AdviceContext <<JavaScript>> {
+    +constructor(strategy)
+    +setStrategy(strategy)
+    +getQuestion(question)
+  }
+  class VehicleCreate <<Pydantic>> {
+    +year: int
+    +make: str
+    +model: str
+    +trim: str
+    +mileage: int
+  }
+  class Scoped <<Pydantic>> {
+    +fits(vehicle): bool
+  }
+  class Mod <<Pydantic>> {
+    +id: str
+    +name: str
+    +requires: list
+    +recommended_with: list
+    +conflicts_with: list
+    +search_text(): str
+  }
+  class AdvisorService <<Python>> {
+    +advise(vehicle, question, top_k, installed_mods)
+  }
+  class Retriever <<Python>> {
+    +search(vehicle, query, top_k)
+    +search_guides(vehicle, query, top_k)
+    +expand(mod, vehicle)
+  }
+  component "Advisor.jsx" as AdvisorPage
+  component "advice.py: advice()" as AdviceApi
+  AdvisorPage ..> GarageRecommendationEngine : evaluates active vehicle
+  GarageRecommendationEngine ..> ReminderCalculator : calculateReminder()
+  ReminderCalculator o-- MileageReminderStrategy
+  ReminderCalculator o-- TimeReminderStrategy
+  AdvisorPage ..> AdviceContext : uses strategy
+  AdviceStrategy <|-- PerformanceStrategy
+  AdviceStrategy <|-- HandlingStrategy
+  AdviceStrategy <|-- GeneralStrategy
+  AdviceContext o-- AdviceStrategy
+  Scoped <|-- Mod
+  Scoped ..> VehicleCreate : checks fitment
+  Retriever ..> Mod : retrieves and expands
+  AdvisorPage ..> AdviceApi : POST /api/advice
+  AdviceApi ..> AdvisorService : calls
+  AdvisorService *-- Retriever
+}
+@enduml

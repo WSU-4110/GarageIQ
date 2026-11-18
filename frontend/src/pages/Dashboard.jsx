@@ -143,10 +143,10 @@ export default function Dashboard() {
           {navItems.map((item) => (
             <button
               key={item.label}
-              className={`nav-item ${active === item.label ? "active" : ""} ${item.label === "Find shops" ? "unavailable" : ""}`}
-              aria-disabled={item.label === "Find shops"}
+              className={`nav-item ${active === item.label ? "active" : ""}`}
+
               onClick={() => {
-                if (item.label === "Find shops") notify("Find shops is not available yet.");
+                if (item.label === "Find shops") navigate("/shops");
                 else if (item.label === "My garage") navigate("/vehicle");
                 else if (item.label === "Modifications") navigate("/modifications");
                 else if (item.label === "Maintenance") navigate("/maintenance");
@@ -272,10 +272,10 @@ export default function Dashboard() {
             <div className="panel shop-panel">
               <div className="shop-photo" />
               <div className="shop-content">
-                <div className="panel-heading"><div><p className="eyebrow">Trusted nearby</p><h3>Apex Motorworks</h3></div><span className="rating">★ 4.9</span></div>
-                <p>BMW performance specialists · 3.2 mi away</p>
-                <div className="shop-meta"><span>Open until 6 PM</span><span>24 builds</span></div>
-                <button className="full-button dark" onClick={() => notify("Shop profiles are not connected yet.")}>View shop <Icon name="arrow" size={15} /></button>
+                <div className="panel-heading"><div><p className="eyebrow">Performance shops</p><h3>Find a trusted workshop</h3></div></div>
+                <p>Search by ZIP code or city, service type and your vehicle make.</p>
+                <div className="shop-meta"><span>Listings from Google Maps</span></div>
+                <button className="full-button dark" onClick={() => navigate("/shops")}>Find shops <Icon name="arrow" size={15} /></button>
               </div>
             </div>
           </section>

@@ -9,7 +9,7 @@ from firebase_admin import auth
 from app.firebase_config import db
 from fastapi import FastAPI
 
-from app.api import advice, vehicles
+from app.api import advice, vehicles, shops
 from app.core.config import get_settings
 from app.knowledge.loader import load_knowledge
 from app.rag.embeddings import build_embedder
@@ -42,6 +42,8 @@ app.add_middleware(
 app.include_router(vehicles.router)
 app.include_router(advice.router)
 app.include_router(advice.router, prefix="/api")
+app.include_router(shops.router)
+app.include_router(shops.router, prefix="/api")
 
 
 @app.get("/")
