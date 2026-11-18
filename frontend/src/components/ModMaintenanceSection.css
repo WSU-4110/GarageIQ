@@ -1,0 +1,66 @@
+.garage-mod-health .garage-panel-heading { align-items:flex-start; }
+.mod-health-count {flex-shrink:0;font-size:12px;font-weight:700;color:#7e3b1e;background:#fff0e8;border:1px solid #f2d1bf;border-radius:999px;padding:7px 12px}
+.mod-health-intro {margin:0 0 16px;color:#5e6062;font-size:12px;line-height:1.6}
+.mod-health-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.mod-health-card {min-width:0;padding:16px;border:1px solid #e2e0da;border-radius:9px;background:#fdfdfb}
+.mod-health-card-top {display:flex;align-items:center;flex-wrap:wrap;gap:7px;margin-bottom:9px}
+.mod-health-group {color:#b54c22;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+.mod-health-type {padding:3px 7px;border-radius:4px;background:#f0f0ed;color:#555;font-size:10px;font-weight:600}
+.mod-health-card h3 {margin:0 0 8px;font:700 20px/1.1 'Barlow Condensed',sans-serif}
+.mod-health-card p {margin:0 0 11px;color:#5f6061;font-size:12px;line-height:1.55;overflow-wrap:anywhere}
+.mod-health-card .mod-health-causes {margin-bottom:9px;color:#343638}
+.mod-health-details {margin:12px 0;padding:9px 0;border-top:1px solid #eeece8;color:#5f6061;font-size:11px;line-height:1.55}
+.mod-health-details summary {cursor:pointer;color:#b54c22;font-weight:700}
+.mod-health-details ul {padding-left:18px;margin:10px 0}
+.mod-health-details li+li {margin-top:6px}
+.mod-health-sources {margin-top:8px;overflow-wrap:anywhere}
+.mod-health-sources a {color:#9f431b;text-decoration:underline}
+.mod-health-schedule {border:1px solid #cfdfcc;background:#f3faf2;border-radius:7px;padding:10px;margin:10px 0;font-size:12px;line-height:1.5}
+.mod-health-schedule span {display:block;color:#365f34;font-size:11px;margin-top:3px}
+.mod-health-actions {display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.mod-health-remove {border:0;background:none;text-decoration:underline;color:#b33e25;cursor:pointer;font-size:12px}
+.mod-health-editor {margin-top:12px;padding:13px;border-radius:8px;background:#faf8f5;border:1px solid #dedbd4;display:grid;gap:10px}
+.mod-health-editor label {display:grid;gap:5px;font-size:11px;font-weight:700;color:#3b3d3f}
+.mod-health-editor input,.mod-health-editor select {box-sizing:border-box;min-width:0;width:100%;padding:9px;color:#242526;background:white;border:1px solid #ccc;border-radius:5px;font-size:12px}
+.mod-health-interval-inputs {display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.mod-health-baseline {margin:0!important;color:#444!important;font-size:11px!important}
+.mod-health-toggle {margin-top:16px}
+.mod-health-note {margin:14px 0 0;color:#6a6b6b;font-size:11px;line-height:1.5}
+@media(max-width:850px){.mod-health-grid{grid-template-columns:1fr}.garage-mod-health .garage-panel-heading{flex-wrap:wrap}}
+
+/* FR13 workflow: small contextual controls, never destructive deletes on hide. */
+.mod-health-progress{display:grid;gap:5px;margin:-3px 0 16px}
+.mod-health-progress small{color:#656663;font-size:11px}
+.mod-health-progress-bar{height:7px;border-radius:100px;background:#eeeae4;overflow:hidden}
+.mod-health-progress-bar>span{display:block;height:100%;background:#4d9869;border-radius:100px;transition:width .2s}
+.mod-health-success{color:#32734b;font-weight:700;font-size:12px}
+.mod-health-text-button{color:#a94721;border:0;background:transparent;padding:7px 4px;cursor:pointer;text-decoration:underline;text-underline-offset:2px;font-size:12px;font-weight:700}
+.mod-health-toggle+.mod-health-toggle{margin-left:10px}
+.garage-manage-reminder{position:relative;padding-right:29px}
+.garage-hide-reminder{background:transparent;color:#aa583b;border:0;cursor:pointer;font-size:21px;line-height:1;padding:4px 6px;flex-shrink:0}
+.garage-manage-reminder>.garage-hide-reminder{position:absolute;right:7px;top:8px}
+.garage-hide-reminder:hover{color:#d23d26}
+.garage-hide-reminder:disabled,.mod-health-text-button:disabled{opacity:.5;cursor:not-allowed}
+.garage-hidden-reminders{margin:12px 0 4px}
+.garage-hidden-list{display:grid;gap:6px;margin:7px 0}
+.garage-hidden-list>div{display:flex;align-items:center;justify-content:space-between;gap:10px;background:#faf9f7;border:1px solid #e3e0da;border-radius:6px;padding:9px 12px;font-size:12px}
+.mod-effective-tag{display:block;margin:5px 0;color:#b34d25;font-size:10px;font-weight:700}
+.linked-reminder-name{min-width:0;display:grid;gap:3px}
+.linked-effective-detail{display:block;margin-top:6px;font-weight:600;color:#a34824;font-size:11px;line-height:1.4}
+.linked-mod-added{border-top:1px solid #e4e0d9;padding-top:16px;margin-top:20px}
+.linked-mod-added h3{font:700 19px 'Barlow Condensed',sans-serif;text-transform:uppercase;margin:0 0 6px}
+.linked-mod-added-item{display:flex;gap:14px;align-items:center;flex-wrap:wrap;background:#f9f8f6;border:1px solid #e1ddd6;border-radius:7px;padding:10px;margin:8px 0;font-size:12px}
+.linked-mod-added-item>strong{min-width:160px}
+.linked-mod-added-item>span{flex:1;min-width:100px}
+.one-time-panel{border-top:1px solid #e1dfdc;margin-top:22px;padding-top:20px}
+.one-time-heading{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.one-time-heading h3{font:700 20px 'Barlow Condensed',sans-serif;text-transform:uppercase;margin:0 0 5px}
+.one-time-heading p{font-size:12px;color:#70716f;margin:0}
+.one-time-add{display:flex;align-items:end;gap:10px;flex-wrap:wrap;margin:15px 0;padding:12px;background:#faf8f4;border:1px solid #ddd8d0;border-radius:8px}
+.one-time-add label{display:grid;gap:5px;color:#444;font-weight:700;font-size:11px;flex:1;min-width:140px}
+.one-time-add input{padding:9px;border:1px solid #d4d0c8;border-radius:5px;background:#fff;max-width:100%;min-width:0}
+.one-time-list{display:grid;gap:7px;margin-top:12px}
+.one-time-item{display:flex;align-items:center;gap:10px;flex-wrap:wrap;background:#fcfcfb;border:1px solid #e2ded8;border-radius:7px;padding:9px 10px}
+.one-time-item-copy{flex:1;min-width:190px;display:grid;gap:3px;font-size:12px}
+.one-time-item-copy small{font-size:11px;color:#70706f}
+@media(max-width:700px){.one-time-heading{align-items:flex-start}.linked-mod-added-item{align-items:flex-start}.one-time-add{display:grid}}
