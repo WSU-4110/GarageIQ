@@ -1,0 +1,477 @@
+- id: kia-stinger-2018-2023-front-lip-spoiler
+  name: Front Lip Spoiler
+  aliases:
+  - front lip
+  - chin spoiler
+  - lip kit
+  category: exterior
+  summary: Changes the lower front bumper appearance with a subtle or aggressive front lip. Common choice for a
+    sportier stance and more imposing front end.
+  advice: Choose an exact bumper and body style fit; protect ground clearance, pedestrian safety and mounting points.
+  tags:
+  - appearance
+  - styling
+  - aggressive
+  - front bumper
+  - aero
+  source: GarageIQ editorial (unverified; modification category only, not product fitment)
+  license: unspecified
+  verified: false
+- id: kia-stinger-2018-2023-front-splitter
+  name: Front Splitter
+  aliases:
+  - splitter
+  - front aero splitter
+  category: exterior
+  summary: Projects forward under the front bumper for race-inspired appearance and potentially altered aerodynamic
+    loads.
+  advice: Real aerodynamic benefit requires structural attachment and measured vehicle-specific design; beware driveway
+    clearance.
+  tags:
+  - appearance
+  - aerodynamics
+  - track
+  - front end
+  source: GarageIQ editorial (unverified; modification category only, not product fitment)
+  license: unspecified
+  verified: false
+- id: kia-stinger-2018-2023-side-skirts
+  name: Side Skirts
+  aliases:
+  - side skirt kit
+  - rocker extensions
+  category: exterior
+  summary: Add lower body extensions along the rocker panels for a lower, wider and more aggressive visual profile.
+  advice: Check door clearance, jack locations, drainage, mounting and specific wheelbase/body style.
+  tags:
+  - appearance
+  - lowered
+  - body kit
+  - stance
+  source: GarageIQ editorial (unverified; modification category only, not product fitment)
+  license: unspecified
+  verified: false
+- id: kia-stinger-2018-2023-rear-diffuser-style-valance
+  name: Rear Diffuser Style Valance
+  aliases:
+  - rear diffuser
+  - bumper diffuser
+  category: exterior
+  summary: Changes rear bumper styling with a diffuser-inspired valance and underbody appearance.
+  advice: A cosmetic diffuser does not prove functional downforce; confirm bumper variant and exhaust clearance.
+  tags:
+  - appearance
+  - rear bumper
+  - aggressive
+  - aero
+  source: GarageIQ editorial (unverified; modification category only, not product fitment)
+  license: unspecified
+  verified: false
+- id: kia-stinger-2018-2023-trunk-lip-spoiler
+  name: Trunk Lip Spoiler
+  aliases:
+  - lip spoiler
+  - ducktail
+  - duckbill
+  category: exterior
+  summary: Adds a small rear deck or trunk edge spoiler for a subtle sportier profile.
+  advice: Confirm sedan/coupe/hatchback trunk geometry; secure attachment and weather sealing.
+  tags:
+  - appearance
+  - spoiler
+  - ducktail
+  - styling
+  - rear
+  source: GarageIQ editorial (unverified; modification category only, not product fitment)
+  license: unspecified
+  verified: false
+- id: kia-stinger-2018-2023-rear-wing
+  name: Rear Wing
+  aliases:
+  - gt wing
+  - spoiler wing
+  category: exterior
+  summary: Adds a raised wing for race-inspired exterior appearance; a properly engineered wing may also affect
+    aero balance.
+  advice: Mounting reinforcement, rear visibility, lift balance and local road rules matter.
+  tags:
+  - appearance
+  - aggressive
+  - track
+  - aero
+  - rear
+  source: GarageIQ editorial (unverified; modification category only, not product fitment)
+  license: unspecified
+  verified: false
+- id: kia-stinger-2018-2023-widebody-fender-kit
+  name: Widebody Fender Kit
+  aliases:
+  - widebody
+  - fender flare kit
+  category: exterior
+  summary: Adds wider fender or quarter panel styling to visually broaden the car and permit some wheel fitments.
+  advice: Significant bodywork may be required; tire coverage, suspension travel and corrosion protection must be
+    checked.
+  tags:
+  - appearance
+  - wide stance
+  - aggressive
+  - wheels
+  - body kit
+  source: GarageIQ editorial (unverified; modification category only, not product fitment)
+  license: unspecified
+  verified: false
+- id: kia-stinger-2018-2023-bolt-on-fender-flares
+  name: Bolt-On Fender Flares
+  aliases:
+  - fender flares
+  - arch extensions
+  category: exterior
+  summary: Adds wheel arch flares for a wider exterior appearance and possible tire coverage.
+  advice: Check fastening, trapped moisture, body lines and specific door or bumper clearances.
+  tags:
+  - exterior
+  - styling
+  - wide
+  - stance
+  source: GarageIQ editorial (unverified; modification category only, not product fitment)
+  license: unspecified
+  verified: false
+- id: kia-stinger-2018-2023-front-grille-restyle
+  name: Front Grille Restyle
+  aliases:
+  - grille replacement
+  - mesh grille
+  category: exterior
+  summary: Changes the front grille mesh or surround for a cleaner, sportier or blacked-out look.
+  advice: Preserve cooling airflow, sensor placement and active grille components where fitted.
+  tags:
+  - appearance
+  - front end
+  - blacked out
+  - styling
+  source: GarageIQ editorial (unverified; modification category only, not product fitment)
+  license: unspecified
+  verified: false
+- id: kia-stinger-2018-2023-rear-bumper-restyle
+  name: Rear Bumper Restyle
+  aliases:
+  - bumper cover
+  - rear valance
+  category: exterior
+  summary: Changes the rear bumper exterior design to match a sport package or custom style.
+  advice: Confirm exact trim/body fitment, crash structure, parking sensors and exhaust routing.
+  tags:
+  - exterior
+  - appearance
+  - body kit
+  - rear
+  source: GarageIQ editorial (unverified; modification category only, not product fitment)
+  license: unspecified
+  verified: false
+- id: kia-stinger-2018-2023-front-bumper-restyle
+  name: Front Bumper Restyle
+  aliases:
+  - front bumper kit
+  - bumper cover
+  category: exterior
+  summary: Replaces exterior bumper cover styling for a more aggressive or sport-package appearance.
+  advice: Check crash system compatibility, radar, fog lamps, pedestrian regulations and mounting points.
+  tags:
+  - exterior
+  - appearance
+  - aggressive
+  - front
+  source: GarageIQ editorial (unverified; modification category only, not product fitment)
+  license: unspecified
+  verified: false
+- id: kia-stinger-2018-2023-hood-restyle
+  name: Hood Restyle
+  aliases:
+  - aftermarket hood
+  - vented hood
+  category: exterior
+  summary: Changes the hood profile with scoops or vents for an aggressive engine-bay inspired appearance.
+  advice: Confirm latch strength, water management, structural safety and actual functional airflow.
+  tags:
+  - exterior
+  - appearance
+  - hood
+  - aggressive
+  source: GarageIQ editorial (unverified; modification category only, not product fitment)
+  license: unspecified
+  verified: false
+- id: kia-stinger-2018-2023-mirror-cap-covers
+  name: Mirror Cap Covers
+  aliases:
+  - mirror caps
+  - carbon look mirror
+  category: exterior
+  summary: Changes side mirror housing appearance with painted, black or composite-style caps.
+  advice: Fit depends on mirror shape and included cameras or turn indicators.
+  tags:
+  - exterior
+  - blackout
+  - appearance
+  - cosmetic
+  source: GarageIQ editorial (unverified; modification category only, not product fitment)
+  license: unspecified
+  verified: false
+- id: kia-stinger-2018-2023-roof-spoiler
+  name: Roof Spoiler
+  aliases:
+  - hatch roof spoiler
+  - roof wing
+  category: exterior
+  summary: Adds a spoiler at the trailing roof edge on vehicles with compatible roof and hatch geometry.
+  advice: Only appropriate for supported roof/hatch configurations; avoid obstructing rear visibility.
+  tags:
+  - exterior
+  - spoiler
+  - appearance
+  source: GarageIQ editorial (unverified; modification category only, not product fitment)
+  license: unspecified
+  verified: false
+- id: kia-stinger-2018-2023-window-rain-visors
+  name: Window Rain Visors
+  aliases:
+  - window deflectors
+  - rain guards
+  category: exterior
+  summary: Adds slim exterior rain guards along side windows for a distinctive trim line and light-weather ventilation.
+  advice: Confirm door/window channel design and secure fit to avoid wind noise.
+  tags:
+  - exterior
+  - accessories
+  - window
+  - styling
+  source: GarageIQ editorial (unverified; modification category only, not product fitment)
+  license: unspecified
+  verified: false
+- id: kia-stinger-2018-2023-lowering-visual-stance
+  name: Lowering Visual Stance
+  aliases:
+  - stance setup
+  - flush fitment
+  category: exterior
+  summary: Uses appropriate wheel offset, tire sizing and suspension geometry to achieve a more flush or lower-looking
+    vehicle profile.
+  advice: Check load rating, tire coverage, suspension travel, alignment and rubbing; not a specific kit.
+  tags:
+  - appearance
+  - stance
+  - wheels
+  - lowered
+  - fitment
+  source: GarageIQ editorial (unverified; modification category only, not product fitment)
+  license: unspecified
+  verified: false
+- id: kia-stinger-2018-2023-blackout-exterior-trim
+  name: Blackout Exterior Trim
+  aliases:
+  - chrome delete
+  - black trim
+  - blacked out
+  category: exterior
+  summary: Replaces or covers shiny exterior trim for a blacked-out and more aggressive look.
+  advice: Verify coating compatibility and preserve required lights and reflectors.
+  tags:
+  - appearance
+  - black
+  - styling
+  - chrome delete
+  source: GarageIQ editorial (unverified; modification category only, not product fitment)
+  license: unspecified
+  verified: false
+- id: kia-stinger-2018-2023-headlight-housing-restyle
+  name: Headlight Housing Restyle
+  aliases:
+  - dark headlight housing
+  - projector housing
+  category: exterior
+  summary: Changes the appearance of headlamp assemblies through compatible approved housings rather than tinted
+    light output.
+  advice: Maintain certified beam pattern, brightness, aim, and safety equipment; do not obscure required lighting.
+  tags:
+  - appearance
+  - headlights
+  - front end
+  source: GarageIQ editorial (unverified; modification category only, not product fitment)
+  license: unspecified
+  verified: false
+- id: kia-stinger-2018-2023-taillight-housing-restyle
+  name: Taillight Housing Restyle
+  aliases:
+  - smoked look taillights
+  - tail light assembly
+  category: exterior
+  summary: Changes rear lamp housing styling using compliant replacement assemblies.
+  advice: Required illumination, color and visibility must remain legal; avoid tinted lenses that reduce light.
+  tags:
+  - appearance
+  - taillights
+  - rear end
+  source: GarageIQ editorial (unverified; modification category only, not product fitment)
+  license: unspecified
+  verified: false
+- id: kia-stinger-2018-2023-custom-badging
+  name: Custom Badging
+  aliases:
+  - emblem swap
+  - debade
+  - rebadge
+  category: exterior
+  summary: Changes manufacturer or trim badging presentation through removal or replacement of exterior emblems.
+  advice: Avoid interfering with sensors, paint finish or required identification labels.
+  tags:
+  - appearance
+  - cosmetic
+  - emblems
+  - badges
+  source: GarageIQ editorial (unverified; modification category only, not product fitment)
+  license: unspecified
+  verified: false
+- id: kia-stinger-2018-2023-mud-flap-styling
+  name: Mud Flap Styling
+  aliases:
+  - rally mud flaps
+  - splash guards
+  category: exterior
+  summary: Adds visible splash guards for a rally-inspired exterior look and reduced road spray.
+  advice: Choose mounting compatible with bumper and wheel travel.
+  tags:
+  - exterior
+  - appearance
+  - rally
+  - accessories
+  source: GarageIQ editorial (unverified; modification category only, not product fitment)
+  license: unspecified
+  verified: false
+- id: kia-stinger-2018-2023-wheel-spacers-evaluation
+  name: Wheel Spacers Evaluation
+  aliases:
+  - spacers
+  - flush wheel fit
+  category: exterior
+  summary: Evaluates certified hub-centric spacer setups for a wider-looking wheel position where engineering supports
+    them.
+  advice: Wheel bolt engagement, hub load, clearance and legality need professional verification; improper installation
+    can cause wheel loss.
+  tags:
+  - stance
+  - wheels
+  - appearance
+  - fitment
+  source: GarageIQ editorial (unverified; modification category only, not product fitment)
+  license: unspecified
+  verified: false
+- id: kia-stinger-2018-2023-roof-rack-styling
+  name: Roof Rack Styling
+  aliases:
+  - roof bars
+  - cargo rack
+  category: exterior
+  summary: Adds a crossbar or rack system where a compatible mounting point is available, changing utility and exterior
+    profile.
+  advice: Observe roof load ratings, wind noise, clearance and attachment compatibility.
+  tags:
+  - exterior
+  - utility
+  - appearance
+  source: GarageIQ editorial (unverified; modification category only, not product fitment)
+  license: unspecified
+  verified: false
+- id: kia-stinger-2018-2023-license-plate-mount-relocation
+  name: License Plate Mount Relocation
+  aliases:
+  - offset plate
+  - plate bracket
+  category: exterior
+  summary: Changes license plate mounting location for a cleaner or asymmetric front bumper appearance.
+  advice: Must preserve legal plate visibility and avoid blocking cooling or sensors.
+  tags:
+  - appearance
+  - front bumper
+  - accessory
+  source: GarageIQ editorial (unverified; modification category only, not product fitment)
+  license: unspecified
+  verified: false
+- id: kia-stinger-2018-2023-axle-back-exhaust-concept
+  name: Axle-Back Exhaust Concept
+  aliases:
+  - axleback
+  - muffler section
+  - rear muffler
+  category: exhaust
+  summary: Replaces the rear muffler section to change exhaust note and loudness, often a first step when a driver
+    wants a meaner or deeper sound.
+  advice: Verify body style, pipe size, exact exhaust layout, noise rules and potential drone.
+  tags:
+  - sound
+  - meaner
+  - louder
+  - deep
+  - exhaust
+  - aggressive
+  source: GarageIQ editorial (unverified; modification category only, not product fitment)
+  license: unspecified
+  verified: false
+- id: kia-stinger-2018-2023-cat-back-exhaust-concept
+  name: Cat-Back Exhaust Concept
+  aliases:
+  - catback
+  - cat back
+  - performance exhaust
+  category: exhaust
+  summary: Changes exhaust piping and mufflers behind the catalytic converter to produce a different tone, often
+    louder or sportier.
+  advice: Confirm actual model/engine/body fit, noise and emissions compliance and drone characteristics.
+  tags:
+  - sound
+  - meaner
+  - louder
+  - deep
+  - exhaust
+  - aggressive
+  source: GarageIQ editorial (unverified; modification category only, not product fitment)
+  license: unspecified
+  verified: false
+- id: kia-stinger-2018-2023-resonated-exhaust-concept
+  name: Resonated Exhaust Concept
+  aliases:
+  - resonated catback
+  - resonator
+  - less drone
+  category: exhaust
+  summary: Describes exhaust systems using resonators to shape sound and suppress some unpleasant cruising frequencies
+    while retaining a sportier exhaust tone.
+  advice: Drone depends on complete exhaust design and vehicle operating frequency; compare actual system measurements.
+  tags:
+  - sound
+  - exhaust
+  - deep
+  - drone
+  - comfort
+  source: GarageIQ editorial (unverified; modification category only, not product fitment)
+  license: unspecified
+  verified: false
+- id: kia-stinger-2018-2023-performance-muffler-concept
+  name: Performance Muffler Concept
+  aliases:
+  - muffler upgrade
+  - deep tone muffler
+  - sport muffler
+  category: exhaust
+  summary: Changes the muffler's acoustic design to create a deeper or more aggressive exhaust sound for a given
+    vehicle.
+  advice: Muffler sound, emissions compliance and fitment depend on complete system design; do not assume horsepower
+    gains.
+  tags:
+  - sound
+  - louder
+  - meaner
+  - exhaust
+  - tone
+  source: GarageIQ editorial (unverified; modification category only, not product fitment)
+  license: unspecified
+  verified: false
